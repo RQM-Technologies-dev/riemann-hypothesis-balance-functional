@@ -115,7 +115,8 @@ Core bridge names synchronized with manuscript text:
 
 ## 6) Operator-theoretic gaps
 
-**Gap:** Key operator-theoretic properties needed by the argument are not yet established in full (e.g., symmetry/self-adjointness conditions, domain invariance, spectral meaning of the criterion).
+**Gap:** The operator-theoretic support package needed by the manuscript (OP1--OP8 in `manuscript/spectral-framework.tex`) is not yet discharged under one finalized operator model.
+This includes ambient-space/domain typing, closure/closability control, symmetry-domain invariance, intertwining/covariance identities, spectral-legitimacy conditions, compatibility with \(\Phi_H\), admissibility stability under operator-side transforms, and dependency-locked usage.
 
 **Why it matters:**
 - Spectral conclusions are only as strong as the operator foundations.
@@ -124,9 +125,9 @@ Core bridge names synchronized with manuscript text:
 **Current status:** **Open (technical core).** Requirements are recognized, but proofs are not complete.
 
 **What would count as resolution:**
-- Proof-level statements for all required operator properties used later.
-- Verification that each property is invoked only where hypotheses are met.
-- A dependency table linking each RH-relevant claim to specific operator lemmas.
+- A theorem-level OP1--OP8 package proved (or explicitly imported as synchronized assumptions) for one chosen operator realization.
+- Verification that each operator property is invoked only where hypotheses are met in Target A, Target B, and Stage-6 transfer/exclusion.
+- A dependency table linking each RH-relevant claim to specific operator lemmas, with no hidden operator assumptions.
 
 ---
 

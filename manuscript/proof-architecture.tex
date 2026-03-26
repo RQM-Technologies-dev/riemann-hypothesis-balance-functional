@@ -23,13 +23,16 @@ A fixed formal context in which all subsequent operators and functionals are wel
 
 \subsection*{Stage 2: Operator construction and operator-side regularity}
 \textbf{Required inputs.}
-Stage 1 definitions, plus a concrete operator construction rule and hypotheses needed for boundedness/closability/spectral meaning (as appropriate to the chosen operator model). At this stage, analytic-control obligations are recorded but not discharged; they are deferred to Stage~6 as a separate theorem package.
+Stage 1 definitions, plus a concrete operator construction rule and hypotheses needed for boundedness/closability/spectral meaning (as appropriate to the chosen operator model).
+For audit, Stage~2 must supply an explicit operator-theoretic package (OP1--OP8 as recorded in \texttt{spectral-framework.tex}): ambient space/domain typing, closure control, symmetry-domain invariance, intertwining/covariance identities, spectral-legitimacy for every invoked spectral object, compatibility with $\Phi_H$, admissibility stability under operator-side transforms, and dependency-locked usage maps.
+At this stage, analytic-control obligations are recorded but not discharged; they are deferred to Stage~6 as a separate theorem package.
 
 \textbf{Intended output.}
 A mathematically controlled operator layer: existence of the constructed operator(s), admissible action on $H$, and a traceable list of operator properties actually used later.
 
 \textbf{Current status.}
 \textbf{Partial}.  Core construction ideas are present, but several operator-regularity statements remain assumption-level and require formal proofs under explicit hypotheses.
+\openbridge{Stage~2 remains open at the OP-package level: no finalized theorem stack yet proves OP1--OP8 under one synchronized operator model.}
 
 \subsection*{Stage 3: Balance functional well-posedness}
 \textbf{Required inputs.}
@@ -85,6 +88,7 @@ Stage~6 also isolates a distinct \emph{no-alternative-locus theorem target} for 
 namely that no connected component of $\mathcal{B}$ is off the critical line.
 This target is stronger than local uniqueness and must explicitly exclude alternative vertical lines, off-line curves/submanifolds, disconnected off-line components, and regime-specific off-line loci outside the local regime.
 Stage~6 also isolates an \emph{analytic-control support package} as a separate open bridge. In audit form, this package must provide: (AC1) strip-wide growth/defect bounds; (AC2) uniform convergence on transfer-relevant sectors; (AC3) justified interchange operations; (AC4) continuation/extension control across regimes; (AC5) no-hidden-branch control for $\mathcal{B}$; and (AC6) compatibility of local estimates with strip-wide admissibility. These AC items are theorem targets only in the present manuscript.
+Stage~6 additionally depends on operator-side transfer stability from Stage~2: admissibility preservation under the operator transformations actually used in continuation/transport arguments and explicit traceability of those transformations to proved OP lemmas.
 
 \textbf{Intended output.}
 A global theorem-level exclusion mechanism distinct from Stage 5:

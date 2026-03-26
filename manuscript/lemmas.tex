@@ -113,12 +113,32 @@ If $\rho$ is a nontrivial zero of $\zeta$, then $\overline{\rho}$ is also a nont
 \end{lemma}
 \noindent\emph{Feeds into:} final symmetry-consistent exclusion statement used by the Section~8 architecture.
 
-\subsubsection*{B5. Cross-cutting support: operator closure and analytic control}
+\subsubsection*{B5. Cross-cutting support: operator package (OP) and analytic package (AC)}
 
-\begin{lemma}[Operator-theoretic closure package for the coherence object \textnormal{(OPEN TARGET; placeholder)}]
-\placeholder{Establishes: all operator hypotheses used later (domain invariance, required symmetry/intertwining relation, and any closure/self-adjointness-type property explicitly invoked) are proved in the same functional setting. Depends on: finalized construction of $H$ from Section~7. Why it matters: prevents hidden operator assumptions in correspondence and exclusion claims.}
+\begin{lemma}[OP1/OP2: Ambient-space, dense-domain, and closure-control package \textnormal{(OPEN TARGET; placeholder)}]
+\placeholder{Establishes: a finalized ambient space $\mathcal{X}$, operator domain $\mathcal{D}(H)$, and operator action $H:\mathcal{D}(H)\to\mathcal{X}$ with the exact density/closure/closability properties later invoked. Depends on: finalized construction of $H$ from Section~7. Why it matters: without typed domain and closure control, later spectral and balance claims may be ill-posed.}
 \end{lemma}
-\noindent\emph{Feeds into:} B1 admissibility formulation, B2 symmetry maps, and B3 correspondence soundness.
+\noindent\emph{Feeds into:} B1 admissibility well-posedness, B3 correspondence soundness, and all later operator-side transfer steps.
+
+\begin{lemma}[OP3/OP4: Symmetry-domain invariance and intertwining package \textnormal{(OPEN TARGET; placeholder)}]
+\placeholder{Establishes: reflection/conjugation (and any model-specific symmetry action) preserve the required operator and auxiliary domains, together with the precise intertwining/covariance identity used to transport symmetry to $\Phi_H$. Depends on: OP1/OP2 package and finalized symmetry realization. Why it matters: this is the operator-level bridge that supports B2 reflection/conjugation compatibility without hidden assumptions.}
+\end{lemma}
+\noindent\emph{Feeds into:} B2 symmetry compatibility, B4 quartet-transfer, and Stage~6 contradiction-route admissibility.
+
+\begin{lemma}[OP5: Spectral-legitimacy package for invoked spectral operations \textnormal{(OPEN TARGET; placeholder)}]
+\placeholder{Establishes: every spectral construction used by the manuscript (resolvent, projection, functional calculus, decomposition, or weaker declared substitute) is legitimate for the chosen $H$ under explicitly stated hypotheses. Depends on: OP1/OP2 and chosen operator model class. Why it matters: prevents informal spectral language from being treated as theorem-level input in Target~A or Stage~6.}
+\end{lemma}
+\noindent\emph{Feeds into:} B3 zero--balance correspondence and any exclusion mechanism that invokes spectral-side quantities.
+
+\begin{lemma}[OP6: Operator--balance compatibility package \textnormal{(OPEN TARGET; placeholder)}]
+\placeholder{Establishes: the definition and evaluation of $\Phi_H$ use only operator-side objects justified by OP1--OP5, with no circular dependence on the zero set and no illegal transform/interchange at the operator layer. Depends on: OP1--OP5 and B1 admissibility setup. Why it matters: this is required before $\Phi_H(s)=0$ can function as a theorem-level predicate in correspondence, uniqueness, or contradiction steps.}
+\end{lemma}
+\noindent\emph{Feeds into:} B1 well-posedness, B3 correspondence construction, and B4 off-line contradiction package.
+
+\begin{lemma}[OP7/OP8: Operator-side admissibility stability and dependency-locked usage \textnormal{(OPEN TARGET; placeholder)}]
+\placeholder{Establishes: operator-side transformations used in local-to-global transfer preserve admissibility hypotheses, and each operator hypothesis is explicitly linked to the lemma(s) that use it (dependency lock). Depends on: OP1--OP6 plus finalized transfer class. Why it matters: prevents hypothesis drift between local Target~B proofs and Stage~6 full-strip exclusion.}
+\end{lemma}
+\noindent\emph{Feeds into:} B4 admissibility-stability transfer, global extension of local uniqueness, no-alternative-locus target, and full-strip no-off-line-balance target.
 
 \begin{lemma}[AC1: Strip-wide growth and defect bounds \textnormal{(OPEN TARGET; placeholder)}]
 \placeholder{Establishes: quantitative growth/defect bounds used by Stage~6 contradiction steps are valid uniformly on the declared strip sectors (including boundary-near and large-parameter regimes). Depends on: B1 well-posedness and finalized analytic side conditions. Why it matters: without strip-wide bounds, local uniqueness cannot control off-line behavior globally.}
