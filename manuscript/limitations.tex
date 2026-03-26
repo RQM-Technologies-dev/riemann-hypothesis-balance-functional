@@ -24,6 +24,21 @@ Only statements supported by complete definitions, hypotheses, and logically val
   Without such a proof, uniqueness of the critical line remains open within this framework.
 \end{enumerate}
 
+\subsection*{Operator-theoretic failure mode (explicit Stage-2/Stage-6 risk)}
+The operator burden is an open bridge with concrete failure modes, not a generic warning.
+The balance framework and exclusion route fail as theorem-level arguments if any of the following operator-side items is missing under the chosen model:
+\begin{enumerate}
+  \item no proof-level ambient-space/domain specification for $H$ matching later lemmas;
+  \item no proved closure/closability or graph control where later spectral steps require it;
+  \item no proved domain invariance under reflection/conjugation (or other declared symmetry transport);
+  \item no explicit intertwining/covariance identity linking operator symmetry to the balance law $\Phi_H$;
+  \item use of spectral constructions without a proved legitimacy theorem in the declared operator setting;
+  \item failure to prove that operator-side transformations preserve admissibility hypotheses used in local-to-global transfer;
+  \item mismatch between operator assumptions used in Target~A/Target~B and those used in Stage~6 exclusion.
+\end{enumerate}
+Accordingly, the manuscript requires an explicit operator-theoretic support package (OP1--OP8 in \texttt{spectral-framework.tex} and \texttt{lemmas.tex}), with each item proved or explicitly imported in one synchronized hypothesis package.
+Until this package is discharged, correspondence, uniqueness transfer, and full-strip exclusion remain conditional.
+
 \subsection*{Analytic-control failure mode (explicit Stage-6 risk)}
 The analytic-control burden is an open bridge, not a generic caution.
 For the local-to-global transfer and full-strip exclusion steps, failure of any one of the following would invalidate the Stage~6 route even if local Target~B were available:

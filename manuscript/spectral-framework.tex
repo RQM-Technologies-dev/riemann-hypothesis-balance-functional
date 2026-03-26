@@ -48,6 +48,50 @@ For audit, the $H$-layer requirements split into two roles.
 \end{itemize}
 This split is not cosmetic: Stages 2--3 in \texttt{proof-architecture.tex} require both classes to be complete before Target A/B bridges can be promoted beyond placeholders.
 
+\subsection*{Operator-theoretic support package (OP) for balance, transfer, and exclusion}
+To keep the manuscript audit-first, we isolate a theorem package for operator-side obligations.
+This package is \emph{not} claimed proved.
+It records the operator statements that would have to be available before Target~A, Target~B, and Stage~6 exclusion can close.
+
+Let $\mathcal{X}$ denote the ambient space, let $H$ denote the chosen operator object, and let $\mathcal{D}(H)\subseteq\mathcal{X}$ denote its working domain.
+Write $\mathcal{A}$ for the admissible parameter class and $\mathcal{A}_{\mathrm{strip}}:=\{s\in\mathcal{A}:0<\RePart(s)<1\}$.
+
+\paragraph{(OP1) Ambient-space and dense-domain theorem target.}
+Specify $\mathcal{X}$ and $\mathcal{D}(H)$ with proof-level typing and density/closure assumptions exactly matching later lemmas.
+If the model uses multiple graph/topology choices, all later statements must identify which one is active.
+
+\paragraph{(OP2) Well-defined action and closability/closure target.}
+Prove that $H:\mathcal{D}(H)\to\mathcal{X}$ is well defined and that the closure properties invoked later (closable/closed/graph-closed) actually hold in the declared setting.
+No later argument may cite a closure property not established here or explicitly assumed.
+
+\paragraph{(OP3) Domain invariance under symmetry transport target.}
+For each symmetry action used downstream (reflection transport, conjugation transport, or model-specific realization), prove that the induced action preserves the domain class required by the corresponding lemma.
+This includes invariance of any auxiliary operator domains used to define $\Phi_H$.
+
+\paragraph{(OP4) Intertwining/covariance theorem target.}
+State and prove the exact operator identity used to transfer symmetry to the balance law (invariance, covariance, or intertwining relation).
+The theorem must be written at operator level, not only at heuristic or symbolic level.
+
+\paragraph{(OP5) Spectral-legitimacy target for invoked spectral statements.}
+Whenever the manuscript uses spectral language (resolvent, spectral projection, functional calculus, mode decomposition, or equivalent), prove that these constructions are legitimate for the chosen $H$ model under the same hypotheses.
+If a weaker spectral notion is used, it must be stated explicitly.
+
+\paragraph{(OP6) Compatibility target between operator layer and balance functional.}
+Prove that the definition of $\Phi_H$ uses only admissible operator-side objects and that every operator transform used to build/evaluate $\Phi_H$ preserves well-posedness on the declared admissible class.
+
+\paragraph{(OP7) Operator-side stability of admissibility target.}
+For transformations used in Target~B and Stage~6 (continuation classes, symmetry transports, deformation/flow steps, or equivalent), prove that admissibility hypotheses remain valid after transformation.
+This is the operator-side counterpart of analytic transfer control.
+
+\paragraph{(OP8) Dependency-locked usage target.}
+Provide a theorem/lemma map showing where each operator property (OP1)--(OP7) is used in Targets~A/B and Stage~6.
+No step in correspondence or exclusion should rely on undeclared operator facts.
+
+\paragraph{Status note.}
+(OP1)--(OP8) are open theorem targets in the present manuscript version.
+They define the operator-theoretic support burden.
+They do not assert that a finalized operator model has been selected or verified.
+
 \subsection*{Minimal required structure for the coherence functional $\Phi$}
 Once a candidate $H$-layer is fixed, $\Phi$ must be introduced as a derived object with explicit dependence.
 
@@ -126,6 +170,18 @@ The local coercive/rigidity/positivity estimates used for Target~B must be shown
 \paragraph{Status note.}
 (AC1)--(AC6) are open analytic bridges in the current manuscript version.
 They define the analytic-control burden required for Stage~6 closure but are not claimed proved here.
+
+\subsection*{Separation of burden classes used by the manuscript}
+The proof program uses five distinct burden classes.
+\begin{enumerate}
+  \item \textbf{Structural operator requirements:} OP1--OP4.
+  \item \textbf{Analytic-control requirements:} AC1--AC6.
+  \item \textbf{Target~A correspondence requirements:} P1--P5 plus OP4--OP6 and AC2--AC3 where interchanges/limits are used.
+  \item \textbf{Target~B uniqueness requirements:} OP3--OP7 plus P3--P5 and local control ingredients from \texttt{lemmas.tex}.
+  \item \textbf{Stage~6 transfer/exclusion requirements:} OP7--OP8 together with AC1--AC6, no-alternative-locus closure, and contradiction-route synchronization.
+\end{enumerate}
+This classification is a dependency statement only.
+It does not promote any open bridge to theorem status.
 
 \subsection*{Dependency use map to later stages and lemma targets}
 The interface above is designed to feed specific downstream bridges.
