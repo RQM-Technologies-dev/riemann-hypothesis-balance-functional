@@ -1,23 +1,59 @@
-This section tracks lemma-level dependencies. Items below are explicitly marked by status.
+This section is a lemma-level dependency ledger for the manuscript under review. It distinguishes established standard inputs from manuscript-specific draft targets and open bridges requiring proof.
 
-\subsection*{Symmetry lemmas (available)}
-\begin{lemma}[Reflection transport of zeros]
-If $\zeta(s_0)=0$ in the critical strip, then $\zeta(1-s_0)=0$.
+\subsection*{A. Classical symmetry inputs (available; standard references)}
+
+\begin{lemma}[Reflection transport of nontrivial zeros]
+If $\rho$ is a nontrivial zero of $\zeta$, then $1-\rho$ is also a nontrivial zero.
+\end{lemma}
+\noindent\emph{Status: standard.} This is a direct consequence of the completed zeta function functional equation $\xi(s)=\xi(1-s)$; see \cite{Edwards1974,Titchmarsh1986}.
+
+\begin{lemma}[Conjugation transport of nontrivial zeros]
+If $\rho$ is a nontrivial zero of $\zeta$, then $\overline{\rho}$ is also a nontrivial zero.
+\end{lemma}
+\noindent\emph{Status: standard.} This follows from Schwarz reflection for $\xi$ (equivalently $\xi(\bar s)=\overline{\xi(s)}$); see \cite{Edwards1974,Titchmarsh1986}.
+
+\subsection*{B. Draft lemma targets (manuscript-specific; open unless noted)}
+
+\subsubsection*{B1. Admissibility / well-posedness targets}
+
+\begin{lemma}[Admissibility implies a well-defined balance functional \textnormal{(OPEN TARGET; placeholder)}]
+\placeholder{Establishes: under explicit admissibility hypotheses on the proposed coherence object, the balance functional is well-defined (domain specified; finite-valued; measurable/continuous in the declared topology). Depends on: final operator-level construction in Section~7 and a non-circular admissibility criterion from Section~2. Why it matters: without well-posedness, later reflection and exclusion statements are not mathematically meaningful.}
 \end{lemma}
 
-\begin{lemma}[Conjugation transport of zeros]
-If $\zeta(s_0)=0$, then $\zeta(\overline{s_0})=0$.
+\begin{lemma}[Stability of balance under approved perturbation class \textnormal{(OPEN TARGET; placeholder)}]
+\placeholder{Establishes: small perturbations in the manuscript's allowed class do not destroy admissibility or the definition of balance. Depends on: the precise perturbation class and norm/topology choices (currently provisional). Why it matters: supports reproducibility of any subsequent inference and prevents dependence on an unstable encoding.}
 \end{lemma}
 
-\subsection*{Lemma placeholders tied to open bridges}
-\begin{lemma}[Well-posedness of balance criterion \textnormal{(placeholder)}]
-\placeholder{Need precise assumptions ensuring existence/uniqueness/measurability statements.}
+\subsubsection*{B2. Reflection-compatibility targets}
+
+\begin{lemma}[Reflection compatibility of the balance criterion \textnormal{(OPEN TARGET; placeholder)}]
+\placeholder{Establishes: for admissible data, balance evaluated at $s$ matches balance evaluated at $1-s$ in the precise form required by the reduction architecture. Depends on: B1 well-posedness targets plus the exact map implementing reflection on the spectral side. Why it matters: this is the manuscript-specific bridge from classical zero symmetry to the proposed balance mechanism.}
 \end{lemma}
 
-\begin{lemma}[Reflection invariance of balance \textnormal{(placeholder)}]
-\placeholder{Draft dependency for Target B. Proof not available in this version.}
+\begin{lemma}[Conjugation compatibility of the balance criterion \textnormal{(OPEN TARGET; placeholder)}]
+\placeholder{Establishes: balance is compatible with $s\mapsto \bar s$ in the same function class used by the argument. Depends on: B1 well-posedness targets and the real-structure assumptions used in Section~6. Why it matters: needed to keep the manuscript's symmetry reductions internally consistent when passing between reflected/conjugate points.}
 \end{lemma}
 
-\begin{lemma}[Exclusion of off-line balance \textnormal{(placeholder)}]
-\placeholder{Central open bridge. Must be proved without heuristic analogies.}
+\subsubsection*{B3. Correspondence-support targets}
+
+\begin{lemma}[From balanced spectral data to zeta-side candidate points \textnormal{(OPEN TARGET; placeholder)}]
+\placeholder{Establishes: an explicit correspondence map sending balanced spectral configurations to candidate critical-strip points, with hypotheses and codomain clearly stated. Depends on: finalized definitions in Section~2 and spectral setup in Section~7. Why it matters: without this bridge, balance statements cannot be interpreted as statements about zeta zeros.}
 \end{lemma}
+
+\begin{lemma}[Soundness of correspondence at the lemma level \textnormal{(OPEN TARGET; placeholder)}]
+\placeholder{Establishes: if the correspondence outputs a point $s_0$, then the claimed zeta-side property attached to $s_0$ is justified under stated assumptions. Depends on: the preceding correspondence construction and any analytic continuation/regularity inputs invoked there. Why it matters: prevents logical gaps where a constructed point is used as if it already satisfied a proved zeta property.}
+\end{lemma}
+
+\subsubsection*{B4. Exclusion-support targets}
+
+\begin{lemma}[No admissible off-line balance states \textnormal{(OPEN BRIDGE; placeholder)}]
+\placeholder{Establishes: for $0<\RePart(s)<1$ with $\RePart(s)\neq \tfrac12$, the manuscript's balance criterion cannot hold (or yields a contradiction) under explicit assumptions. Depends on: B1--B3 targets and a non-heuristic coercive/positivity/monotonic ingredient still to be supplied. Why it matters: this is the central exclusion step needed to rule out off-line zeros within the proposed framework.}
+\end{lemma}
+
+\begin{lemma}[Quartet-level exclusion transfer \textnormal{(OPEN TARGET; placeholder)}]
+\placeholder{Establishes: once one off-line point is excluded by the manuscript criterion, the associated reflection/conjugation quartet is excluded in the exact sense required by Section~8. Depends on: classical symmetry lemmas from part A and the off-line exclusion lemma above. Why it matters: converts pointwise exclusion into the symmetry-compatible exclusion statement used in the global reduction.}
+\end{lemma}
+
+\subsection*{C. Audit note on current status}
+
+\auditnote{All lemmas in part A are standard inputs from the cited literature. All lemmas in part B are manuscript-specific targets and remain open placeholders in this version unless and until full proofs are inserted.}
