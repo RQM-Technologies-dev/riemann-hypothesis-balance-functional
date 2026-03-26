@@ -13,7 +13,7 @@ If $\rho$ is a nontrivial zero of $\zeta$, then $\overline{\rho}$ is also a nont
 \noindent\emph{Status: standard.} This follows from Schwarz reflection for $\xi$ (equivalently $\xi(\bar s)=\overline{\xi(s)}$); see \cite{Edwards1974,Titchmarsh1986}.
 
 \subsection*{B. Draft lemma targets (manuscript-specific; open unless noted)}
-\noindent\emph{Reviewer map.} Part B is ordered as a dependency stack: \textbf{(B1) admissibility foundation} $\rightarrow$ \textbf{(B2) symmetry compatibility} $\rightarrow$ \textbf{(B3) zeta correspondence} $\rightarrow$ \textbf{(B4) off-line exclusion transfer}, with \textbf{(B5)} supplying operator/analytic control used across earlier blocks. Every item below remains an explicit open placeholder.
+\noindent\emph{Reviewer map.} Part B is ordered as a dependency stack: \textbf{(B1) admissibility foundation} $\rightarrow$ \textbf{(B2) symmetry compatibility} $\rightarrow$ \textbf{(B3) zeta correspondence} $\rightarrow$ \textbf{(B4) preferred off-line exclusion route via transfer $\to$ no-alternative-locus}, with \textbf{(B5)} supplying operator/analytic control used across earlier blocks. Every item below remains an explicit open placeholder.
 
 \subsubsection*{B1. Foundation: admissibility and well-posedness}
 
@@ -58,7 +58,7 @@ If $\rho$ is a nontrivial zero of $\zeta$, then $\overline{\rho}$ is also a nont
 \end{lemma}
 \noindent\emph{Feeds into:} the global exclusion-extension target below and Stage~5 in \texttt{proof-architecture.tex}.
 
-\paragraph{Transfer-bridge lemma stack for $\mathcal{B}$ (audit order; all OPEN).}
+\paragraph{Preferred Stage-6 lemma stack for $\mathcal{B}$ (audit order; all OPEN).}
 To make the local-to-global burden explicit, B4 uses the following stack:
 \[
 \text{Local uniqueness on }\mathcal{R}_{\mathrm{loc}}
@@ -97,7 +97,7 @@ Must include admissibility stability, compatibility of local estimates with the 
 \noindent\emph{Feeds into:} full-strip off-line exclusion and Stage~6 global mechanism.
 
 \begin{lemma}[Candidate exclusion principle template \textnormal{(OPEN BRIDGE; placeholder)}]
-\placeholder{Establishes: a theorem schema specifying the structural ingredient that makes off-line balance impossible (for example coercive gap, positivity/monotonic drift, rigidity equality case, reflection-incompatibility, or no-alternative-locus principle), without yet committing to a final operator realization. Depends on: B1--B3 well-posedness/correspondence plus explicit Stage~6 hypothesis synchronization. Why it matters: turns ``global mechanism'' language into a checkable theorem target before any model-specific proof attempt.}
+\placeholder{Establishes: a theorem schema specifying which structural ingredient makes off-line balance impossible, without yet committing to a final operator realization. In the current manuscript hierarchy, coercive gap / positivity-monotonicity / rigidity are treated as \emph{supporting ingredients} for the preferred transfer $\to$ no-alternative-locus route, while reflection-incompatibility and direct contradiction-only closure are retained as \emph{fallback alternatives}. Depends on: B1--B3 well-posedness/correspondence plus explicit Stage~6 hypothesis synchronization. Why it matters: turns ``global mechanism'' language into a checkable theorem target with a declared priority order rather than a flat list.}
 \end{lemma}
 \noindent\emph{Feeds into:} the contradiction-route admissibility package and the contradiction-form exclusion lemma.
 
@@ -117,7 +117,7 @@ Must include admissibility stability, compatibility of local estimates with the 
 \noindent\emph{Feeds into:} off-line contradiction and quartet-transfer targets.
 
 \begin{lemma}[Off-line balance contradiction lemma target \textnormal{(OPEN BRIDGE; placeholder)}]
-\placeholder{Establishes: assuming the contradiction-route admissibility package and one selected exclusion-principle ingredient, a formal contradiction is derived with a declared theorem ingredient in the same synchronized package (coercivity/positivity/rigidity/transfer/no-alternative-locus). Depends on: candidate exclusion principle template, no-alternative-locus principle target, contradiction-route admissibility package, no-hidden-branch analytic control, and global extension from local uniqueness. Why it matters: supplies the explicit logical step from an admissible off-line balanced assumption to theorem-level incompatibility rather than heuristic tension.}
+\placeholder{Establishes: assuming the contradiction-route admissibility package and one selected exclusion-principle ingredient, a formal contradiction is derived with a declared theorem ingredient in the same synchronized package. In the current strategy, this contradiction lemma is \emph{secondary}: primarily it is expected to close via the preferred transfer/no-alternative-locus route (supported by coercivity/positivity/rigidity controls), while direct reflection-incompatibility contradiction remains a fallback. Depends on: candidate exclusion principle template, no-alternative-locus principle target, contradiction-route admissibility package, no-hidden-branch analytic control, and global extension from local uniqueness. Why it matters: supplies the explicit logical step from an admissible off-line balanced assumption to theorem-level incompatibility rather than heuristic tension.}
 \end{lemma}
 \noindent\emph{Feeds into:} the full-strip no-off-line-balance theorem target below.
 
