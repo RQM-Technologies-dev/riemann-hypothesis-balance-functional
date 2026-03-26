@@ -1,120 +1,88 @@
 # Claim Map
 
-*A concise, reviewer-oriented map of the argument structure.*
+*A short audit map of the proposed proof framework.*
 
----
+## Central claim
 
-## Central Claim
+**Asserted target:** every nontrivial zero of \(\zeta(s)\) lies on
+\(\Re(s)=\tfrac12\).
 
-The manuscript proposes that the nontrivial zeros of the Riemann zeta function
-ζ(s) are forced onto the critical line Re(s) = 1/2 by a balance condition arising
-from the reflection symmetry of the functional equation. The proposed argument
-attempts to show that this balance condition cannot be satisfied at any s with
-Re(s) ≠ 1/2.
+**How the manuscript attempts to get there:** combine the functional-equation
+symmetry of \(\xi(s)\) with a spectral/coherence balance condition that is
+claimed to be satisfiable only on the critical line.
 
-**Status:** Proposed. The framework is conceptually assembled; formal rigour is
-in progress. See [notes/known-gaps.md](../notes/known-gaps.md).
+**Current status:** this is a proposed endpoint, not an established theorem in
+this repository.
 
----
+## Main symmetry principle
 
-## Main Symmetry Principle
+\[
+\xi(s)=\xi(1-s),\qquad
+\xi(s)=\tfrac12 s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s).
+\]
 
-The functional equation of the Riemann zeta function,
+**Formal fact:** the completed zeta function is symmetric under
+\(s\leftrightarrow 1-s\), with symmetry axis \(\Re(s)=\tfrac12\).
 
-```
-ξ(s) = ξ(1 − s),    where ξ(s) = (1/2)s(s−1)π^(−s/2)Γ(s/2)ζ(s),
-```
+**Asserted use in the framework:** this symmetry is treated as structural input
+for a balance criterion, not only as a pairing rule for zeros.
 
-establishes a reflection symmetry of the completed zeta function ξ(s) about
-the line Re(s) = 1/2. Any zero of ξ (equivalently, of ζ in the critical strip)
-must lie in a configuration compatible with this symmetry.
+**Requires proof:** that the added balance criterion plus symmetry is strong
+enough to *exclude* all off-line zeros, rather than only organize them into
+symmetric configurations.
 
-**The manuscript proposes:** that this symmetry is not merely a constraint on
-where zeros *can* occur, but, together with the spectral-coherence structure,
-a mechanism that *forces* all zeros to lie on Re(s) = 1/2.
+## Spectral/coherence interpretation
 
-**What remains to be shown:** that the symmetry alone, or the symmetry combined
-with the spectral construction, is sufficient to rule out off-line zeros.
+**Heuristic motivation:** zeros are interpreted as cancellation/balance points
+of a spectral object attached to \(\zeta\).
 
----
+**Asserted programmatic step:** construct an operator/functional \(H\) whose
+balance points correspond to nontrivial zeros.
 
-## Spectral / Coherence Interpretation
+**Requires proof (major bridge):**
+1. A precise definition of \(H\) (space, domain, operator properties).
+2. A theorem giving \(\zeta(s)=0\iff s\) is a balance point of \(H\).
+3. Control of \(H\) off the critical line strong enough to rule out off-line
+   balance points.
 
-The proposed framework interprets nontrivial zeros as *balance points* in a
-spectral object associated with ζ. Informally:
+## Why the critical line is privileged
 
-- A zero of ζ(s) is treated as a state at which certain spectral contributions
-  cancel — a destructive interference or equilibrium condition.
-- The reflection symmetry of ξ constrains which states can achieve this
-  cancellation.
-- The claim is that cancellation is only achievable when the state lies on
-  Re(s) = 1/2.
+**Formal input:** \(\Re(s)=\tfrac12\) is the fixed axis of
+\(s\leftrightarrow 1-s\).
 
-**What must be made rigorous:** The spectral object must be defined precisely
-as a mathematical operator or functional. The correspondence between its
-"cancellation states" and zeros of ζ must be proved, not assumed. See
-[manuscript/spectral-framework.tex](../manuscript/spectral-framework.tex) and
-[manuscript/definitions.tex](../manuscript/definitions.tex).
+**Heuristic claim in the manuscript:** if balance is genuinely reflection
+symmetric and nondegenerate, the natural locus for exact cancellation is the
+fixed axis.
 
----
+**Requires proof:** uniqueness. Symmetry alone does not forbid mirrored
+off-axis zeros; one must show the proposed balance equations have no off-axis
+solutions.
 
-## Why the Critical Line Is Privileged
+## What remains to be formalized
 
-The manuscript argues that Re(s) = 1/2 is the unique axis of the reflection
-symmetry s ↔ 1 − s. Therefore:
+- **Open:** full mathematical specification of the spectral/coherence object.
+- **Open:** zero \(\leftrightarrow\) balance correspondence theorem.
+- **Partial/Open:** symmetry-compatibility properties of the balance criterion.
+- **Open (central):** exclusion of all off-line solutions.
+- **Open:** explicit handling of possible edge/pathological regimes
+  (large height, multiplicities, near-line clustering).
 
-1. Any zero paired with its symmetric counterpart under this reflection must,
-   if the balance criterion is symmetric itself, lie on the symmetry axis.
-2. Off-axis zeros would necessarily come in symmetric pairs (s, 1−s) unless they
-   are already on the axis — but the manuscript attempts to show that off-axis
-   pairs cannot satisfy the proposed balance criterion simultaneously.
+For a fuller gap register, see
+[notes/known-gaps.md](../notes/known-gaps.md).
 
-**Caveat:** This argument currently relies on an analogy between balance in the
-proposed spectral object and the classical functional equation. The analogy must
-be converted into a theorem. This is the primary open step.
+## What a skeptical mathematician should test first
 
----
+1. **Definition test:** Is the spectral object defined with enough precision to
+   support theorem-level statements?
+2. **Equivalence test:** Is the zero/balance correspondence proved, or only
+   motivated by analogy?
+3. **Exclusion test (highest pressure point):** Where is the argument that
+   *mathematically* rules out off-line balance points?
+4. **Dependency test:** Which lemmas are indispensable for the exclusion step,
+   and which are currently conjectural?
+5. **Robustness test:** Would the same reasoning accidentally apply to zeta-like
+   functions known or expected to have off-line zeros? If yes, the criterion is
+   not yet selective enough.
 
-## What Remains to Be Formalized
-
-The following items are required to complete the argument:
-
-| Step | Description | Status |
-|------|-------------|--------|
-| 1 | Precise definition of the spectral/coherence operator | Open |
-| 2 | Proof that zeros of ζ correspond exactly to cancellation states of the operator | Open |
-| 3 | Proof that the balance criterion is symmetric under s ↔ 1−s | Partial |
-| 4 | Proof that only Re(s) = 1/2 supports the balance criterion | Open (central gap) |
-| 5 | Ruling out all off-line zero configurations | Open |
-
-See [notes/known-gaps.md](../notes/known-gaps.md) for the full gap register.
-
----
-
-## What a Skeptical Mathematician Should Test First
-
-If you want to identify the weakest point in the current argument as efficiently
-as possible, focus on the following questions:
-
-1. **Is the spectral object well-defined?**
-   Does [manuscript/spectral-framework.tex](../manuscript/spectral-framework.tex)
-   give a mathematically precise definition of the operator or functional? If not,
-   the argument cannot proceed.
-
-2. **Is the correspondence between zeros and cancellation states proved?**
-   Or is it assumed by analogy? Check
-   [manuscript/definitions.tex](../manuscript/definitions.tex) and
-   [manuscript/lemmas.tex](../manuscript/lemmas.tex).
-
-3. **Does the symmetry argument actually rule out off-line zeros, or does it merely
-   make them seem implausible?**
-   Check [manuscript/critical-line-argument.tex](../manuscript/critical-line-argument.tex).
-
-4. **Are there hidden assumptions?**
-   Check [manuscript/limitations.tex](../manuscript/limitations.tex) and
-   [notes/objections-and-responses.md](../notes/objections-and-responses.md).
-
-5. **Does the argument apply only to ζ, or could it be adapted to functions that
-   violate RH?**
-   If the argument does not distinguish ζ from functions with off-line zeros, it
-   cannot be sufficient.
+In short: the fastest audit path is to stress-test the off-line exclusion step;
+it is the central unresolved bridge in the current framework.
