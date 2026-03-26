@@ -1,10 +1,19 @@
-This section records scope and comparison points for mathematical reviewers.
+This discussion section is interpretive rather than part of the formal proof flow. It is included to clarify scope, dependencies, and comparison points for mathematical audit.
 
-\begin{itemize}
-  \item The framework is aligned in spirit with spectral approaches, but the present operator model is incomplete.
-  \item Computational experiments may guide conjecture refinement, but they do not substitute for proof.
-  \item The strongest contribution of this version is dependency clarity: it identifies exactly which bridges must be proved.
-\end{itemize}
+\paragraph{What this framework attempts to contribute.}
+The manuscript proposes a proof framework in which a spectral-coherence construction is used to organize the Riemann Hypothesis (RH) into explicit operator-theoretic and analytic subclaims. The intended contribution is not a stand-alone classical spectral theorem, but a structured reduction: if the listed bridges are proved under the stated assumptions, then the RH conclusion would follow within the manuscript architecture. In this sense, the current value of the framework is traceability. It makes the logical dependency graph visible, distinguishes proved components from provisional ones, and isolates the points where new arguments are still required.
 
-\paragraph{Audit-facing priority.}
-Future drafts should prioritize formal closure of open bridges over expansion of heuristic narrative.
+\paragraph{What remains unresolved.}
+Several steps remain open and are not presented as established results. In particular, the manuscript still requires formal justification of the bridge statements connecting the coherence functional, the operator model, and the zero-location conclusion. These bridges currently function as targeted obligations, not completed proofs. Numerical checks and consistency tests can support plausibility and help detect contradictions, but they do not close these obligations. The manuscript should therefore be read as an argument that attempts to show how RH could follow from a specific spectral-coherence mechanism, conditional on unresolved proof steps that are explicitly identified.
+
+\paragraph{Relation to nearby spectral programs.}
+The framework is adjacent to classical spectral programs in the broad sense that it seeks a spectral encoding of information about zeta zeros. However, it is not identical to standard formulations that center a single self-adjoint operator with a fully established spectral correspondence. Here, the emphasis is on a coherence-based architecture and on reduction through intermediate analytic objects. This placement is best interpreted as \emph{neighboring} the classical spectral agenda rather than claiming equivalence to any established program. Similar motivation does not imply interchangeability of technical hypotheses or proof obligations.
+
+\paragraph{Why an audit-first posture is necessary.}
+For a claim of this scale, presentation quality is a mathematical issue, not merely editorial preference. An audit-first posture enforces explicit assumptions, conservative claim language, and visible separation between theorem-level content and heuristic interpretation. This reduces the risk of overstating partial results and allows reviewers to evaluate the framework component-by-component. It also improves falsifiability: if a bridge fails, the failure can be localized without ambiguity about what had actually been proved.
+
+\paragraph{Interpretation versus proof.}
+Interpretive statements in this section should not be read as additional evidence for the formal claims. Their role is to guide expert reading of the manuscript's scope and status. Formal validity is determined only by the definitions, lemmas, propositions, and theorems together with their hypotheses and dependencies.
+
+\paragraph{Forward path.}
+For this framework to mature into a proof, each open bridge must be replaced by a complete argument with explicit hypotheses, the operator/coherence correspondence must be established in full technical detail, and all conditional steps must be eliminated or discharged by cited theorems. At that point, independent verification would need to confirm that the final chain of implications is gap-free.
