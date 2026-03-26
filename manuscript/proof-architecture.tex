@@ -78,7 +78,16 @@ This stage is allowed to be local/regime-scoped, provided the scope is explicit.
 \subsection*{Stage 6: Global off-line exclusion mechanism}
 \textbf{Required inputs.}
 Refined estimates or structural principles compatible with Stages 2--5, sufficient to upgrade local uniqueness logic to a global exclusion statement.
-The manuscript now treats this as a \emph{candidate exclusion mechanism template} problem: the Stage-6 proof must identify at least one explicit theorem mechanism class (for example coercive gap, positivity/monotonicity, rigidity equality case, reflection-incompatibility, or another formally stated alternative) and show that it applies on the full admissible strip.
+In this revision, the manuscript selects a \emph{preferred theorem path} rather than a flat list of equally weighted possibilities:
+\[
+\text{local Target-B uniqueness on }\mathcal{R}_{\mathrm{loc}}
+\Longrightarrow
+\text{local-to-global transfer for }\mathcal{B}
+\Longrightarrow
+\text{no-alternative-locus closure on }\mathcal{A}_{\mathrm{strip}}.
+\]
+This preferred path is a strategy choice under review, not a proved theorem chain.
+Other mechanism classes (coercive gap, positivity/monotonicity, rigidity, reflection-incompatibility, and direct contradiction routes) remain in scope, but are organized as supporting ingredients or fallback routes relative to the preferred closure path.
 In addition, Stage~6 now records a \emph{candidate contradiction route}: one assumes an admissible off-line balanced point under a synchronized package (admissibility, balance well-definedness, reflection/conjugation compatibility, and required regularity regime), then derives contradiction with one declared global-control ingredient under the same package.
 Stage~6 now isolates a \emph{local-to-global transfer theorem target} as a separate bridge: under synchronized hypotheses, local Stage-5 uniqueness on $\mathcal{R}_{\mathrm{loc}}$ must extend to the full admissible strip $\mathcal{A}_{\mathrm{strip}}$ with explicit continuation/compactness/uniformity control and explicit prevention of hidden off-line branches outside $\mathcal{R}_{\mathrm{loc}}$.
 Stage~6 also isolates a distinct \emph{no-alternative-locus theorem target} for the balanced set
@@ -93,20 +102,22 @@ For dependency clarity, the intended theorem flow is:
 \[
 \underbrace{\text{Stage-5 local uniqueness on }\mathcal{R}_{\mathrm{loc}}}_{\text{local Target B control}}
 \Longrightarrow
-\underbrace{\text{Stage-6 transfer principle for }\mathcal{B}}_{\text{open closure bridge}}
+\underbrace{\text{Stage-6 transfer principle for }\mathcal{B}}_{\text{preferred open closure bridge}}
+\Longrightarrow
+\underbrace{\text{no-alternative-locus closure for }\mathcal{B}}_{\text{preferred global mechanism target}}
 \Longrightarrow
 \underbrace{\text{full-strip off-line exclusion on }\mathcal{A}_{\mathrm{strip}}}_{\text{global conclusion}}.
 \]
 The middle implication is an independent theorem target, not an automatic corollary of Stage~5.
 
 \textbf{Intended output.}
-A global theorem-level exclusion mechanism distinct from Stage 5:
+A global theorem-level exclusion mechanism distinct from Stage 5, prioritized by the preferred closure route:
 \begin{enumerate}
-  \item theorem-level transfer bridge from Stage-5 local uniqueness on $\mathcal{R}_{\mathrm{loc}}$ to full-strip control on $\mathcal{A}_{\mathrm{strip}}$, supported by an explicit analytic-control package (AC1--AC6),
-  \item theorem-level no-alternative-locus statement for $\mathcal{B}$ on the full admissible strip,
-  \item full-strip exclusion of admissible off-line balanced configurations,
-  \item symmetry-compatible transfer (reflection/conjugation) without weakening hypotheses,
-  \item explicit contradiction-form closure: off-line balanced assumption $\Rightarrow$ violation of one theorem ingredient in the synchronized Stage-6 package.
+  \item \textbf{Primary bridge:} theorem-level transfer from Stage-5 local uniqueness on $\mathcal{R}_{\mathrm{loc}}$ to full-strip control on $\mathcal{A}_{\mathrm{strip}}$, supported by AC1--AC6.
+  \item \textbf{Primary global target:} theorem-level no-alternative-locus statement for $\mathcal{B}$ on the full admissible strip.
+  \item \textbf{Primary conclusion:} full-strip exclusion of admissible off-line balanced configurations.
+  \item \textbf{Supporting mechanism burden:} coercive/positivity/rigidity ingredients strong enough to prove items (1)--(2) under synchronized assumptions.
+  \item \textbf{Fallback burden:} reflection-incompatibility or direct contradiction-route closure if the primary transfer/no-alternative-locus path cannot be completed.
 \end{enumerate}
 
 \textbf{Current status.}

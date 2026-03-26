@@ -192,6 +192,56 @@ Without fixing a finalized operator model, the manuscript currently treats the f
 These are mechanism templates only.
 Any accepted version must be converted into explicit lemmas with hypotheses and dependency tracing.
 
+\subsection*{Preferred Stage~6 theorem path (current manuscript choice; conditional)}
+\label{subsec:preferred-stage6-route}
+The manuscript now designates one \emph{preferred theorem path} for Stage~6:
+\begin{quote}
+\textbf{Primary route: local-to-global closure for $\mathcal{B}$ culminating in a no-alternative-locus theorem target.}
+\end{quote}
+Concretely, the intended logical route is
+\[
+\text{Stage-5 local uniqueness on }\mathcal{R}_{\mathrm{loc}}
+\Longrightarrow
+\text{transfer/closure on }\mathcal{A}_{\mathrm{strip}}
+\Longrightarrow
+\text{no off-line component of }\mathcal{B}.
+\]
+This is a planning decision for proof development under audit.
+It is \emph{not} a claim that the route has been proved.
+
+\paragraph{Why this is the current preferred route.}
+This route is currently the most coherent fit with the existing architecture because:
+\begin{enumerate}
+  \item Stage~5 already isolates a local uniqueness burden, so a transfer theorem is the direct missing bridge to full-strip exclusion;
+  \item the no-alternative-locus target is the clean global statement needed by the Stage~6 conclusion;
+  \item the same route aligns with the existing OP/AC burden split (operator-side admissibility stability plus analytic continuation/compactness control);
+  \item it keeps theorem targets aligned with the current dependency stack in \texttt{proof-architecture.tex} and \texttt{lemmas.tex}.
+\end{enumerate}
+
+\paragraph{Role of the other mechanism classes relative to the preferred route.}
+The manuscript keeps all mechanism classes visible, but assigns them different roles:
+\begin{enumerate}
+  \item \textbf{Primary sub-mechanisms (inside the preferred route):}
+  local-to-global closure, no-hidden-branch control, and no-alternative-locus closure for $\mathcal{B}$.
+  \item \textbf{Supporting ingredients (to make transfer/no-alternative-locus provable):}
+  coercive gap estimates, positivity/monotonic drift controls, and rigidity/equality-case controls.
+  In the current strategy, these are not independent Stage~6 endpoints; they are candidate tools for proving the transfer and closure bridges.
+  \item \textbf{Secondary/fallback routes:}
+  reflection-incompatibility and direct contradiction-under-assumed-off-line-balance arguments.
+  These remain viable alternatives if the primary closure route stalls, but are not the leading theorem path in this revision.
+\end{enumerate}
+
+\paragraph{Unresolved dependencies for the preferred route.}
+Before the preferred route can become a proof, the manuscript still requires theorem-level closure of:
+\begin{enumerate}
+  \item Stage-5 local uniqueness under explicit hypotheses;
+  \item a synchronized transfer package (admissibility stability, continuation/compactness uniformity, and symmetry-compatible transport);
+  \item no-hidden-off-line-component control for $\mathcal{B}$ outside $\mathcal{R}_{\mathrm{loc}}$;
+  \item at least one proved global-control ingredient (coercive/positivity/rigidity class) strong enough to close no-alternative-locus;
+  \item hypothesis synchronization with Target~A correspondence assumptions.
+\end{enumerate}
+All five items remain open in the current manuscript version.
+
 \subsection*{Candidate contradiction route under an assumed off-line balanced point (template only)}
 This subsection makes the Stage~6 contradiction burden explicit in assumption-conclusion form.
 It does not claim that a contradiction has been proved.

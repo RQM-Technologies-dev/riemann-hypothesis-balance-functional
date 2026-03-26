@@ -86,6 +86,9 @@ Core bridge names synchronized with manuscript text:
 - A local or asymptotic argument that leaves edge regimes untreated is insufficient.
 
 **Current status:** **Open (completeness).** A candidate exclusion-mechanism template is now stated in the manuscript, but no theorem-level instantiation has been proved.
+The current manuscript strategy prioritizes one route under audit:
+local Stage-5 uniqueness \(\Rightarrow\) transfer to full-strip \(\Rightarrow\) no-alternative-locus closure for \(\mathcal{B}\) \(\Rightarrow\) global exclusion.
+Other mechanism classes (coercive/positivity/rigidity, reflection-incompatibility, contradiction templates) remain active as supporting or fallback components, not equal-status endpoints.
 
 **What would count as resolution:**
 - A global contradiction or global structural theorem that covers every \(s\) with \(0<\Re(s)<1\), \(\Re(s)\neq 1/2\), under one synchronized hypothesis package, with the mechanism class stated explicitly (e.g., coercive gap, positivity/monotonicity, rigidity, or reflection-incompatibility).
