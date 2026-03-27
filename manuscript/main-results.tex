@@ -1,26 +1,15 @@
-This section states the shortest main theorem targets built on one object:
-\[
-\Phi(q):=\Gamma(q)(1-q)\zeta(q).
-\]
+This section states the main theorem targets for the simplified manuscript spine.
 
-\subsection*{Established input (standard)}
-\begin{proposition}[Functional symmetry of completed zeta]
-\label{prop:functional-symmetry}
-The completed zeta function satisfies $\xi(s)=\xi(1-s)$; see \cite{Riemann1859,Edwards1974,Titchmarsh1986}.
-\end{proposition}
-
-\subsection*{Step 1: Canonical balance set}
-In this manuscript, balance means exactly
-\[
-\Phi(q)=0.
-\]
+\subsection*{Canonical setup}
 Define
 \[
+\Phi(q):=\Gamma(q)(1-q)\zeta(q),
+\qquad
 \mathcal{B}:=\{q\in\C:0<\RePart(q)<1,\ \Phi(q)=0\}.
 \]
 
-\subsection*{Step 2: Target A (zero--balance correspondence)}
-\begin{drafttheorem}[Target A: strip-zero correspondence via $\Phi$]
+\subsection*{Target A: zero--balance correspondence}
+\begin{drafttheorem}[Target A]
 \label{thm:target-correspondence}
 \placeholder{Theorem target under construction; proof not yet provided.}
 The argument attempts to prove
@@ -29,33 +18,33 @@ q\in\mathcal{B}
 \quad\Longleftrightarrow\quad
 q\text{ is a nontrivial zero of }\zeta.
 \]
-Status: open target in the current manuscript version.
+Status: open.
 \end{drafttheorem}
 
-\subsection*{Step 3: Target B (critical-line exclusion)}
-\begin{drafttheorem}[Target B: canonical critical-line exclusion]
-\label{thm:stage6-master-exclusion-target}
+\subsection*{Target B: critical-line exclusion}
+\begin{drafttheorem}[Target B]
+\label{thm:target-uniqueness}
 \placeholder{Theorem target under construction; proof not yet provided.}
-The argument attempts to prove the single exclusion statement
+The argument attempts to prove
 \[
 \mathcal{B}\subseteq\{q\in\C:\RePart(q)=\tfrac12\}.
 \]
-Status: open target in the current manuscript version.
+Status: open.
 \end{drafttheorem}
 
-\subsection*{Step 4: Conditional RH reduction}
-\begin{proposition}[Conditional RH reduction from Targets A and B]
+\subsection*{Conditional RH reduction}
+\begin{proposition}[Conditional RH reduction]
 \label{prop:rh-reduction-main-spine}
 If Targets~A and~B hold, then every nontrivial zero of $\zeta$ has real part $\tfrac12$.
 \end{proposition}
 
 \begin{proof}
-By Target~A, each nontrivial zero lies in $\mathcal{B}$.
-By Target~B, each point of $\mathcal{B}$ satisfies $\RePart(q)=\tfrac12$.
+By Target~A, every nontrivial zero is in $\mathcal{B}$.
+By Target~B, every point of $\mathcal{B}$ has real part $\tfrac12$.
 Therefore every nontrivial zero lies on the critical line.
 \end{proof}
 
 \begin{remark}[Status discipline]
-The RH deduction above is conditional.
-This manuscript does not claim that Target~A or Target~B is already proved.
+This deduction is conditional on open Targets~A and~B.
+The manuscript does not claim a completed proof of RH.
 \end{remark}

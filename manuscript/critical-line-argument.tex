@@ -1,41 +1,22 @@
-This section states the critical-line target directly in terms of
-\[
-\Phi(q):=\Gamma(q)(1-q)\zeta(q).
-\]
+This section isolates one question in the simplified proof attempt:
+why would strip balance force criticality?
 
-\subsection*{Canonical criticality question}
-Why should
-\[
-\Phi(q)=0
-\]
-force
-\[
-\RePart(q)=\tfrac12
-\]
-for points in the critical strip?
-The manuscript records this as the central open exclusion bridge.
-
-\subsection*{Main exclusion target}
-\begin{drafttheorem}[Target B: critical-line exclusion for balanced points]
-\label{thm:target-uniqueness}
-\placeholder{Theorem target under construction; proof not yet provided.}
+\subsection*{Question}
 Let
 \[
+\Phi(q):=\Gamma(q)(1-q)\zeta(q),
+\qquad
 \mathcal{B}:=\{q\in\C:0<\RePart(q)<1,\ \Phi(q)=0\}.
 \]
-The argument attempts to prove
+The central open step is Target~B from \cref{thm:target-uniqueness}:
 \[
-\mathcal{B}\subseteq\{q\in\C:\RePart(q)=\tfrac12\}.
+q\in\mathcal{B}\Longrightarrow \RePart(q)=\tfrac12.
 \]
-Status: open.
-\end{drafttheorem}
 
-\subsection*{How this feeds RH reduction}
-\begin{proposition}[Interface with the proof spine]
-If \cref{thm:target-correspondence} and \cref{thm:target-uniqueness} are both proved, then \cref{prop:rh-reduction-main-spine} follows.
-\end{proposition}
+\subsection*{Why this is decisive}
+With Target~A (\cref{thm:target-correspondence}), the statement above excludes all off-line nontrivial zeros.
+That implication is exactly the conditional RH reduction in \cref{prop:rh-reduction-main-spine}.
 
-\begin{remark}[Status]
-This section intentionally omits recursive Stage-6 scaffolding.
-The remaining work is concentrated in one direct question: exclude off-line solutions of $\Phi(q)=0$ in the strip.
-\end{remark}
+\subsection*{Current status}
+No Stage-6 dependency stack is used in this section.
+The manuscript records a single open bridge: strip-wide exclusion of off-line balanced points.

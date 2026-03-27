@@ -1,42 +1,25 @@
-This section explains the reduced framework around one direct object.
+This section records the simplified framework used in the main manuscript.
 
-\subsection*{Canonical object in the main text}
-The main flow uses only
+\subsection*{Canonical object}
+The main text is centered on one function:
 \[
 \Phi(q):=\Gamma(q)(1-q)\zeta(q).
 \]
-Balance means $\Phi(q)=0$.
-No operator/resolvent surrogate is used in the core theorem chain.
+Balance is defined only by $\Phi(q)=0$.
 
-\subsection*{Why this simplification is used}
-The manuscript under review is intended for mathematical audit.
-A single explicit object makes dependencies visible:
+\subsection*{Reason for this scope}
+The manuscript under review is prepared for mathematical audit.
+Using one explicit object keeps the proof obligations short and visible:
 \begin{enumerate}
-  \item define $\Phi$,
-  \item relate $\Phi(q)=0$ to nontrivial zeros,
-  \item prove critical-line exclusion for balanced points.
-\end{enumerate}
-This avoids treating a large family of alternative $\Phi_H$ constructions in the proof spine.
-
-\subsection*{Role of operator language (secondary only)}
-Operator-based interpretations may still be useful as heuristic motivation or future support.
-In this revision they are secondary material and do not define balance in the main text.
-Any future operator realization must be presented as support for the fixed canonical object above, not as a replacement for it.
-
-\subsection*{Open burdens attached to the simplified core}
-The simplification does not close the main proof gaps.
-The remaining open burdens are:
-\begin{enumerate}
-  \item proving the theorem-level correspondence between $\Phi(q)=0$ and nontrivial zeta zeros on the strip;
-  \item proving the theorem-level exclusion
-  \[
-  \Phi(q)=0\ \Longrightarrow\ \RePart(q)=\tfrac12
-  \]
-  on the declared domain.
+  \item identify strip zeros via $\Phi(q)=0$;
+  \item exclude off-line strip points via $\Phi(q)=0\Rightarrow \RePart(q)=\tfrac12$.
 \end{enumerate}
 
-\begin{remark}[Audit boundary]
-This section is a scope statement.
-It records what object the argument uses and what is still open.
-It does not claim RH and does not claim that the open bridges are solved.
+\subsection*{Secondary role of operator language}
+Operator or resolvent interpretations are optional heuristics in this revision.
+They are not part of the main theorem chain and are not used to define balance.
+
+\begin{remark}[Status boundary]
+This simplification is organizational, not a completed proof step.
+The two theorem targets above remain open.
 \end{remark}

@@ -1,131 +1,77 @@
-This page exists to make mathematical scrutiny easier.
+This register is maintained for mathematical audit.
 
-# Known Gaps (Audit-Facing)
+# Known Gaps (Simplified Manuscript)
 
-This register tracks the simplified manuscript built around one canonical object:
+The current manuscript is organized around one canonical object:
 \[
 \Phi(q):=\Gamma(q)(1-q)\zeta(q).
 \]
 
-Editorial status note (2026-03-27): the manuscript main flow was simplified to one object, one balance notion, and one exclusion target. This simplification is intentional and does not close any major proof gap by itself.
+Editorial status note (2026-03-27): the main text was simplified to one proof spine. The simplification improves readability but does not close the core proof gaps.
 
 Conventions:
 - **Status labels:** Open / Partial / Blocked.
-- **Resolution criterion:** what would count as mathematical closure.
-- **Evidence rule:** computational or heuristic evidence can guide work but does not prove theorems.
+- **Resolution criterion:** theorem-level closure under explicit hypotheses.
+- **Evidence rule:** heuristic or computational evidence is supportive, not a proof substitute.
 
 ---
 
-## 1) Why this \(\Phi\) is the canonical object
+## 1) Why this \(\Phi\) is the right canonical object
 
-**Gap:** The manuscript chooses
+**Gap:** The manuscript fixes
 \[
 \Phi(q)=\Gamma(q)(1-q)\zeta(q)
 \]
-as the main-text balance object, but this choice is a simplifying decision under audit, not a uniqueness theorem.
+as the main object, but a full theorem-level justification of this choice as the right reduction route is still open.
 
-**Why it matters:**
-- The proof spine depends on this one definition.
-- If the choice is poorly scoped, later targets may not be the right reduction route.
+**Status:** **Open (foundational).**
 
-**Current status:** **Open (foundational framing).**
-
-**What would count as resolution:**
-- A precise theorem-level justification that this \(\Phi\) is sufficient for the intended RH reduction route.
-- Clear domain statements and non-circular assumptions for all uses of \(\Phi\).
+**Resolution criterion:**
+- A precise statement showing this choice is sufficient for the intended RH reduction under declared assumptions.
+- Clear non-circular domain and regularity conditions for each use of \(\Phi\).
 
 ---
 
-## 2) Zero correspondence for the chosen balance condition
+## 2) Why balance corresponds to nontrivial zeta zeros
 
-**Gap:** The manuscript target is to prove strip-level correspondence between
+**Gap:** Target~A remains open in theorem form:
 \[
 \Phi(q)=0
-\quad\text{and}\quad
-\zeta(q)=0 \text{ (nontrivial zeros)}.
+\quad\Longleftrightarrow\quad
+q\text{ is a nontrivial zero of }\zeta
 \]
-This theorem is not yet proved in full manuscript detail.
+on the strip.
 
-**Why it matters:**
-- Target A is the first essential bridge in the proof spine.
-- Without exact correspondence, the RH reduction cannot proceed.
+**Status:** **Open (critical).**
 
-**Current status:** **Open (critical).**
-
-**What would count as resolution:**
-- A complete two-direction theorem with explicit hypotheses and domain.
-- Proof that no spurious strip-balanced points are introduced by the chosen formulation.
+**Resolution criterion:**
+- A complete two-direction proof with explicit hypotheses.
+- Explicit exclusion of spurious strip-balanced points.
 
 ---
 
-## 3) Critical condition: why balance forces \(\Re(q)=1/2\)
+## 3) Why balance forces criticality
 
-**Gap:** The central exclusion target
+**Gap:** Target~B remains open:
 \[
-\Phi(q)=0 \Rightarrow \Re(q)=\tfrac12
+\Phi(q)=0 \Longrightarrow \Re(q)=\tfrac12
 \]
-on the strip remains open.
+on the strip.
 
-**Why it matters:**
-- This is Target B in the simplified manuscript.
-- RH requires exclusion of all off-line strip candidates.
+**Status:** **Open (central).**
 
-**Current status:** **Open (central).**
-
-**What would count as resolution:**
-- A theorem-level critical-line exclusion proof under one synchronized hypothesis package.
-- Explicit control of all strip regimes used in the argument.
+**Resolution criterion:**
+- A theorem-level exclusion proof for off-line strip points under one coherent hypothesis package.
 
 ---
 
-## 4) Global exclusion from local arguments (if used)
+## Reviewer quick check
 
-**Gap:** Any local-to-global transfer used to support Target B must be proved explicitly.
+This file tracks three questions only:
+1. Is the canonical object choice adequately justified?
+2. Is zero--balance correspondence proved?
+3. Is critical-line exclusion proved?
 
-**Why it matters:**
-- Local control alone does not settle strip-wide exclusion.
-- Hidden assumptions can enter at continuation/extension steps.
-
-**Current status:** **Open (technical).**
-
-**What would count as resolution:**
-- A complete theorem that upgrades local exclusion to strip-wide exclusion under declared assumptions.
-- Proof-level justification of all continuation/interchange operations used.
-
----
-
-## 5) Heuristic vs theorem boundary
-
-**Gap:** Some motivation remains heuristic.
-
-**Why it matters:**
-- Heuristic interpretation cannot replace theorem-level proof.
-
-**Current status:** **Partial.**
-
-**What would count as resolution:**
-- Every RH-relevant step written as theorem + proof under explicit hypotheses.
-- Heuristic remarks kept clearly labeled and non-essential.
-
----
-
-## At-a-glance risk board
-
-| Gap | Why it matters (short) | Status | Resolution signal |
-|---|---|---|---|
-| Canonical \(\Phi\) justification | Foundational scope of the spine | Open | Theorem-level sufficiency/justification |
-| Target A (zero correspondence) | Links balance to zeta zeros | Open | Two-direction correspondence theorem |
-| Target B (critical-line exclusion) | Excludes off-line balanced points | Open | Strip-wide exclusion theorem |
-| Local-to-global transfer | Prevents regime gaps | Open | Full transfer theorem |
-| Heuristic/theorem separation | Protects rigor | Partial | Explicit formal replacements |
-
----
-
-## Reviewer use
-
-This file is intended to answer:
-1. Which bridges are still open?
-2. Are they acknowledged explicitly?
-3. What exact theorem milestones would close them?
+If any answer is "no," RH remains unproved in this manuscript.
 
 *Last updated: 2026-03-27.*
