@@ -1,13 +1,13 @@
 This register is maintained for mathematical audit.
 
-# Known Gaps (Simplified Manuscript)
+# Known Gaps (Simplified Proof Spine)
 
-The current manuscript is organized around one canonical object:
+The manuscript is organized around
 \[
-\Phi(q):=\Gamma(q)(1-q)\zeta(q).
+\Phi(s):=\Gamma(s)(1-s)\zeta(s).
 \]
 
-Editorial status note (2026-03-27): the main text was simplified to one proof spine. The simplification improves readability but does not close the core proof gaps.
+Editorial status note (2026-03-27): the draft was compressed to one direct proof spine. This improves traceability but does not close the central theorem gap.
 
 Conventions:
 - **Status labels:** Open / Partial / Blocked.
@@ -16,62 +16,59 @@ Conventions:
 
 ---
 
-## 1) Why this \(\Phi\) is the right canonical object
+## 1) Strip correspondence bookkeeping
 
-**Gap:** The manuscript fixes
+**Gap:** The strip correspondence
 \[
-\Phi(q)=\Gamma(q)(1-q)\zeta(q)
+\Phi(s)=0\iff\zeta(s)=0
+\quad (0<\Re(s)<1)
 \]
-as the main object, but a full theorem-level justification of this choice as the right reduction route is still open.
+is straightforward, but the manuscript still needs consistent bookkeeping in every use (domain restrictions, exclusion of poles, and explicit strip hypotheses).
 
-**Status:** **Open (foundational).**
+**Status:** **Partial (technical clarity).**
 
 **Resolution criterion:**
-- A precise statement showing this choice is sufficient for the intended RH reduction under declared assumptions.
-- Clear non-circular domain and regularity conditions for each use of \(\Phi\).
+- Every theorem or lemma invocation states the strip hypothesis explicitly.
+- No step applies the correspondence outside its valid domain.
 
 ---
 
-## 2) Why balance corresponds to nontrivial zeta zeros
+## 2) Critical-line exclusion from the raw zero condition
 
-**Gap:** Target~A remains open in theorem form:
+**Gap:** The core theorem target is still open:
 \[
-\Phi(q)=0
-\quad\Longleftrightarrow\quad
-q\text{ is a nontrivial zero of }\zeta
+0<\Re(s)<1,\ \Phi(s)=0
+\Longrightarrow
+\Re(s)=\tfrac12.
 \]
-on the strip.
-
-**Status:** **Open (critical).**
-
-**Resolution criterion:**
-- A complete two-direction proof with explicit hypotheses.
-- Explicit exclusion of spurious strip-balanced points.
-
----
-
-## 3) Why balance forces criticality
-
-**Gap:** Target~B remains open:
-\[
-\Phi(q)=0 \Longrightarrow \Re(q)=\tfrac12
-\]
-on the strip.
 
 **Status:** **Open (central).**
 
 **Resolution criterion:**
-- A theorem-level exclusion proof for off-line strip points under one coherent hypothesis package.
+- A complete proof under a single coherent hypothesis package.
+- Explicit exclusion of off-line strip points.
+
+---
+
+## 3) RH closure from the core target
+
+**Gap:** RH follows conditionally once Item 2 is proved, but unconditional closure is unavailable because Item 2 is open.
+
+**Status:** **Open (depends on Item 2).**
+
+**Resolution criterion:**
+- Closure of Item 2.
+- Final theorem statement with dependencies and hypotheses fully documented.
 
 ---
 
 ## Reviewer quick check
 
-This file tracks three questions only:
-1. Is the canonical object choice adequately justified?
-2. Is zero--balance correspondence proved?
-3. Is critical-line exclusion proved?
+This file now tracks three direct checks:
+1. Is strip correspondence used with correct domain restrictions?
+2. Is critical-line exclusion proved from \(\Phi(s)=0\)?
+3. If not, is RH correctly presented as conditional only?
 
-If any answer is "no," RH remains unproved in this manuscript.
+If Item 2 is unresolved, RH remains unproved in this manuscript.
 
 *Last updated: 2026-03-27.*

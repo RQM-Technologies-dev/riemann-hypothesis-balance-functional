@@ -1,13 +1,13 @@
-This section fixes the canonical definitions used in the simplified proof attempt.
+This section fixes the canonical definitions for the manuscript under review.
 
 \begin{definition}[Critical strip and critical line]
 The critical strip is
 \[
-\{q\in\C:0<\RePart(q)<1\},
+\{s\in\C:0<\RePart(s)<1\},
 \]
 and the critical line is
 \[
-\{q\in\C:\RePart(q)=\tfrac12\}.
+\{s\in\C:\RePart(s)=\tfrac12\}.
 \]
 \end{definition}
 
@@ -15,30 +15,28 @@ and the critical line is
 \label{def:phi-canonical}
 Define
 \[
-\Phi(q):=\Gamma(q)(1-q)\zeta(q).
+\Phi(s):=\Gamma(s)(1-s)\zeta(s).
 \]
-This is the only main-text balance object in this manuscript.
 \end{definition}
 
 \begin{definition}[Balanced point]
 \label{def:balanced-point}
-A point $q$ is \emph{balanced} if and only if $\Phi(q)=0$.
-On the strip define
+A point $s\in\C$ is \emph{balanced} if and only if
 \[
-\mathcal{B}:=\{q\in\C:0<\RePart(q)<1,\ \Phi(q)=0\}.
+\Phi(s)=0.
 \]
 \end{definition}
 
-\begin{remark}[Immediate strip identity]
-For $0<\RePart(q)<1$, $\Gamma(q)\neq0$ and $1-q\neq0$.
-Hence
+\begin{remark}[Strip correspondence]
+\label{rem:strip-correspondence}
+If $0<\RePart(s)<1$, then $\Gamma(s)\neq 0$ and $1-s\neq 0$. Therefore
 \[
-\Phi(q)=0\iff \zeta(q)=0
+\Phi(s)=0\iff \zeta(s)=0
 \]
 on the strip.
 \end{remark}
 
 \begin{remark}[Status boundary]
-These are definitions and standard analytic facts.
-No RH claim follows from this section alone.
+The definitions and strip correspondence above are standard analytic facts.
+They do not by themselves prove RH.
 \end{remark}
