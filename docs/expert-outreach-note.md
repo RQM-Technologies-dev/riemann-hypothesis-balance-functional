@@ -1,10 +1,10 @@
 # Expert Outreach Note (First-Pass Private Review)
 
-Subject (optional): Private first-pass review request — proposed proof framework (RH, spectral coherence)
+Subject (optional): Private first-pass review request — proposed proof framework (RH, balance-functional approach)
 
 Dear [Name],
 
-I am sharing a repository that contains a **proposed proof framework** for a spectral-coherence approach to the Riemann Hypothesis. The materials are organized for mathematical audit, and the manuscript is **under review** rather than established.
+I am sharing a repository that contains a **proposed proof framework** for a balance-functional approach to the Riemann Hypothesis. The materials are organized for mathematical audit, and the manuscript is **under review** rather than established.
 
 If you are open to a brief first pass, I would be grateful for focused technical feedback on definitions, logical dependencies, and any unresolved proof bridges (especially places where an implication appears unsupported or assumptions need tightening). Identifying gaps is explicitly welcome and useful.
 

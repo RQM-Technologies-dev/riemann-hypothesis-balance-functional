@@ -16,7 +16,11 @@ The Riemann Hypothesis (RH) is a statement about where certain zeros of the Riem
 
 ## What this project is trying to do
 
-This project develops a **spectral-coherence** approach. The argument attempts to show that the critical line is not just one possible location, but the **unique balance axis** compatible with the zeta function’s symmetry and spectral structure.
+This project develops a **balance-functional** approach centered on
+\[
+\Phi(s):=\Gamma(s)(1-s)\zeta(s).
+\]
+The argument attempts to show that the critical line is not just one possible location, but the **unique balance axis** compatible with the zeta function’s symmetry and this balance structure.
 
 In plain language: the framework tries to explain why zeros should align on that line for structural reasons, and then formalize that explanation into rigorous mathematics.
 

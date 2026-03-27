@@ -3,24 +3,24 @@ message: >
   If you reference or build upon this repository, please cite it using the
   metadata below. This project is a proposed proof framework and manuscript
   under review; please cite it accordingly.
-title: "Riemann Hypothesis via Spectral Coherence"
+title: "A Balance Functional Approach to the Riemann Hypothesis"
 abstract: >
   Repository containing manuscript materials, documentation, and support code
-  for a proposed spectral-coherence framework related to the Riemann
-  Hypothesis. The materials are organized for mathematical audit and mark
-  unresolved bridges explicitly.
+  for a proposed balance-functional framework related to the Riemann
+  Hypothesis, centered on Phi(s)=Gamma(s)(1-s)zeta(s). The materials are
+  organized for mathematical audit and mark unresolved bridges explicitly.
 type: software
 authors:
-  - name: "RQM Technologies"
-    # Replace with individual author details when public attribution is finalized:
-    # family-names: "Surname"
-    # given-names: "Given"
-    # orcid: "https://orcid.org/0000-0000-0000-0000"
-    # affiliation: "Institution"
+  - family-names: "Van Geem"
+    given-names: "John Garman"
+    name: "John Garman Van Geem"
+    orcid: "https://orcid.org/0009-0002-4003-8452"
+    affiliation: "CEO / RQM Technologies"
 keywords:
   - riemann-hypothesis
   - zeta-function
   - analytic-number-theory
+  - balance-functional-method
   - spectral-theory
   - manuscript-under-review
   - mathematical-audit
@@ -43,7 +43,7 @@ url: "https://github.com/RQM-Technologies-dev/riemann-hypothesis-spectral-cohere
 # --- Preferred manuscript citation (enable once manuscript metadata is stable) ---
 # preferred-citation:
 #   type: article
-#   title: "Riemann Hypothesis via Spectral Coherence: [Manuscript Title]"
+#   title: "A Balance Functional Approach to the Riemann Hypothesis: [Manuscript Title]"
 #   authors:
 #     - family-names: "Surname"
 #       given-names: "Given"
