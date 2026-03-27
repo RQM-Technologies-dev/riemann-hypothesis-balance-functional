@@ -1,6 +1,6 @@
-# Riemann Hypothesis via Spectral Coherence
+# A Balance Functional Approach to the Riemann Hypothesis
 
-**Proposed proof framework and audit materials for a spectral-coherence approach to the critical line.**
+**Proposed proof framework and audit materials for a balance-functional approach to the critical line.**
 
 > [!IMPORTANT]
 > **Disclaimer (read first):** This repository is a **proposed proof framework under review**. It is provided as material for mathematical audit and should not be treated as an established proof unless independently verified.
@@ -15,7 +15,11 @@ This repository is organized for skeptical, technical review.
 - `code/`: Supporting computational experiments and visualizations; these are evidence aids, not substitutes for proof.
 - `media/`: Figures and diagrams used by the manuscript and documentation.
 
-The argument attempts to show that the critical line arises as the unique balance axis in a reflection-symmetric spectral framework. The materials separate formal statements, heuristic motivation, and unresolved bridges where possible.
+The argument attempts to show that the critical line arises as the unique balance axis in a reflection-symmetric balance-functional framework centered on
+\[
+\Phi(s):=\Gamma(s)(1-s)\zeta(s).
+\]
+The materials separate formal statements, heuristic motivation, and unresolved bridges where possible.
 
 ## Fastest path for reviewers
 

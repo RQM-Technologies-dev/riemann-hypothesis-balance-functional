@@ -1,6 +1,6 @@
 # Documentation Index
 
-Welcome to the documentation for the **Riemann Hypothesis via Spectral Coherence** repository.
+Welcome to the documentation for **A Balance Functional Approach to the Riemann Hypothesis** repository.
 
 This documentation is organized to serve different audiences:
 
