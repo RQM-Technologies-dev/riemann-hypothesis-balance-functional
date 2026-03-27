@@ -1,155 +1,32 @@
-This section records the present limits of the argument and identifies the exact burden of proof that remains.
-It is written for mathematical audit: each unresolved bridge is stated explicitly so that reviewers can test the framework at its most vulnerable points.
+This section records the present limits of the argument in compact audit form.
 
-\subsection*{Scope and evidentiary standard}
-The manuscript proposes a proof framework.
-Its intuitive geometric language is intended to guide construction and suggest mechanisms, but it does not by itself constitute proof.
-Only statements supported by complete definitions, hypotheses, and logically valid derivations should be treated as formal results.
+\subsection*{Scope and standard}
+The manuscript is a proposed proof framework.
+Only theorem-level statements with explicit hypotheses count as proved content.
+Heuristic and computational evidence remain supporting context.
 
-\subsection*{Primary open bridges}
+\subsection*{Main open theorem burdens}
+The simplified proof spine leaves two central open targets:
 \begin{enumerate}
-  \item \textbf{Rigorous operator construction.}
-  The operator/spectral construction must be specified on a precise functional-analytic domain, with well-defined action, closure properties, and spectral meaning.
-  At present, this construction is programmatic rather than complete.
-  Any downstream claim that depends on the spectrum is therefore conditional on this step.
+  \item \textbf{Target A (zero--balance correspondence).}
+  A full theorem is still required to show exact correspondence between nontrivial zeros and balanced points.
 
-  \item \textbf{Proof of the zero--balance equivalence.}
-  Any claimed equivalence between the proposed balance criteria and nontrivial zeros of $\zeta(s)$ must be proved as a theorem in both directions.
-  This equivalence cannot be assumed from analogy, numerics, or partial correspondences.
-  Until a full equivalence proof is written, the balance criteria should be treated as candidate reformulations.
-
-  \item \textbf{Rigorous uniqueness of the critical line.}
-  The argument requires a proof that the relevant mechanism selects $\Re(s)=\tfrac12$ uniquely, not merely that it is compatible with that line.
-  Exclusion of off-line alternatives must be established by explicit estimates or structural theorems under stated hypotheses.
-  Without such a proof, uniqueness of the critical line remains open within this framework.
+  \item \textbf{Target B (critical-line exclusion for balanced points).}
+  A full theorem is still required to show
+  \(
+  \mathcal{B}\subseteq\{s:\RePart(s)=\tfrac12\}
+  \)
+  on the declared admissible strip class.
 \end{enumerate}
 
-\subsection*{Operator-theoretic failure mode (explicit Stage-2/Stage-6 risk)}
-The operator burden is an open bridge with concrete failure modes, not a generic warning.
-The balance framework and exclusion route fail as theorem-level arguments if any of the following operator-side items is missing under the chosen model:
+\subsection*{Technical dependencies remain open}
+Although no longer expanded in the main spine, the following technical burdens remain unresolved and must eventually be discharged in supporting materials:
 \begin{enumerate}
-  \item no proof-level ambient-space/domain specification for $H$ matching later lemmas;
-  \item no proved closure/closability or graph control where later spectral steps require it;
-  \item no proved domain invariance under reflection/conjugation (or other declared symmetry transport);
-  \item no explicit intertwining/covariance identity linking operator symmetry to the balance law $\Phi_H$;
-  \item use of spectral constructions without a proved legitimacy theorem in the declared operator setting;
-  \item failure to prove that operator-side transformations preserve admissibility hypotheses used in local-to-global transfer;
-  \item mismatch between operator assumptions used in Target~A/Target~B and those used in Stage~6 exclusion.
-\end{enumerate}
-Accordingly, the manuscript requires an explicit operator-theoretic support package (OP1--OP8 in \texttt{spectral-framework.tex} and \texttt{lemmas.tex}), with each item proved or explicitly imported in one synchronized hypothesis package.
-Until this package is discharged, correspondence, uniqueness transfer, and full-strip exclusion remain conditional.
-
-\subsection*{Analytic-control failure mode (explicit Stage-6 risk)}
-The analytic-control burden is an open bridge, not a generic caution.
-For the local-to-global transfer and full-strip exclusion steps, failure of any one of the following would invalidate the Stage~6 route even if local Target~B were available:
-\begin{enumerate}
-  \item missing strip-wide growth bounds in boundary-near or large-parameter sectors;
-  \item non-uniform convergence in representations used to transport local estimates;
-  \item unjustified interchange operations (limit/integral, derivative/integral, summation/integration, contour deformation);
-  \item continuation/compactness failure that blocks extension from $\mathcal{R}_{\mathrm{loc}}$ to $\mathcal{A}_{\mathrm{strip}}$;
-  \item hidden off-line branch emergence for $\mathcal{B}=\{s\in\mathcal{A}_{\mathrm{strip}}:\Phi_H(s)=0\}$ outside locally controlled regimes;
-  \item incompatibility between local estimates and strip-wide admissibility hypotheses.
-\end{enumerate}
-Accordingly, Stage~6 requires an explicit analytic-control theorem package (AC1--AC6 in \texttt{spectral-framework.tex} and \texttt{lemmas.tex}), with each item either proved or declared as a synchronized assumption. Until that package is discharged, no theorem-level full-strip exclusion claim is available in this manuscript.
-
-
-\subsection*{Status of the minimum Stage~6 hypothesis package}
-The manuscript now names a minimum synchronized package $\mathcal{H}_{\mathrm{S6}}^{\min}$ for the preferred Stage~6 route (local uniqueness $\to$ transfer $\to$ no-alternative-locus $\to$ full-strip exclusion).
-This package is a formulation scaffold only.
-It specifies the minimum assumptions required to state the target theorem cleanly under one synchronized hypothesis set.
-The target theorem in view is the master Stage~6 exclusion statement: under $\mathcal{H}_{\mathrm{S6}}^{\min}$, local uniqueness on $\mathcal{R}_{\mathrm{loc}}$ extends to global strip exclusion of off-line balanced points, equivalently $\mathcal{B}\subseteq\{s\in\mathcal{A}_{\mathrm{strip}}:\RePart(s)=\tfrac12\}$.
-For audit clarity, the same endpoint is tracked in pointwise, set-theoretic, component/locus, and contradiction-style formulations under the same synchronized package.
-This is recorded as an open theorem target for audit.
-It does not establish that those assumptions are jointly sufficient for a proof.
-It does not assert that any package item is already proved.
-Any later sufficiency claim would require a separate theorem-level argument that discharges every dependency without hypothesis drift.
-The manuscript now also names a first Stage~6 subtheorem target and, within it, one single best first technical move: the concrete lemma target of uniform no-drift transport of the Stage-5 hypothesis tuple along $\mathfrak{C}_{\mathrm{tr}}$.
-This target is now stated as the draft theorem \cref{thm:stage6-first-subtarget-admissibility} in explicit contradiction-ready form, together with a separate proof-skeleton outline.
-Both the theorem and the skeleton are explicitly open and conditional.
-The contradiction-ready formatting is intended to make a line-by-line proof attempt executable for audit; it is not evidence of completion.
-The same status applies to the new first-control derivation skeleton (initialization $+$ structural non-increase $\Rightarrow$ \cref{lem:b4-first-delta-control}): it is a planning scaffold for audit and does not constitute a completed derivation.
-This is a strategy and dependency-order decision only.
-It does not establish that the subtheorem is proved, nor that proving it alone would complete Stage~6.
-The associated no-drift defect functional $\Delta_{\mathrm{nd}}$ is also provisional in this manuscript version: it is defined at the OP/AC interface level for audit and proof planning, and may be revised when a finalized operator realization and transfer model are fixed.
-Its first control statement (\cref{lem:b4-first-delta-control}: classwise vanishing on $\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$) is likewise an open target, not a proved lemma and not a claim that $\Delta_{\mathrm{nd}}$ is the final canonical defect quantity.
-The current base-case companion statement (\cref{lem:b4-delta-initialization-seed}: seed-anchor zero defect on canonical transfer seeds) is also an open proof-planning initialization under audit, not a proved fact and not a final commitment to a unique seed model.
-The manuscript now also records one best current candidate structural property for attempting that control:
-non-increase of $\Delta_{\mathrm{nd}}$ under synchronized transport extension on $\mathfrak{C}_{\mathrm{tr}}$ under one package $\mathcal{H}_{\mathrm{S6}}^{\min}$,
-\[
-C_1\preceq C_2\Longrightarrow
-\Delta_{\mathrm{nd}}(C_2;\Theta_{\mathrm{S5}},\delta)
-\le
-\Delta_{\mathrm{nd}}(C_1;\Theta_{\mathrm{S5}},\delta).
-\]
-This property is a current proof-planning hypothesis under audit.
-It is not a theorem, not a proved support result, and not a claim that control of $\Delta_{\mathrm{nd}}$ has been obtained.
-
-
-\subsection*{Highest-risk point in the current first Stage~6 contradiction attempt}
-The manuscript now identifies a single highest-risk step in the current first contradiction-style subtheorem
-(\cref{thm:stage6-first-subtarget-admissibility}).
-This is not presented as fatal.
-It is presented as the current top audit risk.
-
-\paragraph{Contradiction target being attempted.}
-Under $\mathcal{H}_{\mathrm{S6}}^{\min}$, the first target attempts to show that no transfer-reachable off-line balanced point survives:
-\[
-\mathcal{B}_{\mathrm{tr}}\cap\{s\in\mathcal{A}_{\mathrm{strip}}:\RePart(s)\neq\tfrac12\}=\varnothing.
-\]
-
-\paragraph{Primary likely failure point.}
-The likely failure point is the no-drift transport claim that the exact Stage-5 local hypothesis tuple persists from
-$\mathcal{R}_{\mathrm{loc}}$ to endpoint candidates in $\mathcal{A}_{\mathrm{strip}}$ along $\mathfrak{C}_{\mathrm{tr}}$ under unchanged predicates.
-If this step is underjustified, the contradiction can call local uniqueness at an endpoint where local hypotheses were never theorem-level re-established.
-Within the current \emph{first actual three-step proof skeleton}
-\[
-\cref{lem:b4-delta-initialization-seed}
-\Longrightarrow
-\cref{lem:b4-delta-structural-nonincrease}
-\Longrightarrow
-\cref{lem:b4-first-delta-control},
-\]
-the single most likely internal break point is the universal synchronized seed-extension coverage clause on
-$\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$.
-Initialization and structural non-increase can both hold while still failing to deliver the classwise conclusion if this coverage is missing or only partial.
-This is a diagnosis of the present first derivation attempt, not a claim that the skeleton is invalid.
-
-\paragraph{Neutralization criterion.}
-To neutralize this risk, the manuscript needs a theorem-level transport invariance result with explicit dependency control:
-for each relevant transfer object, admissibility, regularity, symmetry-compatibility, and well-posedness clauses used by Stage~5 are preserved without hidden hypothesis switching.
-In current notation this is the B4a first-concrete bridge (\cref{lem:b4-admissibility-stability-transfer}), with explicit OP7--OP8 and AC1--AC6 support under one synchronized package.
-At the three-step level, the neutralization must also include theorem-level seed-extension coverage under the same synchronized package, now isolated as the explicit repair target \cref{lem:b4-seed-extension-coverage-bridge}, so that initialization + non-increase legitimately imply \cref{lem:b4-first-delta-control} on all of $\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$.
-Until this bridge is proved, the first Stage~6 contradiction attempt remains open.
-
-\paragraph{Current best candidate repair target (explicitly open).}
-The manuscript now names one best candidate repair lemma for this specific failure point:
-\cref{lem:b4-seed-extension-coverage-bridge} in \texttt{lemmas.tex}.
-This target is the coverage/reachability bridge under $\mathcal{H}_{\mathrm{S6}}^{\min}$:
-it requires that every contradiction-relevant transfer object is synchronized-extension reachable from some seed anchor with unchanged tuple/gauge semantics.
-Status remains open.
-This is a repair target, not a proved fix and not a claim of uniqueness.
-The downstream neutralizing theorem target remains \cref{thm:stage6-neutralizing-transport-uniformity} in \texttt{critical-line-argument.tex}.
-Likewise, the first concrete lemma is a current proving-move designation, not an established result.
-
-\paragraph{Technical-character classification (audit judgment; not a theorem claim).}
-Current manuscript reading classifies this neutralizing target as \emph{genuinely mixed}, with \emph{analytic dominant burden} and \emph{operator-theoretic supporting burden}.
-This classification is based on the present dependency architecture (AC1--AC6 carrying the no-drift transport control; OP7--OP8 with invoked OP1--OP6 keeping transport assumptions typed and synchronized).
-It is recorded for proof-planning focus.
-It is not proved as a meta-theorem and may change if the operator realization or transfer model is revised.
-
-\paragraph{What remains unresolved even if the repair target is proved.}
-Even with that neutralizing result, Stage~6 would still require separate closure of:
-\begin{enumerate}
-  \item no-new-off-line-branch emergence outside transfer-reachable classes;
-  \item the no-alternative-locus theorem target for all of $\mathcal{B}$ on $\mathcal{A}_{\mathrm{strip}}$;
-  \item the master Stage~6 exclusion theorem that upgrades local control to full-strip exclusion under one synchronized package.
+  \item operator-theoretic well-posedness and compatibility needed by the balance construction;
+  \item analytic-control and continuation estimates needed to prevent hidden off-line balance branches;
+  \item synchronization of assumptions across local arguments and strip-wide conclusions.
 \end{enumerate}
 
-\subsection*{Interpretation of intermediate evidence}
-Computational checks, model examples, and heuristic consistency tests are useful for stress-testing definitions and detecting contradictions, but they are not substitutes for proof.
-They may justify further investigation; they do not discharge formal obligations.
-
-\subsection*{Policy for unresolved steps}
-Any unresolved dependency should be treated as open and cited where it is used.
-No conclusion stronger than the proved dependencies is warranted.
-Accordingly, the manuscript should be read as materials for mathematical audit of a proposed proof framework, with explicit open bridges rather than implicit assumptions.
+\subsection*{Consequence for claims}
+Because these burdens remain open, the manuscript does not claim a complete proof of RH.
+It should be read as materials for mathematical audit of an argument that attempts to establish RH under explicit unresolved targets.
