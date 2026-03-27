@@ -1,49 +1,41 @@
-This section keeps only the lemma targets needed for the simplified proof spine.
+This ledger keeps only lemma targets that directly support the simplified proof spine around
+\[
+\Phi(q):=\Gamma(q)(1-q)\zeta(q).
+\]
 
-\subsection*{A. Standard symmetry inputs}
+\subsection*{A. Standard inputs}
 
 \begin{lemma}[Reflection symmetry of nontrivial zeros]
 If $\rho$ is a nontrivial zero of $\zeta$, then $1-\rho$ is also a nontrivial zero.
 \end{lemma}
-\noindent\emph{Status: standard.} Follows from the functional equation for completed zeta.
+\noindent\emph{Status: standard.} This follows from the functional equation for completed zeta.
 
 \begin{lemma}[Conjugation symmetry of nontrivial zeros]
 If $\rho$ is a nontrivial zero of $\zeta$, then $\overline{\rho}$ is also a nontrivial zero.
 \end{lemma}
-\noindent\emph{Status: standard.} Follows from Schwarz reflection.
+\noindent\emph{Status: standard.} This follows from Schwarz reflection.
 
-\subsection*{B. Open lemma targets for the canonical object $\Phi$}
+\subsection*{B. Open lemma targets for the main argument}
 
-\begin{lemma}[Strip equivalence lemma target \textnormal{(OPEN)}]
-\label{lem:phi-strip-equivalence}
+\begin{lemma}[Zero--balance correspondence target \textnormal{(OPEN)}]
+\label{lem:phi-zero-balance}
 \placeholder{Proof not yet provided.}
-On the critical strip, show carefully that
+On the strip $0<\RePart(q)<1$, prove with full domain bookkeeping that
 \[
-\Phi(q)=\Gamma(q)(1-q)\zeta(q)=0
+\Phi(q)=0
 \quad\Longleftrightarrow\quad
-\zeta(q)=0,
+q\text{ is a nontrivial zero of }\zeta.
 \]
-including all domain and regularity details needed by later arguments.
 \end{lemma}
 
-\begin{lemma}[Critical-line exclusion lemma target \textnormal{(OPEN)}]
+\begin{lemma}[Critical-line exclusion target \textnormal{(OPEN)}]
 \label{lem:phi-critical-exclusion}
 \placeholder{Proof not yet provided.}
-For strip points, show
+On the strip, prove
 \[
-\Phi(q)=0 \Longrightarrow \RePart(q)=\tfrac12
-\]
-under one explicit hypothesis package.
-\end{lemma}
-
-\begin{lemma}[No off-line balanced points lemma target \textnormal{(OPEN)}]
-\label{lem:no-offline-balanced}
-\placeholder{Proof not yet provided.}
-Using the critical-line exclusion route, prove
-\[
-\{q:0<\RePart(q)<1,\ \RePart(q)\neq\tfrac12,\ \Phi(q)=0\}=\varnothing.
+\Phi(q)=0\Longrightarrow \RePart(q)=\tfrac12.
 \]
 \end{lemma}
 
 \subsection*{Audit note}
-\auditnote{The standard lemmas in Part A are available inputs. The lemmas in Part B are open targets. They are the direct support list for Target A, Target B, and the conditional RH reduction in the simplified manuscript.}
+\auditnote{No B5 cross-cutting support block is used in this main manuscript. The open work is concentrated in the two lemma targets above.}

@@ -1,33 +1,23 @@
-We use a four-step proof spine centered on one canonical object.
+This manuscript now uses one direct proof spine, not a recursive architecture.
 
-\subsection*{Main proof spine}
+\subsection*{Proof spine}
 \begin{enumerate}
-  \item \textbf{Define the object.}
-  Set
+  \item \textbf{Define the canonical object:}
   \[
   \Phi(q):=\Gamma(q)(1-q)\zeta(q).
   \]
 
-  \item \textbf{Define balance and correspondence target.}
-  Balance means $\Phi(q)=0$.
-  Target~A asks for correspondence between balanced strip points and nontrivial zeta zeros (\cref{thm:target-correspondence}).
+  \item \textbf{Define balance:}
+  $q$ is balanced exactly when $\Phi(q)=0$.
 
-  \item \textbf{State one exclusion target.}
-  Target~B asks to prove
-  \[
-  \Phi(q)=0 \Longrightarrow \RePart(q)=\tfrac12
-  \]
-  for strip points (\cref{thm:target-uniqueness}).
+  \item \textbf{State two theorem targets:}
+  Target~A is strip zero--balance correspondence (\cref{thm:target-correspondence});
+  Target~B is strip critical-line exclusion (\cref{thm:target-uniqueness}).
 
-  \item \textbf{Deduce RH conditionally.}
-  Combine Targets~A and~B to obtain the conditional RH reduction (\cref{prop:rh-reduction-main-spine}).
+  \item \textbf{Deduce RH conditionally:}
+  if Targets~A and~B both hold, RH follows by \cref{prop:rh-reduction-main-spine}.
 \end{enumerate}
 
 \subsection*{Status}
-Step~1 is definitional.
-Steps~2 and~3 are open theorem targets.
-Therefore Step~4 is conditional, and RH is not claimed as proved.
-
-\subsection*{Placement of secondary machinery}
-Alternative operator/resolvent architectures are secondary.
-If retained, they belong to supporting notes and not to this main proof spine.
+Steps 1--2 are definitions. Steps 3--4 are open theorem work.
+The argument attempts to establish RH through this route, but RH is not claimed as proved.
