@@ -147,6 +147,14 @@ with operator-side support from OP7--OP8 (and invoked OP1--OP6) and analytic-con
 The no-new-off-line-branch and no-alternative-locus burdens are subsequent Stage~6 obligations, not part of the first subtheorem itself.
 This separation is enforced for audit clarity and theorem-status discipline.
 
+
+\paragraph{Single highest-risk dependency inside the first contradiction setup.}
+Within the first contradiction-style Stage~6 target, the present highest-risk dependency is the transport bridge
+$\cref{lem:b4-admissibility-stability-transfer}$.
+This bridge is where the argument must show that hypotheses proved/assumed locally on $\mathcal{R}_{\mathrm{loc}}$ remain valid at transfer-reachable endpoints in $\mathcal{A}_{\mathrm{strip}}$ under the same package $\mathcal{H}_{\mathrm{S6}}^{\min}$.
+If this bridge fails or remains underjustified, the contradiction step is not yet well-typed: Stage-5 uniqueness is invoked at the endpoint without a theorem-level no-drift transfer justification.
+Accordingly, this bridge is the first proof-critical audit checkpoint in the Stage~6 dependency chain.
+
 \textbf{Intended output.}
 A global theorem-level exclusion mechanism distinct from Stage 5, culminating in the master theorem target \cref{thm:stage6-master-exclusion-target}:
 \begin{enumerate}

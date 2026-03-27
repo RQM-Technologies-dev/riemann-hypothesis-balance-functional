@@ -70,6 +70,30 @@ The contradiction-ready formatting is intended to make a line-by-line proof atte
 This is a strategy and dependency-order decision only.
 It does not establish that the subtheorem is proved, nor that proving it alone would complete Stage~6.
 
+
+\subsection*{Highest-risk point in the current first Stage~6 contradiction attempt}
+The manuscript now identifies a single highest-risk step in the current first contradiction-style subtheorem
+(\cref{thm:stage6-first-subtarget-admissibility}).
+This is not presented as fatal.
+It is presented as the current top audit risk.
+
+\paragraph{Contradiction target being attempted.}
+Under $\mathcal{H}_{\mathrm{S6}}^{\min}$, the first target attempts to show that no transfer-reachable off-line balanced point survives:
+\[
+\mathcal{B}_{\mathrm{tr}}\cap\{s\in\mathcal{A}_{\mathrm{strip}}:\RePart(s)\neq\tfrac12\}=\varnothing.
+\]
+
+\paragraph{Primary likely failure point.}
+The likely failure point is the no-drift transport claim that the exact Stage-5 local hypothesis tuple persists from
+$\mathcal{R}_{\mathrm{loc}}$ to endpoint candidates in $\mathcal{A}_{\mathrm{strip}}$ along $\mathfrak{C}_{\mathrm{tr}}$ under unchanged predicates.
+If this step is underjustified, the contradiction can call local uniqueness at an endpoint where local hypotheses were never theorem-level re-established.
+
+\paragraph{Neutralization criterion.}
+To neutralize this risk, the manuscript needs a theorem-level transport invariance result with explicit dependency control:
+for each relevant transfer object, admissibility, regularity, symmetry-compatibility, and well-posedness clauses used by Stage~5 are preserved without hidden hypothesis switching.
+In current notation this is the B4a transport bridge, with explicit OP7--OP8 and AC1--AC6 support under one synchronized package.
+Until this bridge is proved, the first Stage~6 contradiction attempt remains open.
+
 \subsection*{Interpretation of intermediate evidence}
 Computational checks, model examples, and heuristic consistency tests are useful for stress-testing definitions and detecting contradictions, but they are not substitutes for proof.
 They may justify further investigation; they do not discharge formal obligations.
