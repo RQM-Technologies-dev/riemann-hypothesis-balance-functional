@@ -101,14 +101,25 @@ Accordingly, the immediate B4 support lemmas are grouped by burden type:
 \end{enumerate}
 This grouping is an audit map only; it does not claim any lemma below is proved.
 
-\begin{lemma}[Uniform no-drift transport of the Stage-5 hypothesis tuple along $\mathfrak{C}_{\mathrm{tr}}$ \textnormal{(OPEN BRIDGE; current primary first lemma target)}]
-\label{lem:b4-admissibility-stability-transfer}
-\placeholder{Establishes the first concrete Stage~6 lemma target (aligned with \cref{lem:stage6-first-concrete-no-drift} in \texttt{critical-line-argument.tex}): under $\mathcal{H}_{\mathrm{S6}}^{\min}$, for each contradiction-relevant transfer object $C\in\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}\subseteq\mathfrak{C}_{\mathrm{tr}}$ joining a local anchor in $\mathcal{R}_{\mathrm{loc}}$ to an endpoint in $\mathcal{A}_{\mathrm{strip}}$, the provisional no-drift defect functional
+\begin{lemma}[First control lemma target for the provisional defect functional \texorpdfstring{$\Delta_{\mathrm{nd}}$}{Delta\_nd} \textnormal{(OPEN BRIDGE; primary analytic entry point)}]
+\label{lem:b4-first-delta-control}
+\placeholder{Establishes the first precise analytic control statement in the Stage~6 stack: under $\mathcal{H}_{\mathrm{S6}}^{\min}$, for every contradiction-relevant transfer object $C\in\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}\subseteq\mathfrak{C}_{\mathrm{tr}}$, with transfer-position set $U(C)\subseteq\mathcal{A}_{\mathrm{strip}}$, Stage-5 tuple $\Theta_{\mathrm{S5}}=(\theta_1,\dots,\theta_m)$, clause gauges $\delta_j^{(C)}:U(C)\to[0,\infty]$, and
 \[
-\Delta_{\mathrm{nd}}(C;\Theta_{\mathrm{S5}},\delta):=\sup_{u\in U(C)} d_{\Theta}^{(C)}(u),\qquad
-d_{\Theta}^{(C)}(u):=\max_{1\le j\le m}\delta_j^{(C)}(u),
+d_{\Theta}^{(C)}(u):=\max_{1\le j\le m}\delta_j^{(C)}(u),\qquad
+\Delta_{\mathrm{nd}}(C;\Theta_{\mathrm{S5}},\delta):=\sup_{u\in U(C)}d_{\Theta}^{(C)}(u),
 \]
-vanishes. Here $U(C)$ is the transfer-position set of $C$, $\Theta_{\mathrm{S5}}=(\theta_1,\dots,\theta_m)$ is the Stage-5 tuple, and $\delta_j^{(C)}$ is the clausewise defect gauge. Equivalently, every clause of $\Theta_{\mathrm{S5}}$ persists along $C$ with zero transport defect, so admissibility, regularity, and symmetry predicates are not lost between local anchor and endpoint. Depends on: B1 admissibility well-posedness, OP7--OP8 (with invoked OP1--OP6 where used), and AC1--AC6 continuation/interchange/uniformity controls. Why it matters: this is the first theorem-level control statement on the analytic defect object used to make the downstream neutralizing bridge theorem-typed.}
+one has
+\[
+\forall C\in\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}},\qquad
+\Delta_{\mathrm{nd}}(C;\Theta_{\mathrm{S5}},\delta)=0.
+\]
+Interpretation target: exact classwise no-drift on the contradiction-relevant transfer subclass. Depends on: B1 admissibility well-posedness, OP7--OP8 (with invoked OP1--OP6 where used), and AC1--AC6 continuation/interchange/uniformity controls. Why it matters: this is the first theorem-style control target on a concrete analytic quantity, before transport conclusions are rephrased as endpoint hypothesis persistence.}
+\end{lemma}
+\noindent\emph{Feeds into:} \cref{lem:stage6-first-concrete-no-drift} and its ledger-aligned form \cref{lem:b4-admissibility-stability-transfer}, then \cref{lem:b4-neutralizing-transport-uniformity}.
+
+\begin{lemma}[Uniform no-drift transport of the Stage-5 hypothesis tuple along $\mathfrak{C}_{\mathrm{tr}}$ \textnormal{(OPEN BRIDGE; first transport reformulation downstream of \cref{lem:b4-first-delta-control})}]
+\label{lem:b4-admissibility-stability-transfer}
+\placeholder{Transport-form restatement aligned with \cref{lem:stage6-first-concrete-no-drift} in \texttt{critical-line-argument.tex}: under $\mathcal{H}_{\mathrm{S6}}^{\min}$, if the first control statement \cref{lem:b4-first-delta-control} holds on $\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$, then every clause of $\Theta_{\mathrm{S5}}$ persists along each contradiction-relevant transfer object $C$ from a local anchor in $\mathcal{R}_{\mathrm{loc}}$ to an endpoint in $\mathcal{A}_{\mathrm{strip}}$, with no admissibility/regularity/symmetry predicate loss. Equivalently: classwise vanishing of $\Delta_{\mathrm{nd}}$ is promoted to endpoint-usable hypothesis persistence. Depends on: \cref{lem:b4-first-delta-control} plus the same OP/AC support interfaces needed to interpret transported clauses at endpoints. Why it matters: this is the first transport-usable theorem target extracted from the analytic defect control statement.}
 \end{lemma}
 \noindent\emph{Feeds into:} the immediate neutralizing bridge \cref{lem:b4-neutralizing-transport-uniformity}; then the contradiction conclusion in \cref{thm:stage6-first-subtarget-admissibility}; then later global-extension/no-alternative-locus burdens.
 
@@ -146,7 +157,8 @@ The first executable draft theorem target is \cref{thm:stage6-first-subtarget-ad
 Within B4, its proof burden is grouped as:
 \begin{enumerate}
   \item \textbf{Contradiction assumption bookkeeping:} the off-line balanced assumption package described in \cref{thm:stage6-first-subtarget-admissibility} and aligned with the placeholder contradiction-route admissibility lemma below.
-  \item \textbf{Core first concrete lemma (current best first technical move):} \cref{lem:b4-admissibility-stability-transfer}, i.e. uniform no-drift transport of the full Stage-5 tuple along $\mathfrak{C}_{\mathrm{tr}}$.
+  \item \textbf{Core first analytic control lemma (current best first technical move):} \cref{lem:b4-first-delta-control}, i.e. classwise vanishing target for $\Delta_{\mathrm{nd}}$ on $\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$.
+  \item \textbf{Core first transport reformulation:} \cref{lem:b4-admissibility-stability-transfer}, converting that defect control into endpoint-usable no-drift persistence of the full Stage-5 tuple.
   \item \textbf{Primary downstream neutralizing target:} \cref{lem:b4-neutralizing-transport-uniformity}, which aggregates that first lemma into theorem-usable contradiction enabling at transfer-reachable endpoints.
   \item \textbf{Analytic-control support:} \cref{lem:b4-uniform-continuation} plus AC1--AC6 items in B5.
   \item \textbf{Operator/symmetry support:} OP7--OP8 with invoked OP1--OP6 prerequisites, together with B2 symmetry compatibility.
