@@ -1,6 +1,8 @@
-This section separates established inputs from draft theorem targets.
+This section presents a single proof spine for audit.
+The manuscript keeps only the definitions and theorem targets needed for the RH reduction.
+Detailed Stage~6 mechanisms are intentionally moved out of the main flow.
 
-\subsection*{Established inputs (from standard references)}
+\subsection*{Established inputs (standard references)}
 \begin{proposition}[Functional symmetry]
 \label{prop:functional-symmetry}
 The completed zeta function
@@ -15,128 +17,59 @@ satisfies $\xi(s)=\xi(1-s)$; see \cite{Riemann1859,Edwards1974,Titchmarsh1986}.
 If $\rho$ is a nontrivial zero of $\zeta$, then $1-\rho$ and $\overline{\rho}$ are also nontrivial zeros; see \cite{Edwards1974,Titchmarsh1986}.
 \end{proposition}
 
-\subsection*{Draft theorem targets (not proved in this manuscript version)}
+\subsection*{Step 1: Balance predicate}
+Fix an admissible class $\mathcal{A}$ and a balance functional $\Phi_H:\mathcal{A}\to\mathbb{C}$.
+Define the balanced set in the strip by
+\[
+\mathcal{B}:=\{s\in\mathcal{A}_{\mathrm{strip}}:\Phi_H(s)=0\},
+\qquad
+\mathcal{A}_{\mathrm{strip}}:=\{s\in\mathcal{A}:0<\RePart(s)<1\}.
+\]
+The theorem targets below are always interpreted under one explicit synchronized hypothesis package, to be stated in full where those targets are eventually proved.
+
+\subsection*{Step 2: Zero--balance correspondence target}
 \begin{drafttheorem}[Target A: zero--balance correspondence]
 \label{thm:target-correspondence}
 \placeholder{Theorem target under construction; proof not yet provided.}
-Target statement (conditional): once the manuscript definitions of $H$ and the balance criterion are finalized, one aims to prove that nontrivial zeros in the critical strip correspond exactly to balanced points.
-The target is conditioned on a declared operator-theoretic support package and analytic-control assumptions sufficient to make the correspondence non-circular and theorem-usable.
+Under a fully specified admissibility and well-posedness package, the framework attempts to prove:
+\[
+\rho\text{ is a nontrivial zero of }\zeta
+\quad\Longleftrightarrow\quad
+\rho\in\mathcal{B}.
+\]
+This target is open in the current manuscript version.
 \end{drafttheorem}
 
-\begin{drafttheorem}[Target B: critical-line localization and no-alternative-locus target]
+\subsection*{Step 3: Critical-line exclusion target}
+\begin{drafttheorem}[Target B: exclusion of off-line balanced points]
 \label{thm:target-uniqueness}
 \placeholder{Theorem target under construction; proof not yet provided.}
-Target statement (conditional; theorem target only): let $\mathcal{A}$ be the admissible class and let
+Under a synchronized hypothesis package compatible with Target~A, the framework attempts to prove:
 \[
-\mathcal{B}:=\{s\in\mathcal{A}:\Phi_H(s)=0\}
+\forall s\in\mathcal{B},\qquad \RePart(s)=\tfrac12.
 \]
-denote the balanced set under a finalized $H/\Phi_H$ package.
-Under an explicit hypothesis set $\mathcal{H}_B$ (admissibility synchronization, operator-theoretic support, symmetry compatibility, and analytic-control/rigidity ingredients), one aims to prove:
-\begin{enumerate}
-  \item \textbf{Local critical-line uniqueness target:} every balanced point in the local regime $\mathcal{R}_{\mathrm{loc}}\subseteq\mathcal{A}$ covered by $\mathcal{H}_B$ satisfies $\RePart(s)=\tfrac12$.
-  \item \textbf{Local-to-global transfer target (closure bridge):} there exists a theorem-level extension principle, stated under an explicit synchronized hypothesis package $\mathcal{H}_{\mathrm{tr}}$, that transports the Stage-5 local uniqueness conclusion from $\mathcal{R}_{\mathrm{loc}}$ to all regimes used in the reduction.
-  Here ``local'' means the Stage-5 regime $\mathcal{R}_{\mathrm{loc}}\subseteq\mathcal{A}_{\mathrm{strip}}$ where uniqueness estimates are proved/assumed, while ``global'' means the full admissible strip class $\mathcal{A}_{\mathrm{strip}}$.
-  The transfer target must explicitly control boundary-near, non-perturbative, and large-parameter regions in
-  \[
-  \mathcal{A}_{\mathrm{strip}}:=\{s\in\mathcal{A}:0<\RePart(s)<1\},
-  \]
-  and must exclude hidden off-line balanced branches that could appear only outside $\mathcal{R}_{\mathrm{loc}}$.
-  In theorem-target form, the bridge must provide:
-  \[
-  \Big(\forall s\in\mathcal{B}\cap\mathcal{R}_{\mathrm{loc}},\ \RePart(s)=\tfrac12\Big)\ \Longrightarrow\
-  \Big(\forall s\in\mathcal{B}\cap\mathcal{A}_{\mathrm{strip}},\ \RePart(s)=\tfrac12\Big),
-  \]
-  under one synchronized package $\mathcal{H}_{\mathrm{tr}}$ compatible with Target~A, local Target~B, and Stage~6.
-  \item \textbf{Global no-alternative-locus target:} in the full admissible strip class
-  \[
-  \mathcal{A}_{\mathrm{strip}}:=\{s\in\mathcal{A}:0<\RePart(s)<1\},
-  \]
-  every balanced point satisfies $\RePart(s)=\tfrac12$.
-  Equivalently, the theorem target excludes all off-line balance-supporting loci in $\mathcal{A}_{\mathrm{strip}}$, including:
-  \begin{enumerate}
-    \item alternative vertical lines $\RePart(s)=\sigma_0\neq\tfrac12$;
-    \item non-vertical curves or higher-dimensional submanifolds carrying $\Phi_H=0$;
-    \item disconnected off-line balanced components;
-    \item regime-specific off-line loci that may appear only outside $\mathcal{R}_{\mathrm{loc}}$ unless globally excluded.
-  \end{enumerate}
-  \item \textbf{Contradiction compatibility target:} any assumed off-line balanced point $s_\ast\in\mathcal{A}_{\mathrm{strip}}$ with $\RePart(s_\ast)\neq\tfrac12$ must contradict at least one ingredient of the same synchronized hypothesis package used for local uniqueness, transfer, and global exclusion.
-\end{enumerate}
-\paragraph{Preferred Stage-6 route designation (strategy status only).}
-Within item (2)--(3), the manuscript currently prioritizes the theorem path
+Equivalently,
 \[
-\text{local uniqueness}\Rightarrow\text{transfer bridge}\Rightarrow\text{no-alternative-locus}\Rightarrow\text{full-strip exclusion}.
+\mathcal{B}\cap\{s\in\mathcal{A}_{\mathrm{strip}}:\RePart(s)\neq\tfrac12\}=\varnothing.
 \]
-This is the current preferred proof route under review.
-Its theorem-target formulation is now synchronized with the minimum Stage~6 package $\mathcal{H}_{\mathrm{S6}}^{\min}$ defined in \texttt{critical-line-argument.tex}.
-It is not established in this manuscript version.
-The named package is used to state the route cleanly; it is not claimed sufficient for proof.
-Coercive/positivity/rigidity mechanisms are treated as supporting ingredients for this route, while reflection-incompatibility and direct contradiction-only closures are retained as secondary fallback routes.
-Equivalent formulation target:
-\[
-\mathcal{B}=\mathcal{A}\cap\{s:\RePart(s)=\tfrac12\}.
-\]
-This manuscript version does not prove the above statement.
+This target is open in the current manuscript version.
 \end{drafttheorem}
 
-\begin{drafttheorem}[Master Stage~6 exclusion theorem target (preferred route; formulation only)]
-\label{thm:master-stage6-target-main-results}
-\placeholder{Theorem target under construction; proof not yet provided.}
-Using the notation and minimum synchronized hypothesis package
-$\mathcal{H}_{\mathrm{S6}}^{\min}$ from \texttt{critical-line-argument.tex},
-the current preferred Stage~6 route is organized around one master theorem target:
-\[
-\Big(\forall s\in\mathcal{B}\cap\mathcal{R}_{\mathrm{loc}},\ \RePart(s)=\tfrac12\Big)
-\Longrightarrow
-\Big(\forall s\in\mathcal{B}\cap\mathcal{A}_{\mathrm{strip}},\ \RePart(s)=\tfrac12\Big).
-\]
-For audit readability, the theorem target is recorded in the following formulation-level equivalent forms under the same synchronized package $\mathcal{H}_{\mathrm{S6}}^{\min}$:
-\begin{enumerate}
-  \item \textbf{Pointwise exclusion form:}
-  \[
-  \forall s\in\mathcal{B}\cap\mathcal{A}_{\mathrm{strip}},\quad \RePart(s)=\tfrac12,
-  \]
-  equivalently no admissible off-line balanced point exists in the strip.
-  \item \textbf{Set-theoretic inclusion form:}
-  \[
-  \mathcal{B}\subseteq\{s\in\mathcal{A}_{\mathrm{strip}}:\RePart(s)=\tfrac12\},
-  \]
-  equivalently
-  \[
-  \mathcal{B}\cap\{s\in\mathcal{A}_{\mathrm{strip}}:\RePart(s)\neq\tfrac12\}=\varnothing.
-  \]
-  \item \textbf{Component/locus exclusion form:}
-  every connected component of $\mathcal{B}$ is contained in $\RePart(s)=\tfrac12$, so no off-line connected component of $\mathcal{B}$ exists in $\mathcal{A}_{\mathrm{strip}}$.
-  \item \textbf{Contradiction-style form:}
-  if one assumes $s_\ast\in\mathcal{B}\cap\mathcal{A}_{\mathrm{strip}}$ with $\RePart(s_\ast)\neq\tfrac12$, then that assumption is intended to contradict at least one ingredient of the same synchronized package $\mathcal{H}_{\mathrm{S6}}^{\min}$.
-\end{enumerate}
-No equivalence proof is supplied here beyond recording these as theorem-target formulations under $\mathcal{H}_{\mathrm{S6}}^{\min}$.
-This is the master Stage~6 theorem target under the current preferred route.
-The currently designated first proving subtarget for this route is the open draft theorem target \cref{thm:stage6-first-subtarget-admissibility}, now written in contradiction-ready form: assume a transfer-reachable admissible off-line balanced candidate and derive incompatibility under the same synchronized package via admissibility-stability transfer from $\mathcal{R}_{\mathrm{loc}}$ to $\mathcal{A}_{\mathrm{strip}}$ before no-alternative-locus closure is attempted.
-It is not proved in this manuscript version.
-\end{drafttheorem}
+\subsection*{Step 4: RH reduction}
+\begin{proposition}[Conditional RH reduction inside the framework]
+\label{prop:rh-reduction-main-spine}
+Assume Targets~A and~B are proved under one compatible hypothesis package.
+Then every nontrivial zero $\rho$ of $\zeta$ satisfies $\RePart(\rho)=\tfrac12$.
+\end{proposition}
 
-\begin{remark}[What a no-alternative-locus theorem target must assume]
-Target~B requires more than reflection symmetry.
-Symmetry can imply pairings such as $s\leftrightarrow 1-s$ without ruling out off-line balanced pairs.
-Therefore a valid proof target must state hypotheses strong enough to exclude alternative loci.
-At minimum, one must specify:
-\begin{enumerate}
-  \item \textbf{Admissibility synchronization:} the same admissible class for Target~A, local Target~B, and Stage~6 exclusion transfer.
-  \item \textbf{Symmetry compatibility:} reflection/conjugation transport preserves admissibility and theorem hypotheses.
-  \item \textbf{Global control ingredient(s):} explicit coercivity, positivity, rigidity, monotonicity, or equivalent structure ruling out off-line exact balance.
-  \item \textbf{Analytic-control closure:} assumptions preventing hidden off-line branches created by loss of compactness, boundary singular behavior, or regime changes outside local uniqueness.
-\end{enumerate}
+\begin{proof}
+By Target~A, each nontrivial zero $\rho$ belongs to $\mathcal{B}$.
+By Target~B, every element of $\mathcal{B}$ lies on $\RePart(s)=\tfrac12$.
+Hence $\RePart(\rho)=\tfrac12$ for every nontrivial zero $\rho$.
+\end{proof}
+
+\begin{remark}[Status discipline]
+The main spine above is a conditional proof program.
+In this manuscript version, Targets~A and~B remain open theorem targets.
+Therefore the RH conclusion is not claimed as an established theorem here.
 \end{remark}
-
-\begin{remark}[Failure patterns that remain insufficient for Target~B]
-The following argument forms are insufficient on their own:
-\begin{enumerate}
-  \item regime-restricted proofs that only treat perturbative neighborhoods,
-  \item axis-symmetry statements for $\mathcal{B}$ without axis-uniqueness,
-  \item exclusion arguments whose hypotheses are not inherited by the correspondence class from Target~A.
-\end{enumerate}
-\end{remark}
-
-\begin{conjecture}[RH reduction under targets A and B]
-Conditional implication only: if Targets~A and~B are both proved with a compatible set of explicit assumptions and definitions, then every nontrivial zero is balanced (Target~A) and every balanced point lies on $\RePart(s)=\tfrac12$ (Target~B), so RH follows under those proved hypotheses.
-\end{conjecture}
