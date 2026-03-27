@@ -1,19 +1,25 @@
-This discussion is audit-facing and intentionally brief.
+This discussion is audit-oriented and intentionally short.
 
-\paragraph{What was simplified.}
-The main manuscript now follows one direct route:
-define
+\paragraph{What is settled in the current draft.}
+The manuscript fixes one main object,
 \[
-\Phi(q):=\Gamma(q)(1-q)\zeta(q),
+\Phi(s):=\Gamma(s)(1-s)\zeta(s),
 \]
-define balance by $\Phi(q)=0$, state Target~A and Target~B, then derive RH conditionally.
-Large architecture language and cross-cutting scaffolding were removed from the core flow.
+and uses the strip identity
+\[
+0<\RePart(s)<1\Longrightarrow \Phi(s)=0\iff\zeta(s)=0.
+\]
+This part is straightforward and explicit.
 
 \paragraph{What remains open.}
-The manuscript still has two theorem-level bridges:
-zero--balance correspondence on the strip, and critical-line exclusion for balanced strip points.
-These are explicit open targets, not established results.
+The unresolved burden is a single implication:
+\[
+0<\RePart(s)<1\ \text{and}\ \Phi(s)=0
+\Longrightarrow
+\RePart(s)=\tfrac12.
+\]
+No proof of this implication is currently included.
 
 \paragraph{Research posture.}
-This remains a proposed proof framework under review.
-The argument attempts to show that RH would follow once those two targets are proved.
+This is a proposed proof framework under review.
+The argument attempts to show RH by proving the implication above.

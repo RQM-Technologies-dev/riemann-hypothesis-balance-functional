@@ -1,22 +1,27 @@
-This section isolates one question in the simplified proof attempt:
-why would strip balance force criticality?
-
-\subsection*{Question}
-Let
+This section isolates the central open question in one line:
+why should
 \[
-\Phi(q):=\Gamma(q)(1-q)\zeta(q),
-\qquad
-\mathcal{B}:=\{q\in\C:0<\RePart(q)<1,\ \Phi(q)=0\}.
+\Phi(s)=\Gamma(s)(1-s)\zeta(s)=0
 \]
-The central open step is Target~B from \cref{thm:target-uniqueness}:
-\[
-q\in\mathcal{B}\Longrightarrow \RePart(q)=\tfrac12.
-\]
+force $\RePart(s)=\tfrac12$ in the strip?
 
-\subsection*{Why this is decisive}
-With Target~A (\cref{thm:target-correspondence}), the statement above excludes all off-line nontrivial zeros.
-That implication is exactly the conditional RH reduction in \cref{prop:rh-reduction-main-spine}.
+\subsection*{Open burden}
+After \cref{prop:strip-correspondence}, the entire proof attempt is concentrated in:
+\[
+0<\RePart(s)<1\ \text{and}\ \Phi(s)=0
+\Longrightarrow
+\RePart(s)=\tfrac12.
+\]
+This is \cref{thm:core-target}.
+
+\subsection*{Why this single implication is decisive}
+For strip points, \cref{prop:strip-correspondence} gives
+\[
+\Phi(s)=0\iff\zeta(s)=0.
+\]
+So proving the implication above would exclude every off-line nontrivial zero.
+That is exactly the RH conclusion via \cref{prop:rh-reduction-main-spine}.
 
 \subsection*{Current status}
-No Stage-6 dependency stack is used in this section.
-The manuscript records a single open bridge: strip-wide exclusion of off-line balanced points.
+No proof of this implication is provided in the current manuscript.
+It remains the main unresolved bridge.

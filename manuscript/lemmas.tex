@@ -1,41 +1,30 @@
-This ledger keeps only lemma targets that directly support the simplified proof spine around
-\[
-\Phi(q):=\Gamma(q)(1-q)\zeta(q).
-\]
+This section keeps only lemmas that directly support the simplified proof spine.
 
-\subsection*{A. Standard inputs}
-
-\begin{lemma}[Reflection symmetry of nontrivial zeros]
-If $\rho$ is a nontrivial zero of $\zeta$, then $1-\rho$ is also a nontrivial zero.
+\begin{lemma}[Nonvanishing factors in the strip]
+\label{lem:strip-factors-nonzero}
+If $0<\RePart(s)<1$, then $\Gamma(s)\neq 0$ and $1-s\neq 0$.
 \end{lemma}
-\noindent\emph{Status: standard.} This follows from the functional equation for completed zeta.
+\noindent\emph{Status: standard.}
 
-\begin{lemma}[Conjugation symmetry of nontrivial zeros]
-If $\rho$ is a nontrivial zero of $\zeta$, then $\overline{\rho}$ is also a nontrivial zero.
-\end{lemma}
-\noindent\emph{Status: standard.} This follows from Schwarz reflection.
-
-\subsection*{B. Open lemma targets for the main argument}
-
-\begin{lemma}[Zero--balance correspondence target \textnormal{(OPEN)}]
-\label{lem:phi-zero-balance}
-\placeholder{Proof not yet provided.}
-On the strip $0<\RePart(q)<1$, prove with full domain bookkeeping that
+\begin{lemma}[Strip zero correspondence]
+\label{lem:strip-zero-correspondence}
+If $0<\RePart(s)<1$, then
 \[
-\Phi(q)=0
-\quad\Longleftrightarrow\quad
-q\text{ is a nontrivial zero of }\zeta.
+\Phi(s)=0\iff\zeta(s)=0.
 \]
 \end{lemma}
+\begin{proof}
+By \cref{lem:strip-factors-nonzero}, the factor $\Gamma(s)(1-s)$ is nonzero in the strip.
+So $\Gamma(s)(1-s)\zeta(s)=0$ is equivalent to $\zeta(s)=0$.
+\end{proof}
 
 \begin{lemma}[Critical-line exclusion target \textnormal{(OPEN)}]
 \label{lem:phi-critical-exclusion}
 \placeholder{Proof not yet provided.}
-On the strip, prove
+For $0<\RePart(s)<1$,
 \[
-\Phi(q)=0\Longrightarrow \RePart(q)=\tfrac12.
+\Phi(s)=0\Longrightarrow \RePart(s)=\tfrac12.
 \]
 \end{lemma}
 
-\subsection*{Audit note}
-\auditnote{No B5 cross-cutting support block is used in this main manuscript. The open work is concentrated in the two lemma targets above.}
+\auditnote{The main unresolved step is \cref{lem:phi-critical-exclusion}.}

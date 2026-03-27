@@ -1,23 +1,27 @@
-This manuscript now uses one direct proof spine, not a recursive architecture.
+This section records the proof spine used in the manuscript under review.
 
-\subsection*{Proof spine}
 \begin{enumerate}
-  \item \textbf{Define the canonical object:}
+  \item Define one object:
   \[
-  \Phi(q):=\Gamma(q)(1-q)\zeta(q).
+  \Phi(s):=\Gamma(s)(1-s)\zeta(s).
   \]
 
-  \item \textbf{Define balance:}
-  $q$ is balanced exactly when $\Phi(q)=0$.
+  \item Use the strip correspondence:
+  for $0<\RePart(s)<1$,
+  \[
+  \Phi(s)=0\iff\zeta(s)=0.
+  \]
 
-  \item \textbf{State two theorem targets:}
-  Target~A is strip zero--balance correspondence (\cref{thm:target-correspondence});
-  Target~B is strip critical-line exclusion (\cref{thm:target-uniqueness}).
+  \item Isolate one core theorem target:
+  \[
+  \Phi(s)=0\Longrightarrow\RePart(s)=\tfrac12
+  \quad (0<\RePart(s)<1).
+  \]
 
-  \item \textbf{Deduce RH conditionally:}
-  if Targets~A and~B both hold, RH follows by \cref{prop:rh-reduction-main-spine}.
+  \item Conclude RH conditionally:
+  if Step 3 is proved, RH follows.
 \end{enumerate}
 
-\subsection*{Status}
-Steps 1--2 are definitions. Steps 3--4 are open theorem work.
-The argument attempts to establish RH through this route, but RH is not claimed as proved.
+\noindent
+Steps 1--2 are established setup.
+Step 3 is the unresolved burden.
