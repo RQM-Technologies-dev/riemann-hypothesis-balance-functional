@@ -58,26 +58,26 @@ When the provisional objects are upgraded, each promoted definition should inclu
 \subsection*{Stage-6 provisional transport-defect interface}
 
 \begin{definition}[No-drift defect functional \texorpdfstring{$\Delta_{\mathrm{nd}}$}{Delta\_nd} \textnormal{(provisional; audit/planning object)}]
-Fix one synchronized Stage-6 package $\mathcal{H}_{\mathrm{S6}}^{\min}$, a contradiction-relevant transfer subclass
-\(
-\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}\subseteq\mathfrak{C}_{\mathrm{tr}},
-\)
-and a Stage-5 hypothesis tuple
-\(
-\Theta_{\mathrm{S5}}=(\theta_1,\dots,\theta_m).
-\)
-For each $C\in\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$, let $U(C)\subseteq\mathcal{A}_{\mathrm{strip}}$ be the transfer-position set, and let
-\(
-\delta_j^{(C)}:U(C)\to[0,\infty]
-\)
-be clause-defect gauges for $\theta_j$.
-Define
+Work under one synchronized package $\mathcal{H}_{\mathrm{S6}}^{\min}$, and fix:
+\begin{enumerate}
+  \item a Stage-5 hypothesis tuple $\Theta_{\mathrm{S5}}=(\theta_1,\dots,\theta_m)$;
+  \item a transfer class $\mathfrak{C}_{\mathrm{tr}}$ and contradiction-relevant subclass
+  $\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}\subseteq\mathfrak{C}_{\mathrm{tr}}$;
+  \item for each $C\in\mathfrak{C}_{\mathrm{tr}}$, a transfer-position set $U(C)\subseteq\mathcal{A}_{\mathrm{strip}}$;
+  \item for each clause $\theta_j$ and each $C$, a clause-defect gauge
+  $\delta_j^{(C)}:U(C)\to[0,\infty]$.
+\end{enumerate}
+Define the pointwise tuple-defect gauge
 \[
 d_{\Theta}^{(C)}(u):=\max_{1\le j\le m}\delta_j^{(C)}(u),
-\qquad
-\Delta_{\mathrm{nd}}(C;\Theta_{\mathrm{S5}},\delta):=\sup_{u\in U(C)}d_{\Theta}^{(C)}(u).
 \]
-Interpretation (intended, not proved): $\Delta_{\mathrm{nd}}(C)=0$ means no clause loss along $C$; small positive values indicate controlled drift; finite uniform bounds indicate bounded instability; $\infty$ indicates uncontrolled transport.
+and define the no-drift defect of $C$ by
+\[
+\Delta_{\mathrm{nd}}(C;\Theta_{\mathrm{S5}},\delta):=
+\sup_{u\in U(C)}d_{\Theta}^{(C)}(u)\in[0,\infty].
+\]
+Thus $\Delta_{\mathrm{nd}}$ is a \emph{transport-instability measure}: a supremum defect over positions $u$ and clauses $\theta_j$ along a transfer object $C$.
+Intended semantics (not proved): $\Delta_{\mathrm{nd}}(C)=0$ means exact clause preservation along $C$; $0<\Delta_{\mathrm{nd}}(C)\ll1$ means quantitatively small drift; finite uniform bounds on a transfer subclass mean bounded instability; $\Delta_{\mathrm{nd}}(C)=\infty$ means uncontrolled transport.
 \end{definition}
 
 \begin{remark}[Status and dependency boundary]

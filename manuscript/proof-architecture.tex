@@ -130,9 +130,9 @@ For dependency clarity, the intended theorem flow is:
 \Longrightarrow
 \underbrace{\text{first concrete analytic quantity }\Delta_{\mathrm{nd}}(C;\Theta_{\mathrm{S5}},\delta):=\sup_{u\in U(C)}d_{\Theta}^{(C)}(u)}_{\text{provisional no-drift defect functional (open)}}
 \Longrightarrow
-\underbrace{\text{first control lemma target for }\Delta_{\mathrm{nd}}}_{\text{precise classwise control statement (open)}}
+\underbrace{\text{first control lemma target }\cref{lem:b4-first-delta-control}\text{ for }\Delta_{\mathrm{nd}}}_{\text{precise classwise control statement on }\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}\text{ (open)}}
 \Longrightarrow
-\underbrace{\text{no-drift lemma target \cref{lem:stage6-first-concrete-no-drift}/\cref{lem:b4-admissibility-stability-transfer}}}_{\text{classwise vanishing of }\Delta_{\mathrm{nd}}\text{ on }\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}\text{ (open)}}
+\underbrace{\text{no-drift lemma target \cref{lem:stage6-first-concrete-no-drift}/\cref{lem:b4-admissibility-stability-transfer}}}_{\text{transport-form persistence of the Stage-5 tuple (open)}}
 \Longrightarrow
 \underbrace{\text{neutralizing theorem target \cref{thm:stage6-neutralizing-transport-uniformity}}}_{\text{open contradiction enabler}}
 \Longrightarrow
@@ -155,6 +155,8 @@ It does not assert theorem-level dominance beyond the current route under audit.
 \paragraph{Lemma stack attached to the first Stage~6 draft theorem target (all open).}
 The initial proving attempt is explicitly scoped to the following stack in \texttt{lemmas.tex}:
 \[
+\cref{lem:b4-first-delta-control}
+\Rightarrow
 \cref{lem:b4-admissibility-stability-transfer}
 \Rightarrow
 \cref{lem:b4-uniform-continuation}
@@ -168,12 +170,13 @@ This separation is enforced for audit clarity and theorem-status discipline.
 
 \paragraph{Single highest-risk dependency inside the first contradiction setup.}
 Within the first contradiction-style Stage~6 target, the present highest-risk dependency is the no-drift transport step, now expressed through the provisional analytic defect quantity $\Delta_{\mathrm{nd}}(C;\Theta_{\mathrm{S5}},\delta)=\sup_{u\in U(C)}d_{\Theta}^{(C)}(u)$ on $\mathfrak{C}_{\mathrm{tr}}$.
-The first concrete lemma target addressing that step is $\cref{lem:stage6-first-concrete-no-drift}$ (ledger-aligned with $\cref{lem:b4-admissibility-stability-transfer}$), which aims to force classwise vanishing of this defect on the contradiction-relevant transfer subclass $\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$ under the same package $\mathcal{H}_{\mathrm{S6}}^{\min}$.
+The first concrete control target addressing that step is \cref{lem:b4-first-delta-control}, which aims to force classwise vanishing of this defect on the contradiction-relevant transfer subclass $\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$ under the same package $\mathcal{H}_{\mathrm{S6}}^{\min}$.
+The first transport-form lemma target is then \cref{lem:stage6-first-concrete-no-drift} (ledger-aligned with \cref{lem:b4-admissibility-stability-transfer}), which rephrases that control as endpoint-usable Stage-5 tuple persistence along $\mathfrak{C}_{\mathrm{tr}}$.
 If this bridge fails or remains underjustified, the contradiction step is not yet well-typed: Stage-5 uniqueness is invoked at the endpoint without a theorem-level no-drift transfer justification.
 Accordingly, this bridge is the first proof-critical audit checkpoint in the Stage~6 dependency chain.
 The manuscript now names one best candidate neutralizing theorem target for this checkpoint:
 \cref{thm:stage6-neutralizing-transport-uniformity} in \texttt{critical-line-argument.tex}.
-That target is explicitly open and is downstream of the first concrete lemma $\cref{lem:b4-admissibility-stability-transfer}$.
+That target is explicitly open and is downstream of the first control lemma $\cref{lem:b4-first-delta-control}$ and its transport reformulation $\cref{lem:b4-admissibility-stability-transfer}$.
 It is intended to repair only this no-drift contradiction-typing failure point, after which the route resumes with no-new-off-line-branch and no-alternative-locus burdens toward the master Stage~6 theorem.
 
 \textbf{Intended output.}
