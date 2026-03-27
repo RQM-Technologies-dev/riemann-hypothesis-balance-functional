@@ -130,6 +130,8 @@ For dependency clarity, the intended theorem flow is:
 \Longrightarrow
 \underbrace{\text{primary structural-property lemma target \cref{lem:b4-delta-structural-nonincrease}}}_{\text{non-increase of }\Delta_{\mathrm{nd}}\text{ under synchronized extension (open)}}
 \Longrightarrow
+\underbrace{\text{repair lemma target \cref{lem:b4-seed-extension-coverage-bridge}}}_{\text{synchronized seed-extension coverage on }\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}\text{ (open)}}
+\Longrightarrow
 \underbrace{\text{first control lemma target }\cref{lem:b4-first-delta-control}\text{ for }\Delta_{\mathrm{nd}}}_{\text{precise classwise control statement on }\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}\text{ (open)}}
 \Longrightarrow
 \underbrace{\text{no-drift lemma target \cref{lem:stage6-first-concrete-no-drift}/\cref{lem:b4-admissibility-stability-transfer}}}_{\text{transport-form persistence of the Stage-5 tuple (open)}}
@@ -152,21 +154,21 @@ For audit-facing proof planning, the first intended derivation pattern is now fi
   \[
   \Delta_{\mathrm{nd}}(C_a^{\mathrm{seed}};\Theta_{\mathrm{S5}},\delta)=0.
   \]
-  \item \textbf{Propagation step (structural non-increase target).} For any contradiction-relevant $C\in\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$ covered by synchronized seed-extension, apply \cref{lem:b4-delta-structural-nonincrease} along
-  \(C_a^{\mathrm{seed}}\preceq C\) to target
+  \item \textbf{Propagation step (structural non-increase target).} For any contradiction-relevant object $C\in\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$ and any anchor $a$ with $C_a^{\mathrm{seed}}\preceq C$, apply \cref{lem:b4-delta-structural-nonincrease} as the monotonic propagation rule:
   \[
   \Delta_{\mathrm{nd}}(C;\Theta_{\mathrm{S5}},\delta)
   \le
   \Delta_{\mathrm{nd}}(C_a^{\mathrm{seed}};\Theta_{\mathrm{S5}},\delta).
   \]
-  \item \textbf{First control conclusion target.} Combine the two displays to obtain the classwise target
+  \item \textbf{Coverage-repair step (explicit missing bridge).} Invoke \cref{lem:b4-seed-extension-coverage-bridge} to assert that each contradiction-relevant $C\in\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$ is synchronized-extension reachable from some seed $C_a^{\mathrm{seed}}$ with unchanged tuple/gauge semantics.
+  \item \textbf{First control conclusion target.} Combine initialization, non-increase, and the coverage bridge to obtain the classwise target
   \(
   \Delta_{\mathrm{nd}}(C;\Theta_{\mathrm{S5}},\delta)=0
   \)
   on $\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$, i.e. the target shape of \cref{lem:b4-first-delta-control}.
 \end{enumerate}
 This is an outline of intended derivation structure only.
-It is not a completed derivation and does not assert proof of initialization, structural non-increase, or seed-extension coverage.
+It is not a completed derivation and does not assert proof of initialization, structural non-increase, or the repair bridge \cref{lem:b4-seed-extension-coverage-bridge}.
 
 \paragraph{First proof-critical checkpoint in that derivation chain (explicit).}
 Inside this three-step pattern, the first proof-critical checkpoint is the
@@ -218,6 +220,8 @@ The initial proving attempt is explicitly scoped to the following stack in \text
 \cref{lem:b4-delta-initialization-seed}
 \Rightarrow
 \cref{lem:b4-delta-structural-nonincrease}
+\Rightarrow
+\cref{lem:b4-seed-extension-coverage-bridge}
 \Rightarrow
 \cref{lem:b4-first-delta-control}
 \Rightarrow
