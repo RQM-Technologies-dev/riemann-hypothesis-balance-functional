@@ -1,129 +1,42 @@
-This section fixes one canonical main-text answer to the question ``What is $\Phi_H(s)$?''
-It does not claim this choice is already validated.
-Its role is to state the exact object and list the theorem burdens required before RH-reduction claims become theorem-level statements.
+This section explains the reduced framework around one direct object.
 
-\subsection*{Canonical main-text choice}
-\placeholder{The operator construction and regularization theorem package are not yet complete.}
-The manuscript fixes one functional in the main flow:
+\subsection*{Canonical object in the main text}
+The main flow uses only
 \[
-\Phi_H(s):=\Tr_{\mathrm{reg}}(H-sI)^{-1}-\Tr_{\mathrm{reg}}(H-(1-s)I)^{-1},
+\Phi(q):=\Gamma(q)(1-q)\zeta(q).
 \]
-defined on
-\[
-\mathcal{A}:=
-\left\{
-s\in\C:
-\Tr_{\mathrm{reg}}(H-sI)^{-1},\Tr_{\mathrm{reg}}(H-(1-s)I)^{-1}\ \text{exist and are finite}
-\right\}.
-\]
-The associated predicate is
-\[
-\text{Bal}_H(s)\iff \Phi_H(s)=0 \qquad (s\in\mathcal{A}).
-\]
-Interpretation: $\Phi_H(s)$ is the regularized resolvent reflection defect of $H$ at the pair $(s,1-s)$.
+Balance means $\Phi(q)=0$.
+No operator/resolvent surrogate is used in the core theorem chain.
 
-\subsection*{Minimal required structure for the $H$-layer}
-The manuscript does not need every possible operator-theoretic feature.
-It does need the following \emph{minimal interface} to keep later arguments well-typed and auditable.
-
-\paragraph{(M1) Ambient space and typing data.}
-A specified complex topological vector space (typically a Hilbert or Banach model) $\mathcal{X}$, together with clear codomain conventions for all derived maps.
-Every use of $H$ must state its typing context explicitly.
-
-\paragraph{(M2) Domain and well-defined action.}
-A dense or otherwise explicitly justified domain $\mathcal{D}(H)\subseteq\mathcal{X}$ (as required by the chosen model), and a map
-\[
-H:\mathcal{D}(H)\to\mathcal{X}
-\]
-with proof that this action is well defined under stated hypotheses.
-If closure/closability is needed by subsequent lemmas, that requirement must be stated and proved where used.
-
-\paragraph{(M3) Symmetry-compatibility package.}
-A precise compatibility statement linking the operator layer to the reflection involution $\sigma(s)=1-s$ from \texttt{definitions.tex}.
-This must be explicit and non-heuristic.
-Informal symmetry pictures are admissible only as motivation, not as substitute for this package.
-
-\paragraph{(M4) Operator-regularity assumptions (structural side).}
-The exact regularity required for operator statements: continuity/measurability/analytic dependence of operator-valued maps, domain persistence, and closure/graph conditions needed for later lemmas.
-Each assumption must be tagged as either proved in-manuscript or imported as an explicit hypothesis.
-
-\paragraph{(M5) Dependency traceability.}
-A lemma-level dependency map from operator properties to later claims (especially Targets~A and~B).
-No RH-relevant step should rely on an unlisted implicit property of $H$.
-
-\subsection*{Required theorem package for this explicit \texorpdfstring{$\Phi_H$}{Phi_H}}
-The definition above is explicit; the open work is to prove it is mathematically sound and suitable for Targets~A/B.
-
-\paragraph{(P1) Non-circular construction.}
-The operator model and regularization map $\Tr_{\mathrm{reg}}$ must be defined without using the zero set of $\zeta$.
-
-\paragraph{(P2) Domain of evaluation (admissible class).}
-The declared set $\mathcal{A}$ must be proved nonempty and explicitly characterized.
-If singular points are removed, the exclusion mechanism must be stated.
-
-\paragraph{(P3) Well-posedness and regularity.}
-For $s\in\mathcal{A}$, prove existence and finiteness of both regularized traces and of their difference.
-State the continuity/analytic properties of $s\mapsto\Phi_H(s)$ used later.
-
-\paragraph{(P4) Reflection behavior.}
-The explicit formula gives
-\[
-\Phi_H(1-s)=-\Phi_H(s)
-\]
-whenever both sides are defined.
-A theorem-level proof must show that the admissible class is stable under $s\mapsto 1-s$ and that the regularization is compatible with this identity.
-
-\paragraph{(P5) Bridge to zero claims.}
-A precise theorem target must explain how
-\[
-\Phi_H(s)=0
-\]
-for this explicit resolvent-defect functional maps to nontrivial zero information.
-The bridge should separate:
+\subsection*{Why this simplification is used}
+The manuscript under review is intended for mathematical audit.
+A single explicit object makes dependencies visible:
 \begin{enumerate}
-  \item the forward direction to be proved,
-  \item the converse direction to be proved,
-  \item side conditions preventing spurious balanced points.
+  \item define $\Phi$,
+  \item relate $\Phi(q)=0$ to nontrivial zeros,
+  \item prove critical-line exclusion for balanced points.
+\end{enumerate}
+This avoids treating a large family of alternative $\Phi_H$ constructions in the proof spine.
+
+\subsection*{Role of operator language (secondary only)}
+Operator-based interpretations may still be useful as heuristic motivation or future support.
+In this revision they are secondary material and do not define balance in the main text.
+Any future operator realization must be presented as support for the fixed canonical object above, not as a replacement for it.
+
+\subsection*{Open burdens attached to the simplified core}
+The simplification does not close the main proof gaps.
+The remaining open burdens are:
+\begin{enumerate}
+  \item proving the theorem-level correspondence between $\Phi(q)=0$ and nontrivial zeta zeros on the strip;
+  \item proving the theorem-level exclusion
+  \[
+  \Phi(q)=0\ \Longrightarrow\ \RePart(q)=\tfrac12
+  \]
+  on the declared domain.
 \end{enumerate}
 
-\subsection*{Canonical exclusion target supported by this interface}
-Let
-\[
-\mathcal{A}_{\mathrm{strip}}:=\{s\in\mathcal{A}:0<\RePart(s)<1\},
-\qquad
-\mathcal{B}:=\{s\in\mathcal{A}_{\mathrm{strip}}:\Phi_H(s)=0\}.
-\]
-The main-text exclusion burden is the single subset statement
-\[
-\mathcal{B}\subseteq\{s\in\mathcal{A}_{\mathrm{strip}}:\RePart(s)=\tfrac12\}.
-\]
-This section supports that statement by listing operator and analytic prerequisites.
-It does not claim those prerequisites are proved.
-
-\subsection*{Open support packages (dependency statements, not proved results)}
-\paragraph{Operator-side package (OP).}
-The following remain open theorem targets: well-defined operator action and closure properties, existence of the regularized resolvent traces, regularization invariance/consistency, and dependency-locked usage of these results across Targets~A/B.
-
-\paragraph{Analytic-control package (AC).}
-The following remain open theorem targets: strip-wide bound control for the explicit $\Phi_H$, legitimacy of limit/interchange operations for regularized traces, continuation control from local to strip-wide regimes, and exclusion of hidden off-line branches of $\mathcal{B}$ caused by analytic degeneration.
-
-\paragraph{Status note.}
-OP and AC are recorded as open bridge classes for audit.
-The main manuscript now keeps only this compressed dependency statement and does not carry a long OP/AC lemma catalog in the Stage~6 flow.
-These classes specify proof burden only.
-They do not provide a proof of Target~A or Target~B.
-
-\subsection*{Why this explicit choice is kept in the main flow}
-The conditional reduction step in \texttt{main-results.tex} depends on theorem-level statements about the specific functional above.
-Without a rigorous foundation for this explicit $\Phi_H$:
-\begin{enumerate}
-  \item $\Phi_H(s)=0$ is not yet a theorem-level condition on a proved domain,
-  \item the zero--balance correspondence target lacks a justified bridge,
-  \item the canonical exclusion target lacks a proved analytic object to control.
-\end{enumerate}
-Therefore this explicit $\Phi_H$ choice is a prerequisite object for the manuscript's proposed RH reduction route.
-
-\begin{heuristic}
-Geometric or cancellation intuition can guide candidate constructions of $H$ and $\Phi_H$.
-However, such intuition remains heuristic until converted into explicit definitions, hypotheses, and proved lemmas matching the interface above.
-\end{heuristic}
+\begin{remark}[Audit boundary]
+This section is a scope statement.
+It records what object the argument uses and what is still open.
+It does not claim RH and does not claim that the open bridges are solved.
+\end{remark}

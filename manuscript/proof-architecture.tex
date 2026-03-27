@@ -1,31 +1,33 @@
-We use a four-step proof spine.
-The purpose is to keep the main argument transparent for mathematical audit.
+We use a four-step proof spine centered on one canonical object.
 
 \subsection*{Main proof spine}
 \begin{enumerate}
-  \item \textbf{Define balance.}
-  Fix $\mathcal{A}$, define $\Phi_H$, and define
+  \item \textbf{Define the object.}
+  Set
   \[
-  \mathcal{B}=\{s\in\mathcal{A}_{\mathrm{strip}}:\Phi_H(s)=0\}.
+  \Phi(q):=\Gamma(q)(1-q)\zeta(q).
   \]
 
-  \item \textbf{Target A (correspondence).}
-  Prove that nontrivial zeros of $\zeta$ correspond exactly to points in $\mathcal{B}$
-  (\cref{thm:target-correspondence}).
+  \item \textbf{Define balance and correspondence target.}
+  Balance means $\Phi(q)=0$.
+  Target~A asks for correspondence between balanced strip points and nontrivial zeta zeros (\cref{thm:target-correspondence}).
 
-  \item \textbf{Target B (critical-line exclusion).}
-  Prove that all points of $\mathcal{B}$ satisfy $\RePart(s)=\tfrac12$
-  (\cref{thm:stage6-master-exclusion-target}).
+  \item \textbf{State one exclusion target.}
+  Target~B asks to prove
+  \[
+  \Phi(q)=0 \Longrightarrow \RePart(q)=\tfrac12
+  \]
+  for strip points (\cref{thm:target-uniqueness}).
 
-  \item \textbf{Deduce RH.}
-  Combine Steps 2--3 to obtain the conditional RH reduction
-  (\cref{prop:rh-reduction-main-spine}).
+  \item \textbf{Deduce RH conditionally.}
+  Combine Targets~A and~B to obtain the conditional RH reduction (\cref{prop:rh-reduction-main-spine}).
 \end{enumerate}
 
 \subsection*{Status}
 Step~1 is definitional.
-Steps~2 and~3 are open theorem targets in this manuscript version.
-Therefore Step~4 is conditional, and RH is not claimed as proved here.
+Steps~2 and~3 are open theorem targets.
+Therefore Step~4 is conditional, and RH is not claimed as proved.
 
-\subsection*{Where technical machinery now lives}
-Detailed transfer frameworks, defect-function constructions, and Stage~6 subroutines are retained as technical supporting material (appendices/notes), not as part of the main proof spine. In particular, the prior long OP/AC cross-cutting catalog is no longer in the main proof architecture; only a short dependency acknowledgment remains in manuscript-level summaries.
+\subsection*{Placement of secondary machinery}
+Alternative operator/resolvent architectures are secondary.
+If retained, they belong to supporting notes and not to this main proof spine.

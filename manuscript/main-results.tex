@@ -1,95 +1,61 @@
-This section presents a single proof spine for audit.
-The manuscript keeps only the definitions and theorem targets needed for the RH reduction.
-Detailed Stage~6 mechanisms are intentionally moved out of the main flow.
+This section states the shortest main theorem targets built on one object:
+\[
+\Phi(q):=\Gamma(q)(1-q)\zeta(q).
+\]
 
-\subsection*{Established inputs (standard references)}
-\begin{proposition}[Functional symmetry]
+\subsection*{Established input (standard)}
+\begin{proposition}[Functional symmetry of completed zeta]
 \label{prop:functional-symmetry}
-The completed zeta function
-\[
-\xi(s)=\tfrac12 s(s-1)\pi^{-s/2}\Gamma\!\left(\tfrac{s}{2}\right)\zeta(s)
-\]
-satisfies $\xi(s)=\xi(1-s)$; see \cite{Riemann1859,Edwards1974,Titchmarsh1986}.
+The completed zeta function satisfies $\xi(s)=\xi(1-s)$; see \cite{Riemann1859,Edwards1974,Titchmarsh1986}.
 \end{proposition}
 
-\begin{proposition}[Zero-set symmetries]
-\label{prop:zero-symmetries}
-If $\rho$ is a nontrivial zero of $\zeta$, then $1-\rho$ and $\overline{\rho}$ are also nontrivial zeros; see \cite{Edwards1974,Titchmarsh1986}.
-\end{proposition}
-
-\subsection*{Step 1: Canonical balance predicate (explicit main-text candidate)}
-Fix the proposed coherence object $H$ and the admissible class
+\subsection*{Step 1: Canonical balance set}
+In this manuscript, balance means exactly
 \[
-\mathcal{A}:=
-\left\{
-s\in\C:
-\Tr_{\mathrm{reg}}(H-sI)^{-1},\Tr_{\mathrm{reg}}(H-(1-s)I)^{-1}\ \text{exist and are finite}
-\right\}.
+\Phi(q)=0.
 \]
 Define
 \[
-\Phi_H(s):=
-\Tr_{\mathrm{reg}}(H-sI)^{-1}
--
-\Tr_{\mathrm{reg}}(H-(1-s)I)^{-1}
-\qquad (s\in\mathcal{A}).
+\mathcal{B}:=\{q\in\C:0<\RePart(q)<1,\ \Phi(q)=0\}.
 \]
-This manuscript treats this explicit resolvent reflection-defect functional as the single canonical candidate in the main flow.
-Define
-\[
-\mathcal{A}_{\mathrm{strip}}:=\{s\in\mathcal{A}:0<\RePart(s)<1\},
-\qquad
-\mathcal{B}:=\{s\in\mathcal{A}_{\mathrm{strip}}:\Phi_H(s)=0\}.
-\]
-In the main text, ``balanced'' means exactly $\Phi_H(s)=0$ on $\mathcal{A}_{\mathrm{strip}}$.
-The theorem targets below are interpreted under one explicit synchronized hypothesis package, to be stated in full where those targets are eventually proved.
 
-\subsection*{Step 2: Zero--balance correspondence target}
-\begin{drafttheorem}[Target A: zero--balance correspondence]
+\subsection*{Step 2: Target A (zero--balance correspondence)}
+\begin{drafttheorem}[Target A: strip-zero correspondence via $\Phi$]
 \label{thm:target-correspondence}
 \placeholder{Theorem target under construction; proof not yet provided.}
-Under a fully specified admissibility and well-posedness package, the framework attempts to prove:
+The argument attempts to prove
 \[
-\rho\text{ is a nontrivial zero of }\zeta
+q\in\mathcal{B}
 \quad\Longleftrightarrow\quad
-\rho\in\mathcal{B}
-\quad\text{where }\mathcal{B}\text{ is defined using the explicit }\Phi_H\text{ above}.
+q\text{ is a nontrivial zero of }\zeta.
 \]
-This target is open in the current manuscript version.
+Status: open target in the current manuscript version.
 \end{drafttheorem}
 
-\subsection*{Step 3: Canonical critical-line exclusion target}
-\begin{drafttheorem}[Target B: canonical exclusion statement]
-\label{thm:target-uniqueness}
+\subsection*{Step 3: Target B (critical-line exclusion)}
+\begin{drafttheorem}[Target B: canonical critical-line exclusion]
+\label{thm:stage6-master-exclusion-target}
 \placeholder{Theorem target under construction; proof not yet provided.}
-Under a synchronized hypothesis package compatible with Target~A, the framework attempts to prove the canonical exclusion statement
+The argument attempts to prove the single exclusion statement
 \[
-\mathcal{B}\subseteq\{s\in\mathcal{A}_{\mathrm{strip}}:\RePart(s)=\tfrac12\}.
+\mathcal{B}\subseteq\{q\in\C:\RePart(q)=\tfrac12\}.
 \]
-Here $\mathcal{B}$ is the zero set of the explicit resolvent reflection-defect functional fixed in Step~1.
-This target is open in the current manuscript version.
+Status: open target in the current manuscript version.
 \end{drafttheorem}
 
-\begin{remark}[Formulation policy]
-The main text uses only the subset formulation above for Target~B.
-Equivalent logical reformulations are treated as secondary and are omitted from the core proof spine.
-\end{remark}
-
-\subsection*{Step 4: RH reduction}
-\begin{proposition}[Conditional RH reduction inside the framework]
+\subsection*{Step 4: Conditional RH reduction}
+\begin{proposition}[Conditional RH reduction from Targets A and B]
 \label{prop:rh-reduction-main-spine}
-Assume Targets~A and~B are proved under one compatible hypothesis package.
-Then every nontrivial zero $\rho$ of $\zeta$ satisfies $\RePart(\rho)=\tfrac12$.
+If Targets~A and~B hold, then every nontrivial zero of $\zeta$ has real part $\tfrac12$.
 \end{proposition}
 
 \begin{proof}
-By Target~A, each nontrivial zero $\rho$ belongs to $\mathcal{B}$.
-By Target~B, every element of $\mathcal{B}$ lies on $\RePart(s)=\tfrac12$.
-Hence $\RePart(\rho)=\tfrac12$ for every nontrivial zero $\rho$.
+By Target~A, each nontrivial zero lies in $\mathcal{B}$.
+By Target~B, each point of $\mathcal{B}$ satisfies $\RePart(q)=\tfrac12$.
+Therefore every nontrivial zero lies on the critical line.
 \end{proof}
 
 \begin{remark}[Status discipline]
-The main spine above is a conditional proof program.
-In this manuscript version, Targets~A and~B remain open theorem targets.
-Therefore the RH conclusion is not claimed as an established theorem here.
+The RH deduction above is conditional.
+This manuscript does not claim that Target~A or Target~B is already proved.
 \end{remark}

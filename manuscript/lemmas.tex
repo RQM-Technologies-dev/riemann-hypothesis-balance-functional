@@ -1,294 +1,49 @@
-This section is a lemma-level dependency ledger for the manuscript under review. It distinguishes established standard inputs from manuscript-specific draft targets and open bridges requiring proof.
+This section keeps only the lemma targets needed for the simplified proof spine.
 
-\subsection*{A. Classical symmetry inputs (available; standard references)}
+\subsection*{A. Standard symmetry inputs}
 
-\begin{lemma}[Reflection transport of nontrivial zeros]
+\begin{lemma}[Reflection symmetry of nontrivial zeros]
 If $\rho$ is a nontrivial zero of $\zeta$, then $1-\rho$ is also a nontrivial zero.
 \end{lemma}
-\noindent\emph{Status: standard.} This is a direct consequence of the completed zeta function functional equation $\xi(s)=\xi(1-s)$; see \cite{Edwards1974,Titchmarsh1986}.
+\noindent\emph{Status: standard.} Follows from the functional equation for completed zeta.
 
-\begin{lemma}[Conjugation transport of nontrivial zeros]
+\begin{lemma}[Conjugation symmetry of nontrivial zeros]
 If $\rho$ is a nontrivial zero of $\zeta$, then $\overline{\rho}$ is also a nontrivial zero.
 \end{lemma}
-\noindent\emph{Status: standard.} This follows from Schwarz reflection for $\xi$ (equivalently $\xi(\bar s)=\overline{\xi(s)}$); see \cite{Edwards1974,Titchmarsh1986}.
+\noindent\emph{Status: standard.} Follows from Schwarz reflection.
 
-\subsection*{B. Draft lemma targets (manuscript-specific; open unless noted)}
-\noindent\emph{Reviewer map.} Part B is ordered as a dependency stack: \textbf{(B1) admissibility foundation} $\rightarrow$ \textbf{(B2) symmetry compatibility} $\rightarrow$ \textbf{(B3) zeta correspondence} $\rightarrow$ \textbf{(B4) preferred off-line exclusion route via transfer $\to$ no-alternative-locus}. Cross-cutting operator/analytic burden remains open and is tracked in \texttt{manuscript/spectral-framework.tex} and \texttt{notes/known-gaps.md}. Every item below remains an explicit open placeholder.
+\subsection*{B. Open lemma targets for the canonical object $\Phi$}
 
-\subsubsection*{B1. Foundation: admissibility and well-posedness}
-
-\begin{lemma}[Admissibility implies a well-defined balance functional \textnormal{(OPEN TARGET; placeholder)}]
-\placeholder{Establishes: under explicit admissibility hypotheses on the proposed coherence object, the balance functional is well-defined (domain specified; finite-valued; measurable/continuous in the declared topology). Depends on: final operator-level construction in Section~7 and a non-circular admissibility criterion from Section~2. Why it matters: without well-posedness, later reflection and exclusion statements are not mathematically meaningful.}
-\end{lemma}
-\noindent\emph{Feeds into:} B2 symmetry compatibility, B3 correspondence construction, and the cross-cutting operator/analytic burden tracked outside this lemma ledger.
-
-\begin{lemma}[Stability of balance under approved perturbation class \textnormal{(OPEN TARGET; placeholder)}]
-\placeholder{Establishes: small perturbations in the manuscript's allowed class do not destroy admissibility or the definition of balance. Depends on: the precise perturbation class and norm/topology choices (currently provisional). Why it matters: supports reproducibility of any subsequent inference and prevents dependence on an unstable encoding.}
-\end{lemma}
-\noindent\emph{Feeds into:} robustness assumptions used implicitly in B2--B4 and any Section~8 reduction that varies admissible representatives.
-
-\subsubsection*{B2. Symmetry compatibility layer (reflection/conjugation)}
-
-\begin{lemma}[Reflection compatibility of the balance criterion \textnormal{(OPEN TARGET; placeholder)}]
-\placeholder{Establishes: for admissible data, balance evaluated at $s$ matches balance evaluated at $1-s$ in the precise form required by the reduction architecture. Depends on: B1 well-posedness targets plus the exact map implementing reflection on the spectral side. Why it matters: this is the manuscript-specific bridge from classical zero symmetry to the proposed balance mechanism.}
-\end{lemma}
-\noindent\emph{Feeds into:} B4 quartet-level transfer and symmetry-preserving exclusion logic in Section~8.
-
-\begin{lemma}[Conjugation compatibility of the balance criterion \textnormal{(OPEN TARGET; placeholder)}]
-\placeholder{Establishes: balance is compatible with $s\mapsto \bar s$ in the same function class used by the argument. Depends on: B1 well-posedness targets and the real-structure assumptions used in Section~6. Why it matters: needed to keep the manuscript's symmetry reductions internally consistent when passing between reflected/conjugate points.}
-\end{lemma}
-\noindent\emph{Feeds into:} B4 quartet-level transfer and any argument that pairs reflection with conjugation on candidate points.
-
-\subsubsection*{B3. Bridge layer: zero--balance correspondence}
-
-\begin{lemma}[From balanced spectral data to zeta-side candidate points \textnormal{(OPEN TARGET; placeholder)}]
-\placeholder{Establishes: an explicit correspondence map sending balanced spectral configurations to candidate critical-strip points, with hypotheses and codomain clearly stated. Depends on: finalized definitions in Section~2 and spectral setup in Section~7. Why it matters: without this bridge, balance statements cannot be interpreted as statements about zeta zeros.}
-\end{lemma}
-\noindent\emph{Feeds into:} B3 soundness and B4 off-line exclusion, where candidate points must carry zeta-side meaning.
-
-\begin{lemma}[Soundness of correspondence at the lemma level \textnormal{(OPEN TARGET; placeholder)}]
-\placeholder{Establishes: if the correspondence outputs a point $s_0$, then the claimed zeta-side property attached to $s_0$ is justified under stated assumptions. Depends on: the preceding correspondence construction and any analytic continuation/regularity inputs invoked there. Why it matters: prevents logical gaps where a constructed point is used as if it already satisfied a proved zeta property.}
-\end{lemma}
-\noindent\emph{Feeds into:} B4 off-line exclusion as the point where correspondence claims become admissible premises for contradiction/exclusion.
-
-\subsubsection*{B4. Exclusion layer: balance-axis uniqueness and off-line elimination}
-
-\begin{lemma}[Local balance-axis uniqueness lemma target \textnormal{(OPEN TARGET; placeholder)}]
-\placeholder{Establishes: in a declared local regime $\mathcal{R}_{\mathrm{loc}}\subseteq\mathcal{A}$, the balance condition $\Phi_H(s)=0$ implies $\RePart(s)=\tfrac12$. Depends on: B1--B3 targets plus a proved local coercive/positivity/monotonic ingredient in the same regime. Why it matters: this isolates the intrinsic Target~B localization burden before any global extension claim.}
-\end{lemma}
-\noindent\emph{Feeds into:} the global exclusion-extension target below and Stage~5 in \texttt{proof-architecture.tex}.
-
-
-\paragraph{How B1--B4 discharge the minimum Stage~6 formulation package.}
-The minimum synchronized package $\mathcal{H}_{\mathrm{S6}}^{\min}$ from \texttt{critical-line-argument.tex} is mapped here only at proof-program level (all open targets):
-\begin{itemize}
-  \item \textbf{S6-M1:} admissibility synchronization/stability (B1 plus transfer in B4).
-  \item \textbf{S6-M2/S6-M3:} strip-wide well-posedness and symmetry compatibility (B1--B2 under one synchronized package).
-  \item \textbf{S6-M4/S6-M5:} first control and no-drift transport chain in B4.
-  \item \textbf{S6-M6/S6-M7:} no-alternative-locus and contradiction compatibility endpoints in B4.
-\end{itemize}
-Operator/analytic sub-burdens that support these items are still required, but are tracked outside this main lemma ledger to keep the Stage~6 chain readable.
-
-\paragraph{Preferred Stage-6 lemma stack for $\mathcal{B}$ (audit order; all OPEN).}
-To make the local-to-global burden explicit, B4 uses the following stack:
+\begin{lemma}[Strip equivalence lemma target \textnormal{(OPEN)}]
+\label{lem:phi-strip-equivalence}
+\placeholder{Proof not yet provided.}
+On the critical strip, show carefully that
 \[
-\text{Local uniqueness on }\mathcal{R}_{\mathrm{loc}}
-\Rightarrow
-\text{admissibility/continuation/symmetry transfer}
-\Rightarrow
-\text{no new off-line components of }\mathcal{B}
-\Rightarrow
-\text{global exclusion in }\mathcal{A}_{\mathrm{strip}}.
+\Phi(q)=\Gamma(q)(1-q)\zeta(q)=0
+\quad\Longleftrightarrow\quad
+\zeta(q)=0,
 \]
-The next lemmas are placeholders for these exact arrows.
+including all domain and regularity details needed by later arguments.
+\end{lemma}
 
-The first proving target inside the preferred Stage~6 route is the uniform no-drift transport lemma below.
-Reason: without a theorem-level uniform no-drift statement, local Target~B control on $\mathcal{R}_{\mathrm{loc}}$ is not synchronized with strip-wide statements on $\mathcal{A}_{\mathrm{strip}}$, so subsequent transfer/no-alternative-locus claims are not yet theorem-usable.
-This priority label is a strategy designation only and does not upgrade proof status.
-
-\subsubsection*{B4a. Support stack for the first contradiction-style Stage~6 subtheorem}
-
-\paragraph{Three-step first-control chain for $\Delta_{\mathrm{nd}}$ (audit skeleton; all OPEN).}
-Before transport-form conclusions, B4 now isolates an explicit three-step chain:
+\begin{lemma}[Critical-line exclusion lemma target \textnormal{(OPEN)}]
+\label{lem:phi-critical-exclusion}
+\placeholder{Proof not yet provided.}
+For strip points, show
 \[
-\text{Step 1 (initialization): }\cref{lem:b4-delta-initialization-seed}
-\Longrightarrow
-\text{Step 2 (structural propagation): }\cref{lem:b4-delta-structural-nonincrease}
-\Longrightarrow
-\text{Step 2.5 (coverage bridge): }\cref{lem:b4-seed-extension-coverage-bridge}
-\Longrightarrow
-\text{Step 3 (first control target): }\cref{lem:b4-first-delta-control}.
+\Phi(q)=0 \Longrightarrow \RePart(q)=\tfrac12
 \]
-This is a proof-planning skeleton only.
-It does not claim that any step is proved.
-Its purpose is to make the first executable derivation pattern explicit for audit:
-seed-anchor zero defect, then synchronized non-increase along admissible extension, then the explicit seed-extension coverage bridge, then classwise zero-defect control on $\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$.
+under one explicit hypothesis package.
+\end{lemma}
 
-\paragraph{Single highest-risk checkpoint inside this three-step chain (audit diagnosis).}
-Within this specific chain, the primary likely failure point is \emph{not} the existence of a seed statement by itself and \emph{not} the formal non-increase inequality by itself.
-It is the universal \textbf{synchronized seed-extension coverage clause}
+\begin{lemma}[No off-line balanced points lemma target \textnormal{(OPEN)}]
+\label{lem:no-offline-balanced}
+\placeholder{Proof not yet provided.}
+Using the critical-line exclusion route, prove
 \[
-\forall C\in\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}},\ \exists a\in\mathcal{R}_{\mathrm{loc}}
-\text{ such that } C_a^{\mathrm{seed}}\preceq C
+\{q:0<\RePart(q)<1,\ \RePart(q)\neq\tfrac12,\ \Phi(q)=0\}=\varnothing.
 \]
-under unchanged tuple/gauge semantics.
-If this clause fails, the first-control conclusion \cref{lem:b4-first-delta-control} is not derivable on all of $\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$ from Steps 1--2. The current manuscript therefore isolates one primary repair target, \cref{lem:b4-seed-extension-coverage-bridge}, as the missing quantifier bridge.
-This diagnosis is a vulnerability marker for proof planning; it is not a proof of failure and does not invalidate the skeleton.
-
-
-\paragraph{Contradiction-ready grouping for \cref{thm:stage6-first-subtarget-admissibility}.}
-The first subtheorem in \texttt{critical-line-argument.tex} is now stated in contradiction-ready form.
-Accordingly, the immediate B4 support lemmas are grouped by burden type:
-\begin{enumerate}
-  \item \textbf{Contradiction-assumption bookkeeping burden:} keep the off-line balanced premise theorem-typed on $\mathcal{A}_{\mathrm{strip}}$ under one synchronized package $\mathcal{H}_{\mathrm{S6}}^{\min}$.
-  \item \textbf{Intermediate transport-support burden:} prove Stage-5 hypothesis-tuple persistence along continuation classes from $\mathcal{R}_{\mathrm{loc}}$ to transfer-reachable strip points.
-  \item \textbf{First contradiction conclusion burden:} derive transfer-reachable off-line exclusion under the same synchronized package.
-\end{enumerate}
-This grouping is an audit map only; it does not claim any lemma below is proved.
-
-\begin{lemma}[Provisional structural non-increase target for \texorpdfstring{$\Delta_{\mathrm{nd}}$}{Delta\_nd} under synchronized transport extension \textnormal{(OPEN BRIDGE; primary structural lemma under audit)}]
-\label{lem:b4-delta-structural-nonincrease}
-\placeholder{Primary structural lemma target for the current Stage~6 no-drift route. Proof is not provided in this manuscript version.}
-Work under one fixed synchronized package $\mathcal{H}_{\mathrm{S6}}^{\min}$.
-Fix a Stage-5 clause tuple $\Theta_{\mathrm{S5}}=(\theta_1,\dots,\theta_m)$, transfer class $\mathfrak{C}_{\mathrm{tr}}$ with contradiction-relevant subclass $\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}\subseteq\mathfrak{C}_{\mathrm{tr}}$, transfer-position sets $U(C)\subseteq\mathcal{A}_{\mathrm{strip}}$, and clause-defect gauges $\delta_j^{(C)}:U(C)\to[0,\infty]$, with
-\[
-d_{\Theta}^{(C)}(u):=\max_{1\le j\le m}\delta_j^{(C)}(u),\qquad
-\Delta_{\mathrm{nd}}(C;\Theta_{\mathrm{S5}},\delta):=\sup_{u\in U(C)}d_{\Theta}^{(C)}(u).
-\]
-Assume $\preceq$ is the synchronized extension relation on $\mathfrak{C}_{\mathrm{tr}}$, where $C_1\preceq C_2$ means $C_2$ extends $C_1$ without changing the synchronized package, tuple type, or clause-gauge interpretation.
-The structural target assertion is
-\[
-\forall\,C_1,C_2\in\mathfrak{C}_{\mathrm{tr}},\qquad
-C_1\preceq C_2\Longrightarrow
-\Delta_{\mathrm{nd}}(C_2;\Theta_{\mathrm{S5}},\delta)\le
-\Delta_{\mathrm{nd}}(C_1;\Theta_{\mathrm{S5}},\delta).
-\]
-Intended interpretation for the no-drift route (not a proof claim): this monotonicity would supply the structural bridge from local-anchor defect initialization to classwise defect control on $\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$, which is then reformulated as endpoint-usable no-drift transport.
 \end{lemma}
-\noindent\emph{Feeds into:} the three-step first-control chain (with \cref{lem:b4-delta-initialization-seed} as Step 1), then \cref{lem:b4-first-delta-control}, then \cref{lem:stage6-first-concrete-no-drift}/\cref{lem:b4-admissibility-stability-transfer}, then \cref{thm:stage6-neutralizing-transport-uniformity}.
 
-\begin{lemma}[Seed-anchor initialization target for \texorpdfstring{$\Delta_{\mathrm{nd}}$}{Delta\_nd} \textnormal{(OPEN BRIDGE; base-case companion to \cref{lem:b4-delta-structural-nonincrease})}]
-\label{lem:b4-delta-initialization-seed}
-\placeholder{Initialization theorem target under construction; proof not provided in this manuscript version. Under one synchronized package $\mathcal{H}_{\mathrm{S6}}^{\min}$, for each local anchor $a\in\mathcal{R}_{\mathrm{loc}}$ there is a declared seed transfer object $C_a^{\mathrm{seed}}\in\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$ with seed position set $U(C_a^{\mathrm{seed}})=\{a\}$ and clausewise anchor vanishing $\delta_j^{(C_a^{\mathrm{seed}})}(a)=0$ for all $j=1,\dots,m$. Equivalently,
-\[
-\Delta_{\mathrm{nd}}(C_a^{\mathrm{seed}};\Theta_{\mathrm{S5}},\delta)=0
-\quad\text{for each }a\in\mathcal{R}_{\mathrm{loc}}.
-\]
-Companion use with \cref{lem:b4-delta-structural-nonincrease}: if each contradiction-relevant transfer object in $\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$ is a synchronized extension of some seed $C_a^{\mathrm{seed}}$, then classwise vanishing of $\Delta_{\mathrm{nd}}$ follows in the exact form targeted by \cref{lem:b4-first-delta-control}. This lemma is an initialization target only, not a proof that the canonical seed class or extension coverage is finalized.}
-\end{lemma}
-\noindent\emph{Feeds into:} Step 1 of the three-step first-control chain; paired with \cref{lem:b4-delta-structural-nonincrease} (Step 2), it targets \cref{lem:b4-first-delta-control} (Step 3), then \cref{lem:stage6-first-concrete-no-drift}/\cref{lem:b4-admissibility-stability-transfer}.
-
-
-\begin{lemma}[Synchronized seed-extension coverage bridge for contradiction-relevant transfer objects \textnormal{(OPEN BRIDGE; current best repair candidate for the three-step failure point)}]
-\label{lem:b4-seed-extension-coverage-bridge}
-\placeholder{Repair-bridge target; proof not provided in this manuscript version. Work under one fixed synchronized package $\mathcal{H}_{\mathrm{S6}}^{\min}$ with fixed Stage-5 tuple $\Theta_{\mathrm{S5}}$, fixed clause-gauge interpretation $\delta$, and fixed synchronized extension relation $\preceq$ on $\mathfrak{C}_{\mathrm{tr}}$. The required coverage statement is:
-\[
-\forall C\in\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}},\ \exists a\in\mathcal{R}_{\mathrm{loc}}\ \text{such that}\ C_a^{\mathrm{seed}}\preceq C,
-\]
-where $C_a^{\mathrm{seed}}$ is the seed object from \cref{lem:b4-delta-initialization-seed} and the extension $C_a^{\mathrm{seed}}\preceq C$ preserves the synchronized package, tuple semantics, and clause-gauge meaning. This lemma is intended to be combined with \cref{lem:b4-delta-initialization-seed} and \cref{lem:b4-delta-structural-nonincrease}: initialization gives $\Delta_{\mathrm{nd}}(C_a^{\mathrm{seed}};\Theta_{\mathrm{S5}},\delta)=0$, structural non-increase gives $\Delta_{\mathrm{nd}}(C;\Theta_{\mathrm{S5}},\delta)\le \Delta_{\mathrm{nd}}(C_a^{\mathrm{seed}};\Theta_{\mathrm{S5}},\delta)$, and this coverage bridge supplies the universal quantifier passage needed to derive the target shape of \cref{lem:b4-first-delta-control}. Status note: this is the current best candidate repair for the highest-risk internal checkpoint in the first-control derivation skeleton; it is not proved and it is not claimed to be the only possible repair.}
-\end{lemma}
-\noindent\emph{Feeds into:} explicit Step 2.5 in the first-control chain; combines \cref{lem:b4-delta-initialization-seed} and \cref{lem:b4-delta-structural-nonincrease} to make the classwise quantifier in \cref{lem:b4-first-delta-control} theorem-reachable, then feeds \cref{lem:stage6-first-concrete-no-drift}/\cref{lem:b4-admissibility-stability-transfer}.
-
-\begin{lemma}[First control lemma target for the provisional defect functional \texorpdfstring{$\Delta_{\mathrm{nd}}$}{Delta\_nd} \textnormal{(OPEN BRIDGE; primary analytic entry point)}]
-\label{lem:b4-first-delta-control}
-\placeholder{Establishes the first precise analytic control statement in the Stage~6 stack: under $\mathcal{H}_{\mathrm{S6}}^{\min}$, for every contradiction-relevant transfer object $C\in\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}\subseteq\mathfrak{C}_{\mathrm{tr}}$, with transfer-position set $U(C)\subseteq\mathcal{A}_{\mathrm{strip}}$, Stage-5 tuple $\Theta_{\mathrm{S5}}=(\theta_1,\dots,\theta_m)$, clause gauges $\delta_j^{(C)}:U(C)\to[0,\infty]$, and
-\[
-d_{\Theta}^{(C)}(u):=\max_{1\le j\le m}\delta_j^{(C)}(u),\qquad
-\Delta_{\mathrm{nd}}(C;\Theta_{\mathrm{S5}},\delta):=\sup_{u\in U(C)}d_{\Theta}^{(C)}(u),
-\]
-one has
-\[
-\forall C\in\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}},\qquad
-\Delta_{\mathrm{nd}}(C;\Theta_{\mathrm{S5}},\delta)=0.
-\]
-Interpretation target: exact classwise no-drift on the contradiction-relevant transfer subclass. Current immediate support targets are the structural non-increase lemma \cref{lem:b4-delta-structural-nonincrease}, the seed-anchor initialization lemma \cref{lem:b4-delta-initialization-seed}, and the explicit coverage bridge lemma target \cref{lem:b4-seed-extension-coverage-bridge}; all are open. In the current three-step derivation attempt, this coverage clause is the single most likely failure point, because it carries the universal quantifier transfer from seed-level initialization to classwise control. Depends on: B1 admissibility well-posedness and a synchronized operator/analytic support package stated outside this ledger. Why it matters: this is the first theorem-style control target on a concrete analytic quantity before transport conclusions are rephrased as endpoint hypothesis persistence.}
-\end{lemma}
-\noindent\emph{Feeds into:} \cref{lem:stage6-first-concrete-no-drift} and its ledger-aligned form \cref{lem:b4-admissibility-stability-transfer}, then \cref{lem:b4-neutralizing-transport-uniformity}.
-
-\begin{lemma}[Uniform no-drift transport of the Stage-5 hypothesis tuple along $\mathfrak{C}_{\mathrm{tr}}$ \textnormal{(OPEN BRIDGE; first transport reformulation downstream of \cref{lem:b4-first-delta-control})}]
-\label{lem:b4-admissibility-stability-transfer}
-\placeholder{Transport-form restatement aligned with \cref{lem:stage6-first-concrete-no-drift} in \texttt{critical-line-argument.tex}: under $\mathcal{H}_{\mathrm{S6}}^{\min}$, if the first control statement \cref{lem:b4-first-delta-control} holds on $\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$, then every clause of $\Theta_{\mathrm{S5}}$ persists along each contradiction-relevant transfer object $C$ from a local anchor in $\mathcal{R}_{\mathrm{loc}}$ to an endpoint in $\mathcal{A}_{\mathrm{strip}}$, with no admissibility/regularity/symmetry predicate loss. Equivalently: classwise vanishing of $\Delta_{\mathrm{nd}}$ is promoted to endpoint-usable hypothesis persistence. Depends on: \cref{lem:b4-first-delta-control} plus the same synchronized operator/analytic support interfaces needed to interpret transported clauses at endpoints. Why it matters: this is the first transport-usable theorem target extracted from the analytic defect control statement.}
-\end{lemma}
-\noindent\emph{Feeds into:} the immediate neutralizing bridge \cref{lem:b4-neutralizing-transport-uniformity}; then the contradiction conclusion in \cref{thm:stage6-first-subtarget-admissibility}; then later global-extension/no-alternative-locus burdens.
-
-\begin{lemma}[Transport-uniformity contradiction-enablement lemma (best current neutralizing candidate downstream of the first Stage~6 target) \textnormal{(OPEN BRIDGE; theorem target placeholder)}]
-\label{lem:b4-neutralizing-transport-uniformity}
-\placeholder{Establishes: under $\mathcal{H}_{\mathrm{S6}}^{\min}$ plus an explicit no-drift transport clause, every transfer-reachable endpoint in $\mathcal{B}_{\mathrm{tr}}$ inherits the exact Stage-5 local hypothesis tuple in theorem-usable form, with no admissibility/regularity/symmetry predicate drift along $\mathfrak{C}_{\mathrm{tr}}$. Depends on: \cref{lem:b4-admissibility-stability-transfer} and the same synchronized operator/analytic support package used in the first-control chain. Why it matters: this is the single best candidate result to neutralize the currently identified highest-risk failure point in the contradiction-style first Stage~6 attempt; it upgrades endpoint contradiction use from heuristic to theorem-typed.}
-\end{lemma}
-\noindent\emph{Feeds into:} the contradiction conclusion in \cref{thm:stage6-first-subtarget-admissibility}, then \cref{lem:b4-global-extension} and the master Stage~6 exclusion route.
-
-\begin{lemma}[Uniform continuation/compactness control lemma \textnormal{(OPEN BRIDGE; placeholder)}]
-\label{lem:b4-uniform-continuation}
-\placeholder{Establishes: local estimates used for balance-axis uniqueness admit a continuation or compactness mechanism with explicit uniform bounds across boundary-near, non-perturbative, and large-parameter strip sectors. Depends on: local uniqueness target and synchronized analytic-control assumptions tracked outside this ledger. Why it matters: this is the technical bridge preventing loss of control when extending from $\mathcal{R}_{\mathrm{loc}}$ to $\mathcal{A}_{\mathrm{strip}}$.}
-\end{lemma}
-\noindent\emph{Feeds into:} global extension theorem target and off-line contradiction arguments in Stage~6.
-
-\begin{lemma}[No-new-off-line-branch emergence lemma \textnormal{(OPEN BRIDGE; placeholder)}]
-\label{lem:b4-no-new-offline-branch}
-\placeholder{Establishes: under the synchronized transfer hypotheses, no connected component of $\mathcal{B}$ with $\RePart(s)\neq\tfrac12$ can appear outside the local regime if absent inside it. Depends on: admissibility stability transfer, uniform continuation/compactness control, and B2 symmetry compatibility. Why it matters: rules out hidden alternative-locus components created only in global regimes.}
-\end{lemma}
-\noindent\emph{Feeds into:} no-alternative-locus principle and full-strip no-off-line-balance theorem target.
-
-\begin{lemma}[Transfer-reachable contradiction conclusion lemma target \textnormal{(OPEN BRIDGE; placeholder)}]
-\label{lem:b4-global-extension}
-\placeholder{Establishes: the immediate contradiction conclusion targeted by \cref{thm:stage6-first-subtarget-admissibility}: under synchronized transfer hypotheses, any transfer-reachable off-line balanced candidate contradicts the transported Stage-5 uniqueness clause under one synchronized package. In extended form, this feeds a theorem-level local-to-global transfer principle under $\mathcal{H}_{\mathrm{tr}}$. Formal target shape:
-\[
-\Big(\forall s\in\mathcal{B}\cap\mathcal{R}_{\mathrm{loc}},\ \RePart(s)=\tfrac12\Big)\Rightarrow
-\Big(\forall s\in\mathcal{B}\cap\mathcal{A}_{\mathrm{strip}},\ \RePart(s)=\tfrac12\Big).
-\]
-Must include admissibility stability, compatibility of local estimates with the full admissible class, continuation/compactness uniformity, symmetry compatibility, and no-new-off-line-branch control. Depends on: local uniqueness target, admissibility-stability transfer, uniform continuation/compactness control, no-new-off-line-branch emergence, and synchronized support assumptions on operator/analytic control. Why it matters: this is the explicit closure bridge from local Target~B control to global off-line exclusion.}
-\end{lemma}
-\noindent\emph{Feeds into:} full-strip off-line exclusion and Stage~6 global mechanism.
-
-\paragraph{Proof burden ledger for the first Stage~6 draft theorem target.}
-The first executable draft theorem target is \cref{thm:stage6-first-subtarget-admissibility} in \texttt{critical-line-argument.tex}.
-Within B4, its proof burden is grouped as:
-\begin{enumerate}
-  \item \textbf{Contradiction assumption bookkeeping:} the off-line balanced assumption package described in \cref{thm:stage6-first-subtarget-admissibility} and aligned with the placeholder contradiction-route admissibility lemma below.
-  \item \textbf{Primary structural-property lemma burden:} \cref{lem:b4-delta-structural-nonincrease}, i.e. synchronized extension monotonicity target for $\Delta_{\mathrm{nd}}$ on $\mathfrak{C}_{\mathrm{tr}}$.
-  \item \textbf{Primary repair-bridge burden for the current highest-risk checkpoint:} \cref{lem:b4-seed-extension-coverage-bridge}, i.e. synchronized seed-extension coverage on $\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$ under unchanged tuple/gauge semantics.
-  \item \textbf{Core first analytic control lemma (current best first technical move):} \cref{lem:b4-first-delta-control}, i.e. classwise vanishing target for $\Delta_{\mathrm{nd}}$ on $\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$.
-  \item \textbf{Core first transport reformulation:} \cref{lem:b4-admissibility-stability-transfer}, converting that defect control into endpoint-usable no-drift persistence of the full Stage-5 tuple.
-  \item \textbf{Primary downstream neutralizing target:} \cref{lem:b4-neutralizing-transport-uniformity}, which aggregates that first lemma into theorem-usable contradiction enabling at transfer-reachable endpoints.
-  \item \textbf{Analytic-control support:} \cref{lem:b4-uniform-continuation} plus synchronized analytic assumptions recorded outside this ledger.
-  \item \textbf{Operator/symmetry support:} synchronized operator assumptions (tracked outside this ledger) together with B2 symmetry compatibility.
-  \item \textbf{Immediate contradiction conclusion target:} transfer-reachable off-line exclusion, recorded as part of \cref{lem:b4-global-extension}.
-  \item \textbf{Still-open after the neutralized first target:} \cref{lem:b4-no-new-offline-branch}, no-alternative-locus principle, and full-strip exclusion endpoint.
-\end{enumerate}
-This ledger is organizational only.
-It does not claim any listed item is proved.
-
-\begin{lemma}[Candidate exclusion principle template \textnormal{(OPEN BRIDGE; placeholder)}]
-\placeholder{Establishes: a theorem schema specifying which structural ingredient makes off-line balance impossible, without yet committing to a final operator realization. In the current manuscript hierarchy, coercive gap / positivity-monotonicity / rigidity are treated as \emph{supporting ingredients} for the preferred transfer $\to$ no-alternative-locus route, while reflection-incompatibility and direct contradiction-only closure are retained as \emph{fallback alternatives}. Depends on: B1--B3 well-posedness/correspondence plus explicit Stage~6 hypothesis synchronization. Why it matters: turns ``global mechanism'' language into a checkable theorem target with a declared priority order rather than a flat list.}
-\end{lemma}
-\noindent\emph{Feeds into:} the contradiction-route admissibility package and the contradiction-form exclusion lemma.
-
-\begin{lemma}[No-alternative-locus principle for $\mathcal{B}$ \textnormal{(OPEN BRIDGE; theorem target placeholder)}]
-\placeholder{Establishes: under a synchronized hypothesis package $\mathcal{H}_{\mathrm{NAL}}$, the balanced set $\mathcal{B}=\{s\in\mathcal{A}_{\mathrm{strip}}:\Phi_H(s)=0\}$ has no off-line connected component; equivalently every component of $\mathcal{B}$ is contained in $\RePart(s)=\tfrac12$. Must explicitly rule out: (i) alternative vertical lines $\RePart(s)=\sigma_0\neq\tfrac12$, (ii) off-line curves/submanifolds, (iii) disconnected off-line balanced components, and (iv) regime-specific off-line loci outside local uniqueness. Depends on: local balance-axis uniqueness, global extension of hypotheses, and at least one explicit global rigidity/coercivity/positivity/transfer ingredient under admissibility and symmetry synchronization. Why it matters: this is the sharpened Stage~6 theorem target that upgrades local localization into full-strip geometric exclusion for balance.}
-\end{lemma}
-\noindent\emph{Feeds into:} contradiction-form off-line exclusion and final full-strip no-off-line-balance theorem target.
-
-\begin{lemma}[No-hidden-branch analytic control for balance loci \textnormal{(OPEN BRIDGE; placeholder)}]
-\placeholder{Establishes: analytic-control hypotheses (regularity, compactness/continuation control, boundary-near and large-parameter estimates) prevent creation of hidden off-line branches of $\Phi_H=0$ outside the local regime. Depends on: B1 well-posedness and synchronized analytic-control assumptions tracked outside this ledger. Why it matters: without this bridge, a local uniqueness theorem can coexist with off-line components that appear only in regimes not covered by local estimates.}
-\end{lemma}
-\noindent\emph{Feeds into:} no-alternative-locus principle and global extension from local uniqueness.
-
-\begin{lemma}[Contradiction-route admissibility package for an off-line candidate \textnormal{(OPEN BRIDGE; placeholder)}]
-\placeholder{Establishes: if an off-line point $s_\ast$ is assumed balanced, then the assumption package is stated in a theorem-usable form: (i) $s_\ast\in\mathcal{A}_{\mathrm{strip}}$ with $0<\RePart(s_\ast)<1$ and $\RePart(s_\ast)\neq\tfrac12$, (ii) $\Phi_H(s_\ast)$ is well-defined and equals $0$, (iii) reflection/conjugation transports of $s_\ast$ remain admissible under the same hypotheses, and (iv) the regularity regime needed for global transfer is satisfied. Depends on: B1 well-posedness, B2 symmetry compatibility, and synchronized analytic-control assumptions tracked outside this ledger. Why it matters: prevents hidden changes of assumptions between the contradiction premise and the Stage~6 mechanism.}
-\end{lemma}
-\noindent\emph{Feeds into:} off-line contradiction and quartet-transfer targets.
-
-\begin{lemma}[Off-line balance contradiction lemma target \textnormal{(OPEN BRIDGE; placeholder)}]
-\placeholder{Establishes: assuming the contradiction-route admissibility package and one selected exclusion-principle ingredient, a formal contradiction is derived with a declared theorem ingredient in the same synchronized package. In the current strategy, this contradiction lemma is \emph{secondary}: primarily it is expected to close via the preferred transfer/no-alternative-locus route (supported by coercivity/positivity/rigidity controls), while direct reflection-incompatibility contradiction remains a fallback. Depends on: candidate exclusion principle template, no-alternative-locus principle target, contradiction-route admissibility package, no-hidden-branch analytic control, and global extension from local uniqueness. Why it matters: supplies the explicit logical step from an admissible off-line balanced assumption to theorem-level incompatibility rather than heuristic tension.}
-\end{lemma}
-\noindent\emph{Feeds into:} the full-strip no-off-line-balance theorem target below.
-
-\begin{lemma}[No admissible off-line balance states in the full strip \textnormal{(OPEN BRIDGE; placeholder)}]
-\placeholder{Establishes: for every $s\in\mathcal{A}$ with $0<\RePart(s)<1$ and $\RePart(s)\neq \tfrac12$, the manuscript balance criterion fails (or yields contradiction) under one synchronized hypothesis package. Depends on: local uniqueness, global extension, the off-line contradiction lemma target, B1--B3 compatibility, and synchronized operator/analytic closure assumptions tracked outside this ledger. Why it matters: this is the theorem-level exclusion statement needed before converting balance localization into zero exclusion.}
-\end{lemma}
-\noindent\emph{Feeds into:} quartet-level exclusion transfer and the manuscript's global reduction claim.
-
-\begin{lemma}[Master Stage~6 exclusion theorem target (preferred route endpoint) \textnormal{(OPEN BRIDGE; placeholder)}]
-\placeholder{Establishes: under the minimum synchronized package $\mathcal{H}_{\mathrm{S6}}^{\min}$ from \texttt{critical-line-argument.tex}, the preferred Stage~6 route proves
-\[
-\Big(\forall s\in\mathcal{B}\cap\mathcal{R}_{\mathrm{loc}},\ \RePart(s)=\tfrac12\Big)\Rightarrow
-\Big(\forall s\in\mathcal{B}\cap\mathcal{A}_{\mathrm{strip}},\ \RePart(s)=\tfrac12\Big),
-\]
-equivalently in theorem-target form: (i) pointwise no admissible off-line balanced point exists in $\mathcal{A}_{\mathrm{strip}}$, (ii) set-theoretically $\mathcal{B}\cap\{s\in\mathcal{A}_{\mathrm{strip}}:\RePart(s)\neq\tfrac12\}=\varnothing$, (iii) component-wise no off-line connected component of $\mathcal{B}$ survives globally, and (iv) contradiction-style any assumed admissible off-line balanced point violates at least one clause of the same synchronized package. Depends on: local balance-axis uniqueness, admissibility-stability transfer, uniform continuation/compactness control, no-new-off-line-branch emergence, no-alternative-locus principle, and one synchronized operator/analytic support package tracked outside this ledger. Why it matters: this is the single theorem endpoint currently targeted by the Stage~6 program under audit; all Stage~6 sub-lemmas are discharge obligations for this one statement.}
-\end{lemma}
-\noindent\emph{Feeds into:} the Stage~6 output in \texttt{proof-architecture.tex} and the conditional RH reduction pipeline in \texttt{main-results.tex}.
-
-\begin{lemma}[Quartet-level exclusion transfer \textnormal{(OPEN TARGET; placeholder)}]
-\placeholder{Establishes: once one off-line point is excluded by the manuscript criterion, the associated reflection/conjugation quartet is excluded in the exact sense required by Section~8. Depends on: classical symmetry lemmas from part A and the off-line exclusion lemma above. Why it matters: converts pointwise exclusion into the symmetry-compatible exclusion statement used in the global reduction.}
-\end{lemma}
-\noindent\emph{Feeds into:} final symmetry-consistent exclusion statement used by the Section~8 architecture.
-
-\subsubsection*{B5. Cross-cutting support (compressed audit remark)}
-
-\begin{remark}[Cross-cutting operator/analytic burden is retained but moved out of the main Stage~6 ledger]
-The Stage~6 chain in this manuscript still requires theorem-level operator and analytic support (well-posed operator realization, admissibility stability, continuation/interchange legality, and no-hidden-branch control). Those burdens are not removed mathematically; they are tracked in compact form in \texttt{manuscript/spectral-framework.tex} and in detailed audit form in \texttt{notes/known-gaps.md}, rather than as a long OP/AC lemma catalog inside the main B1--B4 flow.
-\end{remark}
-
-\subsection*{C. Audit note on current status}
-
-\auditnote{All lemmas in part A are standard inputs from the cited literature. All lemmas in part B are manuscript-specific targets and remain open placeholders in this version unless and until full proofs are inserted. The open targets are organized to match the gap-register bridge names: exact spectral object, zero--balance correspondence, uniqueness of the balance axis, exclusion of off-critical-line zeros, operator-theoretic gaps, and analytic-control gaps.}
+\subsection*{Audit note}
+\auditnote{The standard lemmas in Part A are available inputs. The lemmas in Part B are open targets. They are the direct support list for Target A, Target B, and the conditional RH reduction in the simplified manuscript.}
