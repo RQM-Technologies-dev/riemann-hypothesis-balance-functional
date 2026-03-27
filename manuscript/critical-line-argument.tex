@@ -276,6 +276,41 @@ To keep contradiction bookkeeping explicit, the outline is split into premise/su
 The transport and symmetry steps above are where AC1--AC6 and OP7--OP8 support is expected to enter.
 The no-new-off-line-branch and no-alternative-locus burdens remain subsequent open targets and are not discharged here.
 
+
+\subsection*{Audit focus: primary likely failure point in the first contradiction-style Stage~6 target}
+To sharpen theorem-status discipline, the manuscript records one \emph{primary likely failure point} in
+\cref{thm:stage6-first-subtarget-admissibility}.
+This is an audit-priority assessment, not a fatality claim.
+
+\paragraph{Contradiction theorem target (for reference).}
+The target theorem is: under one synchronized package $\mathcal{H}_{\mathrm{S6}}^{\min}$, any assumed transfer-reachable off-line balanced point
+\[
+s_\ast\in\mathcal{B}_{\mathrm{tr}}\cap\mathcal{A}_{\mathrm{strip}},\qquad \RePart(s_\ast)\neq\tfrac12,
+\]
+should contradict transported Stage-5 uniqueness, yielding
+\[
+\mathcal{B}_{\mathrm{tr}}\cap\{s\in\mathcal{A}_{\mathrm{strip}}:\RePart(s)\neq\tfrac12\}=\varnothing.
+\]
+This remains a draft theorem target only.
+
+\paragraph{Primary likely failure point (current highest-risk step).}
+The highest-risk step is the \emph{no-drift transport bridge} in item~(4):
+passing from local Stage-5 hypotheses on $\mathcal{R}_{\mathrm{loc}}$ to endpoint-valid hypotheses at $s_\ast$ along
+$C_\ast\in\mathfrak{C}_{\mathrm{tr}}$ without implicit strengthening, weakening, or type changes in admissibility and regularity clauses.
+In current notation, this is precisely the local-to-global synchronization burden across
+$\mathcal{R}_{\mathrm{loc}}\subseteq\mathcal{A}_{\mathrm{strip}}$ under $\mathcal{H}_{\mathrm{S6}}^{\min}$.
+
+\paragraph{Why this is the present top audit risk.}
+If this transport step is not theorem-level, the contradiction route can become circular or under-typed:
+local uniqueness is invoked at $s_\ast$ without proof that the same hypothesis tuple still holds there.
+Then the contradiction conclusion is not logically available, even when $s_\ast\in\mathcal{B}$ is assumed.
+
+\paragraph{What would neutralize this risk (required additional result type).}
+A theorem-level \emph{transport invariance lemma} is required as a dedicated bridge:
+for every transfer path/class element $C\in\mathfrak{C}_{\mathrm{tr}}$ from a local anchor to an endpoint in $\mathcal{A}_{\mathrm{strip}}$, the exact Stage-5 hypothesis tuple is preserved with explicit quantitative control and no predicate drift.
+In the current dependency map this means proving the B4a transport bridge with explicit OP7--OP8 and AC1--AC6 usage, under one fixed synchronized package.
+Until that bridge is proved, the first contradiction-style Stage~6 theorem remains open.
+
 \paragraph{Three-way separation (local result, transfer bridge, global conclusion).}
 To avoid conflation of proof burdens:
 \begin{enumerate}

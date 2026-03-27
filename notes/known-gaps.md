@@ -158,6 +158,11 @@ This includes ambient-space/domain typing, closure/closability control, symmetry
 - A no-hidden-branch closure argument excluding off-line components of $\mathcal{B}$ that could appear only outside $\mathcal{R}_{\mathrm{loc}}$.
 - Independent checking that no step smuggles in the target conclusion.
 
+**Current Stage-6 first-subtheorem audit focus (single highest-risk step):**
+- The most likely failure point in the present contradiction-style first subtheorem is the no-drift transport bridge from local Stage-5 hypotheses on $\mathcal{R}_{\mathrm{loc}}$ to transfer-reachable endpoints in $\mathcal{A}_{\mathrm{strip}}$.
+- If this bridge is not theorem-level, the contradiction step can invoke local uniqueness at an endpoint without proving that the same hypothesis tuple still holds there under $\mathcal{H}_{\mathrm{S6}}^{\min}$.
+- Resolution requires a theorem-level transport invariance lemma (B4a) with explicit OP7--OP8 and AC1--AC6 dependency control under one synchronized package.
+
 ---
 
 ## At-a-glance risk board
@@ -183,4 +188,4 @@ If you are auditing the manuscript, this file is intended to answer three questi
 
 If you identify an additional unresolved bridge, add it here with the same four fields: **gap, why it matters, current status, resolution criterion**.
 
-*Last updated: 2026-03-26.*
+*Last updated: 2026-03-27.*
