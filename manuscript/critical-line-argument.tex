@@ -585,6 +585,54 @@ followed by the neutralizing theorem target \cref{thm:stage6-neutralizing-transp
 \paragraph{Open items even with this initialization available.}
 Even if the initialization statement were proved, the manuscript would still require: (i) proof of the structural non-increase property itself, (ii) proof of the seed-extension coverage statement for $\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$, (iii) promotion from defect control to transport-form tuple persistence in \cref{lem:stage6-first-concrete-no-drift}/\cref{lem:b4-admissibility-stability-transfer}, and (iv) downstream neutralizing/no-alternative-locus/master-exclusion closures.
 
+\subsection*{Single highest-risk point inside the three-step first-control skeleton}
+\label{subsec:stage6-three-step-single-risk}
+This subsection isolates one likely failure mode \emph{internal} to the three-step chain
+\[
+\cref{lem:b4-delta-initialization-seed}
+\Longrightarrow
+\cref{lem:b4-delta-structural-nonincrease}
+\Longrightarrow
+\cref{lem:b4-first-delta-control}.
+\]
+Status: audit diagnosis only.
+It does not claim fatal failure.
+It does not invalidate the current skeleton.
+
+\paragraph{Three-step skeleton (what is being analyzed).}
+The skeleton attempts the following derivation pattern:
+seed-anchor zero defect at $C_a^{\mathrm{seed}}$, then non-increase under
+$C_a^{\mathrm{seed}}\preceq C$, then vanishing of $\Delta_{\mathrm{nd}}$ on the contradiction-relevant class $\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$.
+
+\paragraph{Single primary likely failure point.}
+The most likely break point is \textbf{synchronized seed-extension coverage}:
+for each $C\in\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$, one must have some anchor
+$a\in\mathcal{R}_{\mathrm{loc}}$ with
+\[
+C_a^{\mathrm{seed}}\preceq C
+\]
+under unchanged clause semantics for $\Theta_{\mathrm{S5}}$ and the same gauge interpretation $\delta$.
+If this coverage fails, or holds only on a strict subclass, initialization and non-increase do not propagate to the full contradiction-relevant class, so \cref{lem:b4-first-delta-control} is not obtained in the required quantifier form.
+
+\paragraph{Neutralizing statement shape for this risk.}
+The needed repair is a theorem-level \emph{coverage-compatibility} statement:
+every contradiction-relevant transfer object is seed-reachable by synchronized extension, with no package switching inside $\mathcal{H}_{\mathrm{S6}}^{\min}$.
+In current notation, this is the missing bridge that couples
+\cref{lem:b4-delta-initialization-seed} and
+\cref{lem:b4-delta-structural-nonincrease}
+into the universal conclusion targeted by
+\cref{lem:b4-first-delta-control}.
+
+\paragraph{What remains open after this risk is neutralized.}
+Even with that coverage bridge proved, the manuscript still must prove:
+\begin{enumerate}
+  \item transport-form tuple persistence (\cref{lem:stage6-first-concrete-no-drift}/\cref{lem:b4-admissibility-stability-transfer});
+  \item the neutralizing theorem target \cref{thm:stage6-neutralizing-transport-uniformity};
+  \item no-new-off-line-branch and no-alternative-locus closure;
+  \item the master Stage~6 exclusion endpoint \cref{thm:stage6-master-exclusion-target}.
+\end{enumerate}
+So the present diagnosis identifies the first proof-critical checkpoint in the current derivation attempt, not a complete Stage~6 resolution.
+
 \paragraph{What remains open even if this property were obtained.}
 Even with this structural property, the manuscript would still need:
 \begin{enumerate}

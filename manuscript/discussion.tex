@@ -43,6 +43,35 @@ This ordering is a strategy decision for audit and work planning.
 It is not evidence that any Stage~6 bridge has been discharged.
 In particular, introducing $\Delta_{\mathrm{nd}}$ is a provisional proof-planning move under audit, not a settled final defect object, not a proved construction, and not yet a sufficiency claim for Stage~6 closure.
 
+\subsection*{Single likely failure point in the current three-step Stage~6 skeleton}
+For the specific derivation pattern
+\[
+\text{initialization + structural non-increase}
+\Rightarrow
+\text{first control for }\Delta_{\mathrm{nd}},
+\]
+the manuscript now names one primary likely failure point:
+\textbf{the synchronized seed-extension coverage clause on}
+$\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$.
+
+More explicitly, the chain requires
+\[
+\forall C\in\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}},\ \exists a\in\mathcal{R}_{\mathrm{loc}}
+\text{ such that } C_a^{\mathrm{seed}}\preceq C
+\]
+under unchanged interpretation of the Stage-5 tuple and clause gauges.
+If this clause is not proved in theorem form, the initialization seed in
+\cref{lem:b4-delta-initialization-seed} and the monotonic propagation target in
+\cref{lem:b4-delta-structural-nonincrease} do not force the full classwise conclusion of
+\cref{lem:b4-first-delta-control}.
+
+This diagnosis is intentionally narrow:
+it identifies a first proof-critical checkpoint in the present derivation skeleton.
+It does not claim fatal failure.
+It does not claim the skeleton is invalid.
+The manuscript's current neutralizing direction remains to prove this coverage in synchronized form and then continue with transport reformulation and contradiction-enabling uniformity.
+Even after that, no-alternative-locus and master Stage~6 exclusion targets remain open.
+
 \paragraph{Current technical-character reading of the neutralizing target.}
 The manuscript currently reads the neutralizing result
 (\cref{thm:stage6-neutralizing-transport-uniformity}) as \emph{genuinely mixed}:

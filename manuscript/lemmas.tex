@@ -106,6 +106,17 @@ It does not claim that any step is proved.
 Its purpose is to make the first executable derivation pattern explicit for audit:
 seed-anchor zero defect, then synchronized non-increase along admissible extension, then classwise zero-defect control on $\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$ once seed-extension coverage is proved.
 
+\paragraph{Single highest-risk checkpoint inside this three-step chain (audit diagnosis).}
+Within this specific chain, the primary likely failure point is \emph{not} the existence of a seed statement by itself and \emph{not} the formal non-increase inequality by itself.
+It is the universal \textbf{synchronized seed-extension coverage clause}
+\[
+\forall C\in\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}},\ \exists a\in\mathcal{R}_{\mathrm{loc}}
+\text{ such that } C_a^{\mathrm{seed}}\preceq C
+\]
+under unchanged tuple/gauge semantics.
+If this clause fails, the first-control conclusion \cref{lem:b4-first-delta-control} is not derivable on all of $\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$ from Steps 1--2.
+This diagnosis is a vulnerability marker for proof planning; it is not a proof of failure and does not invalidate the skeleton.
+
 
 \paragraph{Contradiction-ready grouping for \cref{thm:stage6-first-subtarget-admissibility}.}
 The first subtheorem in \texttt{critical-line-argument.tex} is now stated in contradiction-ready form.
@@ -161,7 +172,7 @@ one has
 \forall C\in\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}},\qquad
 \Delta_{\mathrm{nd}}(C;\Theta_{\mathrm{S5}},\delta)=0.
 \]
-Interpretation target: exact classwise no-drift on the contradiction-relevant transfer subclass. Current immediate support targets are the structural non-increase lemma \cref{lem:b4-delta-structural-nonincrease} and the seed-anchor initialization lemma \cref{lem:b4-delta-initialization-seed}, together with synchronized seed-extension coverage on $\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$; all are open. Depends on: B1 admissibility well-posedness, OP7--OP8 (with invoked OP1--OP6 where used), and AC1--AC6 continuation/interchange/uniformity controls. Why it matters: this is the first theorem-style control target on a concrete analytic quantity before transport conclusions are rephrased as endpoint hypothesis persistence.}
+Interpretation target: exact classwise no-drift on the contradiction-relevant transfer subclass. Current immediate support targets are the structural non-increase lemma \cref{lem:b4-delta-structural-nonincrease} and the seed-anchor initialization lemma \cref{lem:b4-delta-initialization-seed}, together with synchronized seed-extension coverage on $\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$; all are open. In the current three-step derivation attempt, this coverage clause is the single most likely failure point, because it carries the universal quantifier transfer from seed-level initialization to classwise control. Depends on: B1 admissibility well-posedness, OP7--OP8 (with invoked OP1--OP6 where used), and AC1--AC6 continuation/interchange/uniformity controls. Why it matters: this is the first theorem-style control target on a concrete analytic quantity before transport conclusions are rephrased as endpoint hypothesis persistence.}
 \end{lemma}
 \noindent\emph{Feeds into:} \cref{lem:stage6-first-concrete-no-drift} and its ledger-aligned form \cref{lem:b4-admissibility-stability-transfer}, then \cref{lem:b4-neutralizing-transport-uniformity}.
 
